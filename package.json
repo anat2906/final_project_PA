@@ -1,0 +1,24 @@
+{
+  "name": "final_project_pa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anat2906/final_project_PA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anat2906/final_project_PA/issues"
+  },
+  "homepage": "https://github.com/anat2906/final_project_PA#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
