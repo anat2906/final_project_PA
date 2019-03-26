@@ -1,0 +1,52 @@
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    &:hover {
+        color: $primary;
+    }
+}
+
+.font-text {
+    font-family: "Gilroy-Regular";
+    font-size: 16px;
+    font-weight: normal;
+    color: $text;
+}
+
+.font-text-sm {
+    font-family: "Gilroy-Regular";
+    font-size: 12px;
+    font-weight: normal;
+    color: $text-grey;
+}
+
+.font-title {
+    font-family: "Gilroy-Bold";
+    font-size: 40px;
+    font-weight: normal;
+    color: $text;
+}
+
+.font-title-sm {
+    font-family: "Gilroy-Bold";
+    font-size: 30px;
+    font-weight: normal;
+    color: $text;
+}
+
+.font-subtitle{
+    font-family: "Gilroy-Bold";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $text-grey;
+}
+
+.font-link {
+    font-family: "Gilroy-Regular";
+    font-size: 16px;
+    font-weight: bold;
+    color: $text;
+}

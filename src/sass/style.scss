@@ -1,0 +1,14 @@
+//infrastructure
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "./base.scss";
+@import "./var.scss";
+@import "./font.scss";
+@import "./typography.scss";
+@import "./layout.scss";
+
+//components 
+@import "./button.scss";
+@import "./header-upper.scss";
+@import "./footer.scss";
+@import "./blog-card.scss"
+

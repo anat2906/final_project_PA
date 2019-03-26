@@ -1,0 +1,44 @@
+.footer {
+  background: whitesmoke;
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    .footer-nav-item {
+      text-align: center;
+      margin-bottom: 2em;
+      &.footer-nav__contacts {
+        height: 100px;
+        p {
+          margin-bottom: 0.5em;
+        }
+        .footer-nav__contacts__icons {
+          margin-top: 0.5em;
+          display: flex;
+          justify-content:center;
+          .footer-nav__contacts__icons__icon {
+            width: 1.5em;
+            height: 1.5em;
+            margin-right: 0.5em;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            &#icon-whatsapp {
+              background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/whatsapp.svg");
+            }
+            &#icon-fb {
+              background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/facebook.svg");
+            }
+            &#icon-instagram {
+              background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/instagram.svg");
+            }
+            &#icon-telegram {
+              background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/telegram-app.svg");
+            }
+          }
+        }
+      }
+    }
+  }
+}
