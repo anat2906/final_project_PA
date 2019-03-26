@@ -25,6 +25,9 @@
       filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.18));
       text-decoration: none;
       transform: translateY(-0.2rem);
+      a {
+        color: white;
+      }
     }
   }
   &.btn-white {
@@ -32,7 +35,9 @@
     border: 2px solid $primary;
     &:hover {
       background-color: $primary;
-      color: white;
+      a {
+        color: white;
+      }
     }
   }
 }
