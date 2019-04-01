@@ -1,1 +1,9 @@
-{% include "tweets/form.html" with form=form btn_title="Update"%}
+{% extends "base.html" %}
+{% block title %}
+    Edit
+{% endblock title %}
+{% block content %}
+
+    {% include "tweets/form.html" with form=form btn_title="Update"%}
+
+{% endblock content %}
