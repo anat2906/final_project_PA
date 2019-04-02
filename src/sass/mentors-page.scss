@@ -31,6 +31,7 @@
     flex-wrap: wrap;
     .mentors__mentor-cards__mentor-card {
       padding: 1em;
+      margin-top: 1.5em;
       text-align: center;
       .mentors__mentor-cards__mentor-card__img {
         width: 80%;
@@ -46,10 +47,12 @@
         margin-top: 0.5em;
       }
       .mentors__mentor-cards__mentor-card__position {
+        padding: 0 1em;
       }
       .mentors__mentor-cards__mentor-card__bio {
         margin-top: 0.5em;
         margin-bottom: 1.5em;
+        padding: 0 1em;
         text-align: left;
       }
     }
