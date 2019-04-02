@@ -1,0 +1,134 @@
+.mainpage {
+  height: auto;
+  .mainpage__first-block__background{
+    height: auto;
+    background-image: url("../../src/static/images/mainpage/bg-img.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+  }
+  .mainpage__first-block {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    .mainpage__first-block__title-div {
+      height: 280px;
+      padding: 3em 2em;
+      background: $text-grey;
+      opacity: 0.5;
+      box-sizing: border-box;
+      .mainpage__first-block__title {
+        font-family: "Gilroy-Bold";
+        font-size: 40px;
+        font-weight: normal;
+        color: $light;
+        text-align: center;
+      }
+      .mainpage__first-block__subtitle {
+        padding-top: 1.5em;
+        color: $light;
+        text-align: center;
+      }
+    }
+    .mainpage__first-block__buttons-div{
+        display: flex;
+        justify-content: space-around;
+        padding: 2em 10em;
+    }
+  }
+  .mainpage__second-block{
+    height: auto;
+    background-color: $light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .mainpage__second-block__title{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      .mainpage__second-block__icon{
+        height: 50px;
+        width: 50px;
+        background: url("../../static/icons/win.png")
+      }
+    }
+    .mainpage__second-block__subtitle{
+      padding-top: 2em;
+    }
+    .mainpage__second-block__text{
+      padding-top: 1.2em;
+    }
+    .mainpage__second-block__btn{
+      padding-top: 2em;
+    }
+  }
+  .mainpage__third-block__background{
+    height: auto;
+    background: $primary-bg;
+    background: linear-gradient(145deg, lighten($primary, 60%) -130%, $primary);
+    .mainpage__third-block{
+      display: flex;
+      flex-direction: column;
+      color: $light;
+      .mainpage__third-block__title{
+        text-align: center;
+      }
+      .mainpage__third-block__cards-div{
+        padding-top: 4em;
+        .mainpage__third-block__cards-carousel{
+          display: flex;
+          justify-content: flex-start;
+          .mainpage__third-block__card{
+            height: 350px;
+            border: 6px solid $light;
+            margin-right: 2em;
+            padding: 0;
+            box-sizing: border-box;
+            .mainpage__third-block__card-img{
+              height: 300px;
+              background-image: url("../../src/static/images/mainpage/signin.jpg");
+              background-repeat: no-repeat;
+              background-position: top;
+              background-size: 110%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mainpage__mentors-block{
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .mainpage_mentor-card{
+      .mainpage_mentor-card__img{
+        border-radius: 50%;
+        height: 300px;
+        background-image: url("../../src/static/images/mainpage/mentor2.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px){
+    .mainpage__first-block__title-div{
+        height: 700px;
+    }
+}
+
+@media (max-width: 985.98px) {
+  .mainpage__first-block__background {
+    height: 500px;
+  }
+}
+@media (max-width: 767.98px) {
+  .mainpage__first-block__background {
+    height: 500px;
+  }
+}

@@ -6,13 +6,19 @@ a {
         color: $primary;
     }
 }
-
+.font-text-md{
+    font-family: "Gilroy-Regular";
+    font-size: 18px;
+    font-weight: normal;
+    color: $text;
+}
 .font-text {
     font-family: "Gilroy-Regular";
     font-size: 16px;
     font-weight: normal;
     color: $text;
 }
+
 
 .font-text-sm {
     font-family: "Gilroy-Regular";
@@ -33,6 +39,12 @@ a {
     font-size: 30px;
     font-weight: normal;
     color: $text;
+}
+.font-title-sm-l{
+    font-family: "Gilroy-Bold";
+    font-size: 30px;
+    font-weight: normal;
+    color: $light;
 }
 
 .font-subtitle{
