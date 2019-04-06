@@ -1,4 +1,5 @@
 .header {
+  background: white;
   .header-upper {
     position: sticky;
     padding: 1.5em 0;
@@ -8,7 +9,6 @@
     .header-upper-wrapper {
       display: flex;
       align-items: center;
-      position: relative;
       .header__header-upper__logo {
         margin-right: 2em;
       }
@@ -29,9 +29,6 @@
           &:hover {
             color: $primary;
           }
-          &.toggled {
-            display: none;
-          }
         }
       }
       .header__header-upper__navbar__lang {
@@ -40,6 +37,20 @@
       }
       .header__header-upper__navbar__btn {
         margin-right: 1.5em;
+      }
+    }
+  }
+  .header-upper__alt-nav {
+    display: none;
+    width: 100%;
+    height: 300px;
+    background: white;
+    .header__header-upper__nav {
+      transition: height 0.5s ease-in; 
+      flex-direction: column;
+      list-style-type: none;
+      .header__header-upper__nav__nav-item {
+        margin: 1.5em 0;
       }
     }
   }
@@ -58,24 +69,19 @@
             display: block;
             width: 20px;
             height: 7px;
-            border-top: 2px solid #8459b5;
+            border-top: 2px solid $primary;
           }
         }
         .header__header-upper__nav {
           display: none;
-          &.visible {
-            position: absolute;
-            display: block;
-            transition: all 0.3s ease-in;
-            top: 50px;
-            .header__header-upper__nav__nav-item {
-              display: block;
-              &.toggled {
-                display: block;
-              }
-            }
-          }
         }
+      }
+    }
+    .header-upper__alt-nav {
+      display: none;
+      &.visible {
+        display: block;
+        position: absolute;
       }
     }
   }
