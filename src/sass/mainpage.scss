@@ -12,17 +12,17 @@
     justify-content: flex-start;
     flex-direction: column;
     .mainpage__first-block__title-div {
-      height: 280px;
-      padding: 3em 2em;
-      background: $text-grey;
-      opacity: 0.5;
+      border-radius: 1px;
+      height: auto;
+      padding: 2.5em 2em;
+      background: $primary;
+      opacity: 0.4;
       box-sizing: border-box;
       .mainpage__first-block__title {
         font-family: "Gilroy-Bold";
         font-size: 40px;
         font-weight: normal;
         color: $light;
-        text-align: center;
       }
       .mainpage__first-block__subtitle {
         padding-top: 1.5em;
@@ -43,6 +43,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+
     .mainpage__second-block__title {
       display: flex;
       justify-content: flex-start;
@@ -71,15 +72,31 @@
       display: flex;
       flex-direction: column;
       color: $light;
+      width: 100%;
       .mainpage__third-block__title {
         text-align: center;
+        h2 {
+          color: $light;
+          span {
+            text-transform: uppercase;
+            font-family: "Gilroy-Bold";
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            color: $light;
+          }
+        }
       }
       .mainpage__third-block__cards-div {
         padding-top: 4em;
         .mainpage__third-block__cards-carousel {
           display: flex;
           justify-content: flex-start;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          width: 100%;
           .mainpage__third-block__card {
+            width: 80%;
             height: 350px;
             border: 6px solid $light;
             margin-right: 2em;
@@ -102,7 +119,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .mainpage__mentors-block__mentor-cards{
+    .mainpage__mentors-block__mentor-cards {
       margin-top: 4em;
       display: flex;
       justify-content: flex-start;
@@ -112,7 +129,7 @@
         flex-direction: column;
         align-items: center;
         .mainpage__mentor-cards__mentor-card__img {
-          // border-radius: 10px;
+          border-radius: 1px;
           width: 80%;
           height: 250px;
           margin: 0 auto;
@@ -121,10 +138,9 @@
           background-position: center;
           background-position-y: 15%;
           filter: grayscale(100%);
-  
         }
         &:hover {
-          .mainpage__mentor-cards__mentor-card__img{
+          .mainpage__mentor-cards__mentor-card__img {
             transition: 300ms;
             transition-property: all;
             transition-duration: 300ms;
@@ -133,10 +149,9 @@
             background-repeat: no-repeat;
             filter: grayscale(0%);
           }
-          .mainpage__mentor-cards__mentor-card__name{
+          .mainpage__mentor-cards__mentor-card__name {
             color: $primary;
           }
-  
         }
         .mainpage__mentor-cards__mentor-card__name {
           text-align: center;
@@ -154,8 +169,158 @@
         }
       }
     }
-    .mainpage__mentors-block__button{
+    .mainpage__mentors-block__button {
       margin-top: 3em;
+    }
+  }
+  .mainpage__steps-block__background {
+    height: auto;
+    background-image: url("../../src/static/images/mainpage/grid_noise.png");
+    background-position-x: center;
+    background-position-y: top;
+    background-size: 5%;
+    .container {
+      .mainpage__steps-block__title {
+        span {
+          color: $primary;
+          display: block;
+          font-family: "Gilroy-Bold";
+        }
+      }
+      .mainpage__steps-block__steps-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .mainpage__steps-block__step-card {
+          margin-top: 4em;
+          position: relative;
+          width: calc(25%);
+          .mainpage__steps-block__step-card__bg {
+            position: absolute;
+            text-align: center;
+            font-size: 180px;
+            color: lighten($primary, 35%);
+            font-family: "Gilroy-Bold";
+            top: -13px;
+            line-height: 126px;
+            width: 100%;
+          }
+          .mainpage__steps-block__step-card__text {
+            position: relative;
+            z-index: 5;
+            min-height: 150px;
+            span {
+              display: block;
+              padding-bottom: 0.3em;
+            }
+          }
+        }
+        .mainpage__steps-block__next-arrow {
+          width: 10%;
+          margin-top: 4em;
+          &:hover {
+            filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.18));
+            text-decoration: none;
+            transform: translateY(-0.2rem);
+          }
+        }
+      }
+    }
+  }
+  .mainpage__reviews-block {
+    height: auto;
+    .mainpage__reviews__title {
+      display: block;
+      span {
+        color: $primary;
+        display: block;
+        font-family: "Gilroy-Bold";
+      }
+    }
+    .mainpage__reviews-block__wrapper {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      width: 100%;
+      padding-top: 4em;
+      .mainpage__reviews-block__review-div {
+        display: flex;
+        justify-content: space-between;
+        .mainpage__reviews-block__carousel {
+          display: flex;
+          flex-direction: column;
+          .mainpage__reviews-block__arrows-div {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: auto;
+            .mainpage__reviews-block__arrow-left {
+              // height: 100px;
+              // background-image: url("../../src/static/icons/mainpage/carousel-left.png");
+            }
+            .mainpage__reviews-block__arrow-right {
+              // height: 100px;
+              // background-image: url("../../src/static/icons/mainpage/carousel-right.png");
+            }
+          }
+          .mainpage__reviews-block__review-div__carousel-inner{
+            .mainpage__reviews-block__review-div__carousel-item {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            .mainpage__reviews-block__review-div__carousel-item__avatar {
+              border-radius: 3px;
+              height: 200px;
+            }
+            .mainpage__reviews-block__review-div__carousel-item__text {
+              padding-left: 20px;
+              padding-right: 20px;
+              p {
+                margin-bottom: 10px;
+              }
+              h4 {
+                margin-bottom: 10px;
+                font-weight: bold;
+              }
+            }
+          }
+          }
+          
+        }
+      }
+      .mainpage__reviews-block__quote-div {
+        margin-top: 5px;
+        background-color: lighten($primary, 35%);
+        padding: 20px 10px;
+        .mainpage__reviews-block__quote-block1 {
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          span{
+            margin-top: 5px;
+            display: block;
+            font-style: italic;
+            margin-bottom: 10px;
+          }
+        }
+        .mainpage__reviews-block__quote-block2 {
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 15px;
+          text-align: center;
+          span{
+            margin-top: 5px;
+            display: block;
+            font-style: italic;
+            margin-bottom: 10px;
+          }
+        }
+      }
     }
   }
 }
