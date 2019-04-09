@@ -45,8 +45,8 @@
     width: 100%;
     height: 300px;
     background: white;
+    transition: height 0.5s ease-in; 
     .header__header-upper__nav {
-      transition: height 0.5s ease-in; 
       flex-direction: column;
       list-style-type: none;
       .header__header-upper__nav__nav-item {
@@ -79,6 +79,7 @@
     }
     .header-upper__alt-nav {
       display: none;
+      height: 0px;
       &.visible {
         display: block;
         position: absolute;

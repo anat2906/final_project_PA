@@ -1,0 +1,28 @@
+.mentee-account__content__subscriptions{
+    margin-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    .mentee-account__content__subscriptions__sub-card{
+        text-align: center;
+        padding: 0;
+        padding-right: 0.5em;
+        margin-top: 2em;
+        .mentee-account__content__subscriptions__sub-card__img{
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            border-radius: 50%; 
+            background-image: url("../../src/static/images/mentor.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .mentee-account__content__subscriptions__sub-card__name{
+            margin-top: 1em;
+        }
+        .mentee-account__content__subscriptions__sub-card__position{
+            margin-top: 0.5em;
+        }
+    }
+
+}
