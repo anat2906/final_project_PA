@@ -1,0 +1,148 @@
+.mentee-account {
+  display: flex;
+  flex-wrap: wrap;
+  .mentee-account__content {
+    .mentee-account__content__feed {
+      .mentee-account__content__feed__publication {
+        width: 100%;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        margin-top: 1em;
+        .mentee-account__content__feed__publication__img {
+          background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/images/blog-img.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 100%;
+          width: 250px;
+          height: 200px;
+          margin-right: 1em;
+        }
+        .mentee-account__content__feed__publication__content {
+          width: 60%;
+          .mentee-account__content__feed__publication__content__title {
+            margin-bottom: 0.5em;
+          }
+          .mentee-account__content__feed__publication__content__text {
+          }
+          .mentee-account__content__feed__publication__content__date {
+          }
+        }
+      }
+    }
+  }
+  .mentee-account__sidebar {
+    padding-top: 1em;
+    .mentee-account__sidebar__nav {
+      list-style-type: none;
+      .mentee-account__sidebar__nav__nav-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+        &#sidebar-feed {
+          &:hover {
+            color: $primary;
+            #sidebar-icon-feed {
+              background-image: url("../../src/static/icons/icons8-scroll\ -primary.svg");
+            }
+          }
+        }
+        &#sidebar-settings {
+          &:hover {
+            color: $primary;
+            #sidebar-icon-settings {
+              background-image: url("../../src/static/icons/icons8-settings-primary.svg");
+            }
+          }
+        }
+        &#sidebar-follows {
+          &:hover {
+            color: $primary;
+            #sidebar-icon-follows {
+              background-image: url("../../src/static/icons/icons8-check-all-primary.svg");
+            }
+          }
+        }
+        #sidebar-icon-feed {
+          background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/icons8-scroll.svg");
+          width: 1.5em;
+          height: 1.5em;
+          margin-right: 0.5em;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        #sidebar-icon-settings {
+          background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/icons8-settings.svg");
+          width: 1.5em;
+          height: 1.5em;
+          margin-right: 0.5em;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        #sidebar-icon-follows {
+          background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/icons8-check-all.svg");
+          width: 1.5em;
+          height: 1.5em;
+          margin-right: 0.5em;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .mentee-account {
+    flex-direction: column-reverse;
+    .mentee-account__sidebar {
+      padding-top: 0;
+      margin-bottom: 1.5em;
+      .mentee-account__sidebar__nav {
+        display: flex;
+        justify-content: space-between;
+        .mentee-account__sidebar__nav__nav-item {
+          margin-right: 1.5em;
+          :last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mentee-account {
+    .mentee-account__content {
+      .mentee-account__content__feed {
+        .mentee-account__content__feed__publication {
+          .mentee-account__content__feed__publication__img {
+            display: none;
+          }
+          .mentee-account__content__feed__publication__content {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .mentee-account__sidebar {
+      .mentee-account__sidebar__nav {
+        .mentee-account__sidebar__nav__nav-item {
+          #sidebar-icon-feed {
+            display: none;
+          }
+          #sidebar-icon-settings {
+            display: none;
+          }
+          #sidebar-icon-follows {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
