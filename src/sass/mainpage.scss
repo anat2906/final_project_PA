@@ -133,7 +133,7 @@
           width: 80%;
           height: 250px;
           margin: 0 auto;
-          background-image: url("/home/meerim/Templates/diploma_project/group_project/src/static/images/mentor.jpg");
+          background-image: url("../../src/static/images/mentor.jpg");
           background-size: cover;
           background-position: center;
           background-position-y: 15%;
@@ -175,10 +175,10 @@
   }
   .mainpage__steps-block__background {
     height: auto;
-    background-image: url("../../src/static/images/mainpage/grid_noise.png");
+    background-image: url("../../src/static/images/aboutpage/topography.png");
     background-position-x: center;
     background-position-y: top;
-    background-size: 5%;
+    
     .container {
       .mainpage__steps-block__title {
         span {
@@ -248,24 +248,24 @@
         display: flex;
         justify-content: space-between;
         .mainpage__reviews-block__carousel {
+          width: 750px;
+          overflow: hidden;
+          height: auto;
+          display: block;
           display: flex;
           flex-direction: column;
-          .mainpage__reviews-block__arrows-div {
+          .mainpage__reviews-block__btns-div {
             display: flex;
             align-items: flex-end;
-            justify-content: space-between;
+            justify-content: flex-start;
             height: auto;
-            .mainpage__reviews-block__arrow-left {
-              // height: 100px;
-              // background-image: url("../../src/static/icons/mainpage/carousel-left.png");
-            }
-            .mainpage__reviews-block__arrow-right {
-              // height: 100px;
-              // background-image: url("../../src/static/icons/mainpage/carousel-right.png");
-            }
           }
-          .mainpage__reviews-block__review-div__carousel-inner{
+          .mainpage__reviews-block__review-div__carousel-slides{
+            width: 10000px;
+            display: flex;
+            flex-direction: row;
             .mainpage__reviews-block__review-div__carousel-item {
+              width: 730px;
             display: flex;
             justify-content: flex-start;
             flex-direction: row;

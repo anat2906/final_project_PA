@@ -6,6 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../../dist/css/style.css" />
     <title>Главная</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -326,17 +337,20 @@
                   <div class="mainpage__third-block__card-img"></div>
                 </div>
                 <div
-                  class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12" style="display: none"
+                  class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
+                  style="display: none"
                 >
                   <div class="mainpage__third-block__card-img"></div>
                 </div>
                 <div
-                  class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12" style="display: none"
+                  class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
+                  style="display: none"
                 >
                   <div class="mainpage__third-block__card-img"></div>
                 </div>
                 <div
-                  class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12" style="display: none"
+                  class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
+                  style="display: none"
                 >
                   <div class="mainpage__third-block__card-img"></div>
                 </div>
@@ -353,30 +367,39 @@
           </h2>
           <div class="mainpage__reviews-block__wrapper">
             <div class="mainpage__reviews-block__review-div col-md-8">
-              <div class="mainpage__reviews-block__carousel ">
+              <div class="mainpage__reviews-block__carousel">
                 <!-- Навигация для карусели -->
-                <div class="mainpage__reviews-block__arrows-div">
+                <div class="mainpage__reviews-block__btns-div">
                   <!-- Кнопка для перехода на предыдущий слайд -->
-                  <a href="#" class="mainpage__reviews-block__arrow-left">
-                      <img
+                  <div
+                    href="#"
+                    class="mainpage__reviews-block__btn"
+                    id="prevbtn"
+                  >
+                    <img
                       src="../static/icons/mainpage/carousel-left.png"
                       alt=""
                     />
-                  </a>
+                  </div>
                   <!-- Кнопка для перехода на следующий слайд -->
-                  <a href="#" class="mainpage__reviews-block__arrow-right">
+                  <div
+                    href="#"
+                    class="mainpage__reviews-block__btn"
+                    id="nextbtn"
+                  >
                     <img
                       src="../static/icons/mainpage/carousel-right.png"
                       alt=""
                     />
-                  </a>
+                  </div>
                 </div>
                 <!-- Слайды карусели -->
                 <div
-                  class="mainpage__reviews-block__review-div__carousel-inner"
+                  class="mainpage__reviews-block__review-div__carousel-slides"
                 >
                   <div
                     class="mainpage__reviews-block__review-div__carousel-item"
+                    id="lastClone"
                   >
                     <div
                       class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
@@ -410,7 +433,6 @@
                   </div>
                   <div
                     class="mainpage__reviews-block__review-div__carousel-item"
-                    style="display: none"
                   >
                     <div
                       class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
@@ -442,9 +464,9 @@
                       </p>
                     </div>
                   </div>
+
                   <div
                     class="mainpage__reviews-block__review-div__carousel-item"
-                    style="display: none"
                   >
                     <div
                       class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
@@ -453,6 +475,74 @@
                         height="200px"
                         width="200px"
                         src="../../src/static/images/mainpage/mentor3.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
+                    >
+                      <p class="font-text">
+                        Когда впервые задумываешься о том, какой карьерный путь
+                        выбрать после окончания учебы, сталкиваешься с огромным
+                        количеством вариантов для самообразования и
+                        трудоустройства, и в этом море информации бывает легко
+                        пропустить что-то стоящее и подходящее именно тебе. На
+                        мой взгляд, это здорово, что у сегодняшних выпускников
+                        есть такая открытая площадка, чтобы получить совет от
+                        опытных менторов и выбрать направление для развития
+                      </p>
+                      <h4 class="font-text-md">Наталья Бессонова,</h4>
+                      <p class="font-text">
+                        Индивидуальный предприниматель, МИРЭА РТУ -
+                        преподаватель
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mainpage__reviews-block__review-div__carousel-item"
+                  >
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
+                    >
+                      <img
+                        height="200px"
+                        width="200px"
+                        src="../../src/static/images/mainpage/mentor1.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
+                    >
+                      <p class="font-text">
+                        Когда впервые задумываешься о том, какой карьерный путь
+                        выбрать после окончания учебы, сталкиваешься с огромным
+                        количеством вариантов для самообразования и
+                        трудоустройства, и в этом море информации бывает легко
+                        пропустить что-то стоящее и подходящее именно тебе. На
+                        мой взгляд, это здорово, что у сегодняшних выпускников
+                        есть такая открытая площадка, чтобы получить совет от
+                        опытных менторов и выбрать направление для развития
+                      </p>
+                      <h4 class="font-text-md">Наталья Бессонова,</h4>
+                      <p class="font-text">
+                        Индивидуальный предприниматель, МИРЭА РТУ -
+                        преподаватель
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="mainpage__reviews-block__review-div__carousel-item"
+                    id="firstClone"
+                  >
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
+                    >
+                      <img
+                        height="200px"
+                        width="200px"
+                        src="../../src/static/images/mainpage/mentor3.jpg"
                         alt=""
                       />
                     </div>
@@ -547,5 +637,19 @@
         </div>
       </section>
     </footer>
+    <script src="../scripts/mainpage.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
   </body>
 </html>
