@@ -6,6 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../../dist/css/style.css" />
     <title>Главная</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -19,19 +30,13 @@
             </div>
             <ul class="header__header-upper__nav">
               <li class="header__header-upper__nav__nav-item font-link">
-                <a href="#">О проекте</a>
+                <a href="./about.html">О проекте</a>
               </li>
               <li class="header__header-upper__nav__nav-item font-link">
                 <a href="./blog.html">Блог</a>
               </li>
               <li class="header__header-upper__nav__nav-item font-link">
                 <a href="./mentors.html">Наши менторы</a>
-              </li>
-              <li class="header__header-upper__nav__nav-item toggled font-link">
-                <a href="#">Войти</a>
-              </li>
-              <li class="header__header-upper__nav__nav-item toggled font-link">
-                <a href="#">Регистрация</a>
               </li>
             </ul>
           </div>
@@ -49,7 +54,11 @@
             <div class="header__header-upper__navbar__btn btn btn-primary">
               <a href="#">Регистрация</a>
             </div>
-            <a href="#" class="header__header-upper__nav-burger">
+            <a
+              href="#"
+              class="header__header-upper__nav-burger"
+              id="header-menu-btn"
+            >
               <span></span>
               <span></span>
               <span></span>
@@ -57,8 +66,557 @@
           </div>
         </div>
       </div>
+      <div class="header-upper__alt-nav" id="header-alt-nav">
+        <ul class="container header__header-upper__nav">
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="#">О проекте</a>
+          </li>
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="./blog.html">Блог</a>
+          </li>
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="./mentors.html">Наши менторы</a>
+          </li>
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="./mentors.html">Войти</a>
+          </li>
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="./mentors.html">Регистрация</a>
+          </li>
+        </ul>
+      </div>
     </header>
-    <main></main>
+<<<<<<< HEAD
+    <main>
+=======
+    <main class="mainpage">
+      <div class="mainpage__first-block__background">
+        <section>
+          <div
+            class="container mainpage__first-block col-lg-8 col-md-8 col-sm-12"
+          >
+            <div class="mainpage__first-block__title-div">
+              <h3 class="mainpage__first-block__title">
+                Онлайн платформа для поиска ментора
+              </h3>
+              <h5 class="mainpage__first-block__subtitle font-text-md">
+                Задача организации, в особенности же дальнейшее развитие
+                различных форм деятельности влечет за собой процесс внедрения. В
+                отличии от lorem ipsum, текст рыба на русском языке наполнит
+                любой макет непонятным смыслом и придаст неповторимый колорит
+                советских времен.
+              </h5>
+            </div>
+            <div class="mainpage__first-block__buttons-div">
+              <div class="btn-lg btn-white">
+                <a href="#">Выбрать ментора</a>
+              </div>
+              <div class="btn-lg btn-primary">
+                <a href="#">Стать ментором</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section>
+        <div
+          class="container mainpage__second-block col-lg-8 col-md-8 col-sm-12"
+        >
+          <div class="mainpage__second-block__title">
+            <div class="mainpage__second-block__icon"></div>
+            <h2 class="font-title-sm">Получите наставничество с сфере</h2>
+            <div class="mainpage__second-block__direction_insert"></div>
+          </div>
+          <div class="mainpage__second-block__subtitle">
+            <h4 class="font-text-md">
+              При создании генератора мы использовали небезизвестный
+              универсальный код речей.
+            </h4>
+          </div>
+          <div class="mainpage__second-block__text">
+            <h4 class="font-text-md">
+              По своей сути рыбатекст является альтернативой традиционному lorem
+              ipsum, который вызывает у некторых людей недоумение при попытках
+              прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на
+              русском языке наполнит любой макет непонятным смыслом и придаст
+              неповторимый колорит советских времен.
+            </h4>
+          </div>
+          <div class="mainpage__second-block__btn">
+            <div class="btn-lg btn-white-transparency">
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="mainpage__steps-block__background">
+        <section class="container">
+          <h2 class="font-title-md mainpage__steps-block__title">
+            Как найти
+            <span>ментора</span>
+          </h2>
+          <div class="mainpage__steps-block__steps-wrapper">
+            <div
+              class="mainpage__steps-block__step-card col-lg-3 col-md-4 col-sm-12"
+            >
+              <p class="mainpage__steps-block__step-card__bg">
+                1
+              </p>
+              <p class="font-text-md mainpage__steps-block__step-card__text">
+                <span class="font-subtitle-lg">Выберите ментора</span>
+                по интересующему вас направлению
+              </p>
+            </div>
+            <div class="mainpage__steps-block__next-arrow">
+              <img
+                src="../../src/static/icons/mainpage/next.png"
+                alt=""
+                style="opacity:0.8"
+              />
+            </div>
+            <div
+              class="mainpage__steps-block__step-card col-lg-3 col-md-4 col-sm-12"
+            >
+              <p class="mainpage__steps-block__step-card__bg">
+                2
+              </p>
+              <p class="font-text-md mainpage__steps-block__step-card__text">
+                <span class="font-subtitle-lg">Напишите ментору</span>
+                в чём Вам нужна его помощь или консультация
+              </p>
+            </div>
+            <div class="mainpage__steps-block__next-arrow">
+              <img
+                src="../../src/static/icons/mainpage/next.png"
+                alt=""
+                style="opacity:0.8"
+              />
+            </div>
+            <div
+              class="mainpage__steps-block__step-card col-lg-3 col-md-4 col-sm-12"
+            >
+              <p class="mainpage__steps-block__step-card__bg">
+                3
+              </p>
+              <p class="font-text-md mainpage__steps-block__step-card__text">
+                <span class="font-subtitle-lg">Получите согласие</span>
+                или с помощью нашего куратора выберите другого ментора
+              </p>
+            </div>
+            <div
+              class="mainpage__steps-block__step-card col-lg-3 col-md-4 col-sm-12"
+            >
+              <p class="mainpage__steps-block__step-card__bg">
+                4
+              </p>
+              <p class="font-text-md mainpage__steps-block__step-card__text">
+                <span class="font-subtitle-lg">Договоритесь о целях</span>
+                и формате сотрудничества на первой встрече с ментором
+              </p>
+            </div>
+            <div class="mainpage__steps-block__next-arrow">
+              <img
+                src="../../src/static/icons/mainpage/next.png"
+                alt=""
+                style="opacity:0.8"
+              />
+            </div>
+            <div
+              class="mainpage__steps-block__step-card col-lg-3 col-md-4 col-sm-12"
+            >
+              <p class="mainpage__steps-block__step-card__bg">
+                5
+              </p>
+              <p class="font-text-md mainpage__steps-block__step-card__text">
+                <span class="font-subtitle-lg">Составьте план действий</span>
+                и достигайте поставленных целей
+              </p>
+            </div>
+            <div class="mainpage__steps-block__next-arrow">
+              <img
+                src="../../src/static/icons/mainpage/next.png"
+                alt=""
+                style="opacity:0.8"
+              />
+            </div>
+            <div
+              class="mainpage__steps-block__step-card col-lg-3 col-md-4 col-sm-12"
+            >
+              <p class="mainpage__steps-block__step-card__bg">
+                6
+              </p>
+              <p class="font-text-md mainpage__steps-block__step-card__text">
+                <span class="font-subtitle-lg">Получайте поддержку</span>
+
+                со стороны куратора проекта на протяжении всего сотрудничества с
+                ментором
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section>
+        <div class="container mainpage__mentors-block">
+          <div class="mainpage__mentors-block__title">
+            <h2 class="font-title-sm">Наши менторы</h2>
+          </div>
+          <div class="mainpage__mentors-block__mentor-cards">
+            <div
+              class="mainpage__mentor-cards__mentor-card col-lg-4 col-md-6 col-sm-12"
+            >
+              <div class="mainpage__mentor-cards__mentor-card__img"></div>
+              <div
+                class="font-title-sm mainpage__mentor-cards__mentor-card__name"
+              >
+                <a href="./publication.html">Ирина Кибина</a>
+              </div>
+              <h4
+                class="font-subtitle mainpage__mentor-cards__mentor-card__position"
+              >
+                Project Manager Zensoft, Tech Women 2018
+              </h4>
+              <div class="font-text mainpage__mentor-cards__mentor-card__bio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur molestiae voluptates accusamus minus autem adipisci
+                ducimus voluptate maiores ad recusandae.
+              </div>
+            </div>
+            <div
+              class="mainpage__mentor-cards__mentor-card col-lg-4 col-md-6 col-sm-12"
+            >
+              <div class="mainpage__mentor-cards__mentor-card__img"></div>
+              <div
+                class="font-title-sm mainpage__mentor-cards__mentor-card__name"
+              >
+                <a href="./publication.html">Ирина Кибина</a>
+              </div>
+              <h4
+                class="font-subtitle mainpage__mentor-cards__mentor-card__position"
+              >
+                Project Manager Zensoft, Tech Women 2018
+              </h4>
+              <div class="font-text mainpage__mentor-cards__mentor-card__bio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur molestiae voluptates accusamus minus autem adipisci
+                ducimus voluptate maiores ad recusandae.
+              </div>
+            </div>
+            <div
+              class="mainpage__mentor-cards__mentor-card col-lg-4 col-md-6 col-sm-12"
+            >
+              <div class="mainpage__mentor-cards__mentor-card__img"></div>
+              <div
+                class="font-title-sm mainpage__mentor-cards__mentor-card__name"
+              >
+                <a href="./publication.html">Ирина Кибина</a>
+              </div>
+              <h4
+                class="font-subtitle mainpage__mentor-cards__mentor-card__position"
+              >
+                Project Manager Zensoft, Tech Women 2018
+              </h4>
+              <div class="font-text mainpage__mentor-cards__mentor-card__bio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur molestiae voluptates accusamus minus autem adipisci
+                ducimus voluptate maiores ad recusandae.
+              </div>
+            </div>
+          </div>
+          <div class="mainpage__mentors-block__button btn-lg btn-primary">
+            <a href="./mentors.html">Показать всех</a>
+          </div>
+        </div>
+      </section>
+      <div class="mainpage__third-block__background">
+        <section>
+          <div
+            class="container mainpage__third-block col-lg-8 col-md-8 col-sm-12"
+          >
+            <div class="mainpage__third-block__title">
+              <h2 class="font-title-md">
+                Как стать ментором на
+                <span>mentor.kg</span>
+              </h2>
+            </div>
+            <div class="mainpage__third-block__cards-div">
+              <div class="mainpage__third-block__cards-carousel">
+                <div
+                  class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
+                >
+                  <div class="mainpage__third-block__card-img"></div>
+                </div>
+                <div
+                  class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
+                >
+                  <div class="mainpage__third-block__card-img"></div>
+                </div>
+                <div
+                  class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
+                >
+                  <div class="mainpage__third-block__card-img"></div>
+                </div>
+                <div
+                  class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
+                  style="display: none"
+                >
+                  <div class="mainpage__third-block__card-img"></div>
+                </div>
+                <div
+                  class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
+                  style="display: none"
+                >
+                  <div class="mainpage__third-block__card-img"></div>
+                </div>
+                <div
+                  class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
+                  style="display: none"
+                >
+                  <div class="mainpage__third-block__card-img"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="container">
+        <div class="mainpage__reviews-block">
+          <h2 class="font-title-md mainpage__reviews__title">
+            Отзывы
+            <span>о менторстве</span>
+          </h2>
+          <div class="mainpage__reviews-block__wrapper">
+            <div class="mainpage__reviews-block__review-div col-md-8">
+              <div class="mainpage__reviews-block__carousel">
+                <!-- Навигация для карусели -->
+                <div class="mainpage__reviews-block__btns-div">
+                  <!-- Кнопка для перехода на предыдущий слайд -->
+                  <div
+                    href="#"
+                    class="mainpage__reviews-block__btn"
+                    id="prevbtn"
+                  >
+                    <img
+                      src="../static/icons/mainpage/carousel-left.png"
+                      alt=""
+                    />
+                  </div>
+                  <!-- Кнопка для перехода на следующий слайд -->
+                  <div
+                    href="#"
+                    class="mainpage__reviews-block__btn"
+                    id="nextbtn"
+                  >
+                    <img
+                      src="../static/icons/mainpage/carousel-right.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <!-- Слайды карусели -->
+                <div
+                  class="mainpage__reviews-block__review-div__carousel-slides"
+                >
+                  <div
+                    class="mainpage__reviews-block__review-div__carousel-item"
+                    id="lastClone"
+                  >
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
+                    >
+                      <img
+                        height="200px"
+                        width="200px"
+                        src="../../src/static/images/mainpage/mentor3.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
+                    >
+                      <p class="font-text">
+                        Когда впервые задумываешься о том, какой карьерный путь
+                        выбрать после окончания учебы, сталкиваешься с огромным
+                        количеством вариантов для самообразования и
+                        трудоустройства, и в этом море информации бывает легко
+                        пропустить что-то стоящее и подходящее именно тебе. На
+                        мой взгляд, это здорово, что у сегодняшних выпускников
+                        есть такая открытая площадка, чтобы получить совет от
+                        опытных менторов и выбрать направление для развития
+                      </p>
+                      <h4 class="font-text-md">Наталья Бессонова,</h4>
+                      <p class="font-text">
+                        Индивидуальный предприниматель, МИРЭА РТУ -
+                        преподаватель
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="mainpage__reviews-block__review-div__carousel-item"
+                  >
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
+                    >
+                      <img
+                        height="200px"
+                        width="200px"
+                        src="../../src/static/images/mainpage/mentor3.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
+                    >
+                      <p class="font-text">
+                        Когда впервые задумываешься о том, какой карьерный путь
+                        выбрать после окончания учебы, сталкиваешься с огромным
+                        количеством вариантов для самообразования и
+                        трудоустройства, и в этом море информации бывает легко
+                        пропустить что-то стоящее и подходящее именно тебе. На
+                        мой взгляд, это здорово, что у сегодняшних выпускников
+                        есть такая открытая площадка, чтобы получить совет от
+                        опытных менторов и выбрать направление для развития
+                      </p>
+                      <h4 class="font-text-md">Наталья Бессонова,</h4>
+                      <p class="font-text">
+                        Индивидуальный предприниматель, МИРЭА РТУ -
+                        преподаватель
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mainpage__reviews-block__review-div__carousel-item"
+                  >
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
+                    >
+                      <img
+                        height="200px"
+                        width="200px"
+                        src="../../src/static/images/mainpage/mentor3.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
+                    >
+                      <p class="font-text">
+                        Когда впервые задумываешься о том, какой карьерный путь
+                        выбрать после окончания учебы, сталкиваешься с огромным
+                        количеством вариантов для самообразования и
+                        трудоустройства, и в этом море информации бывает легко
+                        пропустить что-то стоящее и подходящее именно тебе. На
+                        мой взгляд, это здорово, что у сегодняшних выпускников
+                        есть такая открытая площадка, чтобы получить совет от
+                        опытных менторов и выбрать направление для развития
+                      </p>
+                      <h4 class="font-text-md">Наталья Бессонова,</h4>
+                      <p class="font-text">
+                        Индивидуальный предприниматель, МИРЭА РТУ -
+                        преподаватель
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mainpage__reviews-block__review-div__carousel-item"
+                  >
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
+                    >
+                      <img
+                        height="200px"
+                        width="200px"
+                        src="../../src/static/images/mainpage/mentor1.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
+                    >
+                      <p class="font-text">
+                        Когда впервые задумываешься о том, какой карьерный путь
+                        выбрать после окончания учебы, сталкиваешься с огромным
+                        количеством вариантов для самообразования и
+                        трудоустройства, и в этом море информации бывает легко
+                        пропустить что-то стоящее и подходящее именно тебе. На
+                        мой взгляд, это здорово, что у сегодняшних выпускников
+                        есть такая открытая площадка, чтобы получить совет от
+                        опытных менторов и выбрать направление для развития
+                      </p>
+                      <h4 class="font-text-md">Наталья Бессонова,</h4>
+                      <p class="font-text">
+                        Индивидуальный предприниматель, МИРЭА РТУ -
+                        преподаватель
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="mainpage__reviews-block__review-div__carousel-item"
+                    id="firstClone"
+                  >
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
+                    >
+                      <img
+                        height="200px"
+                        width="200px"
+                        src="../../src/static/images/mainpage/mentor3.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
+                    >
+                      <p class="font-text">
+                        Когда впервые задумываешься о том, какой карьерный путь
+                        выбрать после окончания учебы, сталкиваешься с огромным
+                        количеством вариантов для самообразования и
+                        трудоустройства, и в этом море информации бывает легко
+                        пропустить что-то стоящее и подходящее именно тебе. На
+                        мой взгляд, это здорово, что у сегодняшних выпускников
+                        есть такая открытая площадка, чтобы получить совет от
+                        опытных менторов и выбрать направление для развития
+                      </p>
+                      <h4 class="font-text-md">Наталья Бессонова,</h4>
+                      <p class="font-text">
+                        Индивидуальный предприниматель, МИРЭА РТУ -
+                        преподаватель
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mainpage__reviews-block__quote-div">
+                <div class="mainpage__reviews-block__quote-block1">
+                  <p class="font-text">
+                    Если вы владеете знанием, дайте другим зажечь от него свои
+                    светильники. <span>-Томас Фуллер</span>
+                  </p>
+                  <div class="btn btn-primary">
+                    <a href="#">Стать ментором</a>
+                  </div>
+                </div>
+                <div class="mainpage__reviews-block__quote-block2">
+                  <p class="font-text">
+                    Человек устроен так, что, когда что-то зажигает его душу,
+                    всё становится возможным.
+                    <span>-Жан де Лафонтен</span>
+                  </p>
+                  <div class="btn btn-primary">
+                    <a href="#">Найти ментора</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+>>>>>>> f4ffc78c1e6505be1db7daf13bab631e5acf1814
+    </main>
     <footer>
       <section class="footer">
         <div class="container">
@@ -67,7 +625,9 @@
               <a href="#" class="font-link">Часто задаваемые вопросы</a>
             </li>
             <li class="footer-nav-item col-lg-3 col-md-6 col-sm-12">
-              <a href="#" class="font-link">Пользовательское соглашение</a>
+              <a href="./agreement.html" class="font-link"
+                >Пользовательское соглашение</a
+              >
             </li>
             <li
               class="footer-nav-item col-lg-3 col-md-6 col-sm-12 footer-nav__contacts"
@@ -98,5 +658,23 @@
         </div>
       </section>
     </footer>
+<<<<<<< HEAD
+    <script src="../scripts/header.js"></script>
+=======
+    <script src="../scripts/mainpage.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+>>>>>>> f4ffc78c1e6505be1db7daf13bab631e5acf1814
   </body>
 </html>
