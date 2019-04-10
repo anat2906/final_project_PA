@@ -10,7 +10,7 @@
         align-items: center;
         margin-top: 1em;
         .mentee-account__content__feed__publication__img {
-          background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/images/blog-img.jpg");
+          background-image: url("../../src/static/images/blog-img.jpg");
           background-repeat: no-repeat;
           background-position: center;
           background-size: 100%;
@@ -64,7 +64,7 @@
           }
         }
         #sidebar-icon-feed {
-          background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/icons8-scroll.svg");
+          background-image: url("../../src/static/icons/icons8-scroll.svg");
           width: 1.5em;
           height: 1.5em;
           margin-right: 0.5em;
@@ -73,7 +73,7 @@
           background-size: contain;
         }
         #sidebar-icon-settings {
-          background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/icons8-settings.svg");
+          background-image: url("../../src/static/icons/icons8-settings.svg");
           width: 1.5em;
           height: 1.5em;
           margin-right: 0.5em;
@@ -82,7 +82,7 @@
           background-size: contain;
         }
         #sidebar-icon-follows {
-          background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/icons8-check-all.svg");
+          background-image: url("../../src/static/icons/icons8-check-all.svg");
           width: 1.5em;
           height: 1.5em;
           margin-right: 0.5em;

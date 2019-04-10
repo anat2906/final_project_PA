@@ -12,7 +12,7 @@
 
     this.btns = doc.querySelectorAll(".mainpage__reviews-block__btn");
     this.size = this.box.clientWidth;
-
+    console.log(this.size)
     this.position();
     this.carousel();
   };
@@ -38,7 +38,7 @@
     box.slidesBox.style.transition = "transform .3s ease-in-out";
     var size = box.size;
     index <= 0 ? false : index--;
-    box.slidesBox.style.transform = "translateX(" + -index * size + "px)";
+    box.slidesBox.style.transform = "translateX(" + -index * size +20 + "px)";
     box.jump();
   };
 
@@ -47,7 +47,7 @@
     var max = box.slides.length;
     var size = box.size;
     index >= max - 1 ? false : index++;
-    box.slidesBox.style.transform = "translateX(" + -index * size + "px)";
+    box.slidesBox.style.transform = "translateX(" + -index * size + 20 + "px)";
     box.jump();
   };
 

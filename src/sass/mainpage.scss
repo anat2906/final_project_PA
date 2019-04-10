@@ -2,12 +2,13 @@
   height: auto;
   .mainpage__first-block__background {
     height: auto;
-    background-image: url("../../src/static/images/mainpage/bg-img.jpg");
+    background-image: url("../../src/static/images/aboutpage/about1.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;
   }
   .mainpage__first-block {
+    padding-top: 2em;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -15,16 +16,19 @@
       border-radius: 1px;
       height: auto;
       padding: 2.5em 2em;
-      background: $primary;
-      opacity: 0.4;
+      background: $text-grey;
+      opacity: 0.5;
       box-sizing: border-box;
       .mainpage__first-block__title {
+        opacity: 1;
         font-family: "Gilroy-Bold";
         font-size: 40px;
         font-weight: normal;
         color: $light;
+        text-align: center;
       }
       .mainpage__first-block__subtitle {
+        opacity: 1;
         padding-top: 1.5em;
         color: $light;
         text-align: center;
@@ -178,7 +182,6 @@
     background-image: url("../../src/static/images/aboutpage/topography.png");
     background-position-x: center;
     background-position-y: top;
-    
     .container {
       .mainpage__steps-block__title {
         span {
@@ -219,6 +222,9 @@
         .mainpage__steps-block__next-arrow {
           width: 10%;
           margin-top: 4em;
+          &.arrow__no-desctop {
+            display: none;
+          }
           &:hover {
             filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.18));
             text-decoration: none;
@@ -248,7 +254,6 @@
         display: flex;
         justify-content: space-between;
         .mainpage__reviews-block__carousel {
-          width: 750px;
           overflow: hidden;
           height: auto;
           display: block;
@@ -260,33 +265,32 @@
             justify-content: flex-start;
             height: auto;
           }
-          .mainpage__reviews-block__review-div__carousel-slides{
+          .mainpage__reviews-block__review-div__carousel-slides {
             width: 10000px;
             display: flex;
             flex-direction: row;
             .mainpage__reviews-block__review-div__carousel-item {
               width: 730px;
-            display: flex;
-            justify-content: flex-start;
-            flex-direction: row;
-            .mainpage__reviews-block__review-div__carousel-item__avatar {
-              border-radius: 3px;
-              height: 200px;
-            }
-            .mainpage__reviews-block__review-div__carousel-item__text {
-              padding-left: 20px;
-              padding-right: 20px;
-              p {
-                margin-bottom: 10px;
+              display: flex;
+              justify-content: flex-start;
+              flex-direction: row;
+              .mainpage__reviews-block__review-div__carousel-item__avatar {
+                border-radius: 3px;
+                height: 200px;
               }
-              h4 {
-                margin-bottom: 10px;
-                font-weight: bold;
+              .mainpage__reviews-block__review-div__carousel-item__text {
+                padding-left: 20px;
+                padding-right: 20px;
+                p {
+                  margin-bottom: 10px;
+                }
+                h4 {
+                  margin-bottom: 10px;
+                  font-weight: bold;
+                }
               }
             }
           }
-          }
-          
         }
       }
       .mainpage__reviews-block__quote-div {
@@ -299,7 +303,7 @@
           flex-direction: column;
           align-items: center;
           text-align: center;
-          span{
+          span {
             margin-top: 5px;
             display: block;
             font-style: italic;
@@ -313,7 +317,7 @@
           align-items: center;
           padding-top: 15px;
           text-align: center;
-          span{
+          span {
             margin-top: 5px;
             display: block;
             font-style: italic;
@@ -325,7 +329,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
   .mainpage__first-block__title-div {
     height: 700px;
   }
@@ -336,8 +340,37 @@
     height: 500px;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
   .mainpage__first-block__background {
     height: 500px;
+  }
+}
+
+@media (max-width: 985.98px) and (min-width: 767px) {
+  .mainpage
+    .mainpage__steps-block__background
+    .container
+    .mainpage__steps-block__steps-wrapper
+    .mainpage__steps-block__next-arrow.arrow__no-desctop {
+    display: block;
+  }
+}
+@media (max-width: 985.98px){
+  .mainpage
+  .mainpage__steps-block__background
+  .container
+  .mainpage__steps-block__steps-wrapper
+  .mainpage__steps-block__next-arrow.arrow__tablet{
+    display: none;
+  }
+}
+
+@media(max-width: 767px){
+  .mainpage
+  .mainpage__steps-block__background
+  .container
+  .mainpage__steps-block__steps-wrapper
+  .mainpage__steps-block__next-arrow{
+    display: none;
   }
 }
