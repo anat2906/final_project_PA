@@ -18,17 +18,14 @@
   transform: translateX(-50%) translateY(90%);
  
 }
-.small-container {
-  display: flex;
-  flex-direction: row;
-}
+
 .profile-right {
     margin-top: 100px;
     
 }
 .profile-left {
     margin-top: 150px;
-    margin-left: 50px;
+    padding-left: 3em;
    
 }
 .profile-icons {
@@ -60,10 +57,12 @@
   text-align: justify;
 }
 .profile-ad {
-  margin-left: 10px 5px 10px;
-
-  padding: 10px;
+  margin: 10px 5px 10px;
+  padding: 2em;
   border: 1px solid black;
+  .profile-ad-text {
+    margin-bottom: 1.5em;
+  }
 }
 .button-sm {
   margin: auto;
