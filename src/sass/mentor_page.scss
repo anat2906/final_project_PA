@@ -1,0 +1,74 @@
+.profile-background {
+  text-align: center;
+  width: 100%;
+  height: 220px;
+  background-color: $text-grey;
+  position: relative;
+}
+.profile-avatar {
+  background-image: url("/home/mira/Documents/PA_projects/final_project_PA/src/static/images/profile.png");
+  background-size: 130%;
+  background-repeat:no-repeat;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(90%);
+ 
+}
+
+.profile-right {
+    margin-top: 100px;
+    
+}
+.profile-left {
+    margin-top: 150px;
+    padding-left: 3em;
+   
+}
+.profile-icons {
+  width: 20px;
+  height: 1.5em;
+  margin-right: 0.5em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &#profile-icon-whatsapp {
+    background-image: url("/home/mira/Documents/PA_projects/final_project_PA/src/static/icons/whatsapp.svg");
+  }
+  &#profile-icon-fb {
+    background-image: url("/home/mira/Documents/PA_projects/final_project_PA/src/static/icons/facebook.svg");
+  }
+  &#profile-icon-instagram {
+    background-image: url("/home/mira/Documents/PA_projects/final_project_PA/src/static/icons/instagram.svg");
+  }
+  &#profile-icon-telegram {
+    background-image: url("/home/mira/Documents/PA_projects/final_project_PA/src/static/icons/telegram-app.svg");
+  }
+}
+.profile-bio-text {
+  margin-top: 20px;
+  text-align: justify;
+}
+.profile-expectation-text {
+  margin-top: 20px;
+  text-align: justify;
+}
+.profile-ad {
+  margin: 10px 5px 10px;
+  padding: 2em;
+  border: 1px solid black;
+  .profile-ad-text {
+    margin-bottom: 1.5em;
+  }
+}
+.button-sm {
+  margin: auto;
+  display: block;
+}
+.line-color {
+  color: $primary;
+  height: 2px;
+}
