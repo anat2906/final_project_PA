@@ -1,4 +1,5 @@
 .mentors-wrapper {
+  z-index: 20;
   padding-top: 1.5em;
   .mentors-search {
     margin: 0 auto;
@@ -12,6 +13,7 @@
       color: $text-grey;
       border: none;
       width: calc(100% - 2em);
+      background: none;
       &:focus {
         outline: none;
       }
@@ -37,7 +39,7 @@
         width: 80%;
         height: 300px;
         margin: 0 auto;
-        background-image: url("/home/meerim/Templates/diploma_project/group_project/src/static/images/mentor.jpg");
+        background-image: url("../../src/static/images/mentor.jpg");
         background-size: 100%;
         background-position: center;
         background-position-y: 15%;
