@@ -1,0 +1,96 @@
+.account-sidebar {
+    padding-top: 1em;
+    .account-sidebar__nav {
+      list-style-type: none;
+      .account-sidebar__nav__nav-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+        &#sidebar-feed {
+          &:hover {
+            color: $primary;
+            #sidebar-icon-feed {
+              background-image: url("../../src/static/icons/icons8-scroll\ -primary.svg");
+            }
+          }
+        }
+        &#sidebar-settings {
+          &:hover {
+            color: $primary;
+            #sidebar-icon-settings {
+              background-image: url("../../src/static/icons/icons8-settings-primary.svg");
+            }
+          }
+        }
+        &#sidebar-follows {
+          &:hover {
+            color: $primary;
+            #sidebar-icon-follows {
+              background-image: url("../../src/static/icons/icons8-check-all-primary.svg");
+            }
+          }
+        }
+        #sidebar-icon-feed {
+          background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/icons8-scroll.svg");
+          width: 1.5em;
+          height: 1.5em;
+          margin-right: 0.5em;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        #sidebar-icon-settings {
+          background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/icons8-settings.svg");
+          width: 1.5em;
+          height: 1.5em;
+          margin-right: 0.5em;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        #sidebar-icon-follows {
+          background-image: url("/home/anat2906/projects/JS/final_project_PA/src/static/icons/icons8-check-all.svg");
+          width: 1.5em;
+          height: 1.5em;
+          margin-right: 0.5em;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+}
+@media (max-width: 991.98px) {
+    .account-sidebar {
+      padding-top: 0;
+      margin-bottom: 1.5em;
+      .account-sidebar__nav {
+        display: flex;
+        justify-content: space-between;
+        .account-sidebar__nav__nav-item {
+          margin-right: 1.5em;
+          :last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .account-sidebar {
+        .account-sidebar__nav {
+          .account-sidebar__nav__nav-item {
+            #sidebar-icon-feed {
+              display: none;
+            }
+            #sidebar-icon-settings {
+              display: none;
+            }
+            #sidebar-icon-follows {
+              display: none;
+            }
+          }
+        }
+      }
+}

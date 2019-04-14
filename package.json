@@ -17,17 +17,12 @@
   },
   "homepage": "https://github.com/anat2906/final_project_PA#readme",
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "gulp": "^4.0.0",
-<<<<<<< HEAD
-    "gulp-sass": "^4.0.2"
+    "bootstrap": "^4.3.1"
   },
   "devDependencies": {
-    "gulp-util": "^3.0.8"
-=======
+    "gulp": "^4.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-util": "^3.0.8",
     "jquery": "^3.3.1"
->>>>>>> a36dcd956ea96746e22b59296d3473e495c886be
   }
 }
