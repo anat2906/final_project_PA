@@ -6,7 +6,7 @@
   position: relative;
 }
 .profile-avatar {
-  background-image: url("/home/mira/Documents/PA_projects/final_project_PA/src/static/images/profile.png");
+  background-image: url("../../src/static/images/profile.png");
   background-size: 130%;
   background-repeat:no-repeat;
   width: 160px;
@@ -36,16 +36,16 @@
   background-repeat: no-repeat;
   background-size: contain;
   &#profile-icon-whatsapp {
-    background-image: url("/home/mira/Documents/PA_projects/final_project_PA/src/static/icons/whatsapp.svg");
+    background-image: url("../../src/static/icons/whatsapp.svg");
   }
   &#profile-icon-fb {
-    background-image: url("/home/mira/Documents/PA_projects/final_project_PA/src/static/icons/facebook.svg");
+    background-image: url("../../src/static/icons/facebook.svg");
   }
   &#profile-icon-instagram {
-    background-image: url("/home/mira/Documents/PA_projects/final_project_PA/src/static/icons/instagram.svg");
+    background-image: url("../../src/static/icons/instagram.svg");
   }
   &#profile-icon-telegram {
-    background-image: url("/home/mira/Documents/PA_projects/final_project_PA/src/static/icons/telegram-app.svg");
+    background-image: url("../../src/static/icons/telegram-app.svg");
   }
 }
 .profile-bio-text {
