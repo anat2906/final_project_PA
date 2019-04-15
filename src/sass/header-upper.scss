@@ -1,7 +1,10 @@
 .header {
+  top: 0;
+  right: 0;
+  position: sticky;
   background: white;
+  z-index: 10;
   .header-upper {
-    position: sticky;
     padding: 1.5em 0;
     display: flex;
     justify-content: space-between;
@@ -51,6 +54,117 @@
       list-style-type: none;
       .header__header-upper__nav__nav-item {
         margin: 1.5em 0;
+      }
+    }
+  }
+  .modal-login{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $text;
+    opacity: .9;
+    .modal-login__content{
+      display: flex;
+      flex-direction: column;
+      background-color: $light;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid $text;
+      width: 60%;
+      .modal-login__content__first-block{
+        display: flex;
+        justify-content: space-between;
+        .modal-login__content__title{
+          margin: 0 auto;
+        }
+        .modal-login__close{
+          font-size: 28px;
+          font-weight: bold;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+      .modal-login__content__second-block{
+        text-align: center;
+        form{
+          text-align: center;
+          padding: 1.5em 0.5em;
+          input{
+            border: 1px solid lighten($text-grey, 40%);
+            padding: 14px 20px;
+            margin: 0.5em 0;
+            width: calc(50% - 15px);
+            font-family: "Gilroy-Regular";
+            font-size: 16px;
+            font-weight: normal;
+            color: $text;
+          }
+          button{
+            padding: 0.5em 1.5em;
+            margin-top: 1.5em;
+          }
+        }
+        
+      }
+    }
+  }
+  .modal-join{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $text;
+    opacity: .9;
+    .modal-join__content{
+      background-color: $light;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid $text;
+      width: 60%;
+      .modal-join__content__first-block{
+        display: flex;
+        justify-content: space-between;
+        .modal-join__content__title{
+          margin: 0 auto;
+        }
+        .modal-join__close{
+          font-size: 28px;
+          font-weight: bold;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+      .modal-join__content__second-block{
+        text-align: center;
+        form{
+          text-align: center;
+          padding: 1.5em 0.5em;
+          input{
+            border: 1px solid lighten($text-grey, 40%);
+            padding: 14px 20px;
+            margin: 0.5em 0;
+            width: calc(50% - 15px);
+            font-family: "Gilroy-Regular";
+            font-size: 16px;
+            font-weight: normal;
+            color: $text;
+          }
+          button{
+            padding: 0.5em 1.5em;
+            margin-top: 1.5em;
+          }
+        }
       }
     }
   }

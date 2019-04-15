@@ -1,0 +1,45 @@
+.background-blobs {
+  position: relative;
+  overflow: hidden;
+  .bg-svg {
+    z-index: -500;
+    position: absolute;
+    opacity: 0.6;
+    &#blobShape1 {
+      width: 600px;
+      height: 600px;
+      top: -8%;
+      left: -10%;
+    }
+    &#blobShape2 {
+      width: 550px;
+      height: 550px;
+      bottom: 15%;
+      right: -15%;
+    }
+    &#blobShape3 {
+      width: 500px;
+      height: 500px;
+      top: -2%;
+      left: -5%;
+    }
+    &#blobShape4 {
+      width: 500px;
+      height: 500px;
+      top: 30%;
+      right: -5%;
+    }
+    &#blobShape5 {
+      width: 500px;
+      height: 500px;
+      top: 30%;
+      right: -10%;
+    }
+    &#blobShape7 {
+      width: 500px;
+      height: 500px;
+      top: 35%;
+      right: -10%;
+    }
+  }
+}
