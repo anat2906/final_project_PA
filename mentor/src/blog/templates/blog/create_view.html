@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}
+    Create
+{% endblock title %}
+{% block content %}
+    <div class="container d-block mx-auto mt-5">
+        <form method="post" enctype="multipart/form-data" .>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <table class="table">
+                {{ formset.management_form }}
+                {{ formset.non_form_errors }}
+                {% for form in formset.forms %}
+                {% if forloop.first %}
+                <thead>
+                    <tr>
+                        {% for field in form.visible_fields %}
+                        <th>{{ field.label|capfirst }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                {% endif %}
+                <tr class="formset_row">
+                    {% for field in form.visible_fields %}
+                    <td>
+                        {% if forloop.first %}
+                        {% for hidden in form.hidden_fields %}
+                        {{ hidden }}
+                        {% endfor %}
+                        {% endif %}
+
+                        {{ field.errors.as_ul }}
+                        {{ field }}
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+            <button type="submit" class="btn btn-success d-block mx-auto">Create a post</button>
+        </form>
+    </div>
+{% endblock content %}

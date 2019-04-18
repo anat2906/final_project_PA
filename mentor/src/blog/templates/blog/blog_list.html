@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <form method="GET" class="mt-5 mb-4" action="{% url 'blog:list' %}">
+    <input type="text" name="q" placeholder="Search" value="{{ request.GET.q }}">
+    <input type="submit" value="Search">
+  </form>
+  {% for object in object_list %}
+  <article class="media content-section">
+    <div class="media-body mt-3">
+      <div class="article-metadata">
+        <small class="text-muted">{{ object.timestamp|timesince }}</small>
+      </div>
+      <h2><a class="article-title" href="{% url 'blog:detail' object.id %}">{{ object.title }}</a></h2>
+      <p class="article-content">{{ object.content }}</p>
+
+        {% if object.blogimage_set.first %}
+            <img src="{{ object.blogimage_set.first.image.url }}"/>
+        {% else %}
+          <p>No photo</p>
+        {% endif %}
+{#      <img class="img-thumbnail" src="{{ object.blogimage_set.first.image.url }}"/>#}
+
+    </div>
+  </article>
+  {% empty %}
+  {% if request.GET.q %}
+  <p>No posts found</p>
+  {% else %}
+  <p>No posts.</p>
+  {% endif %}
+  {% endfor %}
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="row mt-2">
+    <div class="col-sm-3 col-xs-12" >
+    <h3>{{ object.username }}</h3>
+        <hr>
+        <p>Followers: {{ object.followed_by.all.count }}</p>
+        <p>
+            {% if not object.username == request.user.username %}
+            <a class="btn btn-link" href="{{ object.profile.get_follow_url }}">
+                {% if following %}Unfollow{% else %}Follow{% endif %}
+            </a>
+            {% endif %}
+        </p>
+        <hr>
+        <h3>Following <small style="color: grey">{{ object.profile.get_following.count }}</small></h3>
+        {% for user in object.profile.get_following %}
+            <a href="/{{ user.username }}">{{ user.username }}</a><br>
+        {% empty %}
+            <h5>Not following any users</h5>
+        {% endfor %}
+        <hr>
+        <h3>Followed By</h3>
+        {% for profile in object.followed_by.all %}
+            <a href="/{{ profile.user.username }}">{{ profile.user.username }}</a><br>
+        {% empty %}
+            <h5>Not followed by any users</h5>
+        {% endfor %}
+        <hr>
+        <h3>Recommended</h3>
+        {% for profile in recommended %}
+            <a href="/{{ profile.user.username }}">{{ profile.user.username }}</a><br>
+        {% empty %}
+            <h5>Not followed by any users</h5>
+        {% endfor %}
+    </div>
+    <div class="col-sm-9 col-xs-12">
+        <h3>Blog</h3>
+        {% for blog in object.blog_set.all %}
+            <article class="media content-section">
+{#              <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">#}
+              <div class="media-body">
+                <div class="article-metadata">
+                  <small class="text-muted">{{ blog.timestamp|timesince }}</small>
+                </div>
+                <h2><a class="article-title" href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a></h2>
+                <p class="article-content">{{ blog.content }}</p>
+              </div>
+            </article>
+            <hr>
+        {% empty %}
+            <h5>No blog yet.</h5>
+        {% endfor %}
+    </div>
+    </div>
+{% endblock content %}
