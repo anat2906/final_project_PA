@@ -1,0 +1,48 @@
+{% load crispy_forms_tags %}
+{#<form {% if form_id %}id="{{ form_id }}"{% endif %}class="form mt-2" method="POST" action="{% if action_url %}{{ action_url }}{% endif %}">#}
+{#    {% csrf_token %}#}
+{#    {{ form|crispy }}#}
+{#    <input class="btn btn-primary" type="submit" value="{{ btn_title }}">#}
+{#</form>#}
+<div class="container">
+    <div class="content-section">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Blog Post</legend>
+                {{ form|crispy }}
+                {{ formset.management_form }}
+                {{ formset.non_form_errors }}
+                {% for form in formset.forms %}
+                {% if forloop.first %}
+                <thead>
+                    <tr>
+                        {% for field in form.visible_fields %}
+                        <th>{{ field.label|capfirst }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                {% endif %}
+                <tr class="formset_row">
+                    {% for field in form.visible_fields %}
+                    <td>
+                        {% if forloop.first %}
+                        {% for hidden in form.hidden_fields %}
+                        {{ hidden }}
+                        {% endfor %}
+                        {% endif %}
+
+                        {{ field.errors.as_ul }}
+                        {{ field }}
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </fieldset>
+            <div class="form-group">
+{#                <button class="btn btn-outline-info" type="submit">Post</button>#}
+                <input class="btn btn-primary" type="submit" value="{{ btn_title }}">
+            </div>
+        </form>
+    </div>
+</div>

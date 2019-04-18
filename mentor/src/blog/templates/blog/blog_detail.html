@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+      <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <small class="text-muted">{{ object.timestamp|timesince }}</small>
+          </div>
+          <h2 class="article-title">{{ object.title }}</h2>
+            <img class="img-thumbnail" src="{{ object.blogimage_set.first.image.url }}"/>
+          <p class="article-content">{{ object.content }}</p>
+
+
+          {% if object.user == request.user %}
+            <div class="mt-5">
+              <a class="btn btn-secondary btn-sm mt-1 mb-1 mr-4" href="{% url 'blog:edit' object.id %}">Update</a>
+              <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'blog:delete' object.id %}">Delete</a>
+            </div>
+        {% endif %}
+        </div>
+      </article>
+    </div>
+
+{% endblock content %}
