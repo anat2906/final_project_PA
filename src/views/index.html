@@ -6,16 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../../dist/css/style.css" />
     <title>Главная</title>
+    <link rel="stylesheet" type="text/css" href="../scripts/slick/slick.css" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
-    />
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+      href="../scripts/slick/slick-theme.css"
     />
   </head>
   <body>
@@ -24,7 +19,7 @@
         <div class="header-upper">
           <div class="header-upper-wrapper">
             <div class="header__header-upper__logo">
-              <h2 class="font-subtitle">
+              <h2 class="font-subtitle active">
                 <a href="./index.html">Mentor.kg</a>
               </h2>
             </div>
@@ -48,10 +43,16 @@
                 RU
               </li>
             </ul>
-            <div id="btn-login"class="header__header-upper__navbar__btn btn btn-white">
+            <div
+              id="btn-login"
+              class="header__header-upper__navbar__btn btn btn-white"
+            >
               <a href="#">Войти</a>
             </div>
-            <div id="btn-join" class="header__header-upper__navbar__btn btn btn-primary">
+            <div
+              id="btn-join"
+              class="header__header-upper__navbar__btn btn btn-primary"
+            >
               <a href="#">Регистрация</a>
             </div>
             <a
@@ -89,15 +90,20 @@
         <div class="modal-login__content container">
           <div class="modal-login__content__first-block">
             <h4 class="modal-login__content__title font-title-sm">
-                Вход
+              Вход
             </h4>
             <span class="modal-login__close">&times;</span>
           </div>
           <div class="modal-login__content__second-block">
             <form action="">
-              <input id="emailReg" placeholder="Почта" type="email" required>
-              <input id="firstNameReg" placeholder="Пароль" type="password" required>
-              <br>
+              <input id="emailReg" placeholder="Почта" type="email" required />
+              <input
+                id="firstNameReg"
+                placeholder="Пароль"
+                type="password"
+                required
+              />
+              <br />
               <button class="btn btn-primary" type="submit">Войти</button>
             </form>
             <a href="#" class="font-text">Забыли пароль?</a>
@@ -108,18 +114,30 @@
         <div class="modal-join__content container">
           <div class="modal-join__content__first-block">
             <h4 class="modal-join__content__title font-title-sm">
-                Регистрация
+              Регистрация
             </h4>
             <span class="modal-join__close">&times;</span>
           </div>
           <div class="modal-join__content__second-block">
             <form action="">
-              <input type="text" name="" id="" placeholder="Имя" required>
-              <input id="emailReg" placeholder="Почта" type="email" required>
-              <input id="firstNameReg" placeholder="Пароль" type="password" required>
-              <input id="firstNameReg" placeholder="Подтвердите пароль" type="password" required>
-              <br>
-              <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+              <input type="text" name="" id="" placeholder="Имя" required />
+              <input id="emailReg" placeholder="Почта" type="email" required />
+              <input
+                id="firstNameReg"
+                placeholder="Пароль"
+                type="password"
+                required
+              />
+              <input
+                id="firstNameReg"
+                placeholder="Подтвердите пароль"
+                type="password"
+                required
+              />
+              <br />
+              <button class="btn btn-primary" type="submit">
+                Зарегистрироваться
+              </button>
             </form>
             <a href="#" class="font-text">Уже есть аккаунт?</a>
           </div>
@@ -128,21 +146,10 @@
     </header>
     <main class="mainpage">
       <div class="background-blobs">
-        <svg class="bg-svg" id="blobShape1" viewBox="0 0 500 500">
-          <clipPath></clipPath>
-          <path
-            fill="url(#g1)"
-            d="M 402.7,215.5 C 433.9,280.4 488.1,367.2 447.7,426.8 410.1,482.2 316.7,460.2 249.7,460.6 182.8,461.1 88.08,485.5 51.26,429.5 10.29,367.3 73.19,279.4 106.9,213 141.8,144 176.6,33.65 253.9,33.7 332.2,33.75 368.8,144.9 402.7,215.5 Z"
-          />
-          <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0" stop-color="#8459b5" />
-            <stop offset="1" stop-color="#94d6ba" />
-          </linearGradient>
-        </svg>
         <div class="mainpage__first-block__background">
           <section>
             <div
-              class="container mainpage__first-block col-lg-6 col-md-8 col-sm-12"
+              class="container mainpage__first-block col-lg-6 col-md-8 col-sm-8"
             >
               <div class="mainpage__first-block__title-div">
                 <h3 class="mainpage__first-block__title">
@@ -171,7 +178,6 @@
           <div
             class="container mainpage__second-block col-lg-8 col-md-8 col-sm-12"
           >
-          
             <div class="mainpage__second-block__title font-title-sm">
               <p>Наставничество в сфере</p>
               <p>
@@ -190,11 +196,11 @@
             </div>
             <div class="mainpage__second-block__text">
               <h4 class="font-text-md">
-                По своей сути рыбатекст является альтернативой традиционному lorem
-                ipsum, который вызывает у некторых людей недоумение при попытках
-                прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на
-                русском языке наполнит любой макет непонятным смыслом и придаст
-                неповторимый колорит советских времен.
+                По своей сути рыбатекст является альтернативой традиционному
+                lorem ipsum, который вызывает у некторых людей недоумение при
+                попытках прочитать рыбу текст. В отличии от lorem ipsum, текст
+                рыба на русском языке наполнит любой макет непонятным смыслом и
+                придаст неповторимый колорит советских времен.
               </h4>
             </div>
             <div class="mainpage__second-block__btn">
@@ -310,8 +316,8 @@
                 <p class="font-text-md mainpage__steps-block__step-card__text">
                   <span class="font-subtitle-lg">Получайте поддержку</span>
 
-                  со стороны куратора проекта на протяжении всего сотрудничества с
-                  ментором
+                  со стороны куратора проекта на протяжении всего сотрудничества
+                  с ментором
                 </p>
               </div>
             </div>
@@ -391,10 +397,8 @@
           </div>
         </section>
         <div class="mainpage__third-block__background">
-          <section>
-            <div
-              class="container mainpage__third-block col-lg-8 col-md-8 col-sm-12"
-            >
+          <section class="container">
+            <div class="container mainpage__third-block col-12">
               <div class="mainpage__third-block__title">
                 <h2 class="font-title-md">
                   Как стать ментором на
@@ -403,39 +407,16 @@
               </div>
               <div class="mainpage__third-block__cards-div">
                 <div class="mainpage__third-block__cards-carousel">
-                  <div
-                    class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
-                  >
-                    <div class="mainpage__third-block__card-img"></div>
+                  <div class="mainpage__third-block__card">
+                    <div>
+                      1
+                    </div>
                   </div>
-                  <div
-                    class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
-                  >
-                    <div class="mainpage__third-block__card-img"></div>
-                  </div>
-                  <div
-                    class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
-                  >
-                    <div class="mainpage__third-block__card-img"></div>
-                  </div>
-                  <div
-                    class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
-                    style="display: none"
-                  >
-                    <div class="mainpage__third-block__card-img"></div>
-                  </div>
-                  <div
-                    class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
-                    style="display: none"
-                  >
-                    <div class="mainpage__third-block__card-img"></div>
-                  </div>
-                  <div
-                    class="mainpage__third-block__card col-lg-4 col-md-6 col-sm-12"
-                    style="display: none"
-                  >
-                    <div class="mainpage__third-block__card-img"></div>
-                  </div>
+                  <div class="mainpage__third-block__card"></div>
+                  <div class="mainpage__third-block__card"></div>
+                  <div class="mainpage__third-block__card"></div>
+                  <div class="mainpage__third-block__card"></div>
+                  <div class="mainpage__third-block__card"></div>
                 </div>
               </div>
             </div>
@@ -448,7 +429,7 @@
               <span>о менторстве</span>
             </h2>
             <div class="mainpage__reviews-block__wrapper">
-              <div class="mainpage__reviews-block__review-div col-md-8">
+              <div class="mainpage__reviews-block__review-div col-lg-8 col-md-12 col-sm-12">
                 <div class="mainpage__reviews-block__carousel">
                   <!-- Навигация для карусели -->
                   <div class="mainpage__reviews-block__btns-div">
@@ -459,7 +440,7 @@
                       id="prevbtn"
                     >
                       <img
-                        src="../static/icons/mainpage/carousel-left.png"
+                        src="../static/icons/carousel-left.png"
                         alt=""
                       />
                     </div>
@@ -470,7 +451,7 @@
                       id="nextbtn"
                     >
                       <img
-                        src="../static/icons/mainpage/carousel-right.png"
+                        src="../static/icons/carousel-right.png"
                         alt=""
                       />
                     </div>
@@ -481,7 +462,6 @@
                   >
                     <div
                       class="mainpage__reviews-block__review-div__carousel-item"
-                      id="lastClone"
                     >
                       <div
                         class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
@@ -489,7 +469,7 @@
                         <img
                           height="200px"
                           width="200px"
-                          src="../../src/static/images/mainpage/mentor3.jpeg"
+                          src="../../src/static/images/mentee1.jpg"
                           alt=""
                         />
                       </div>
@@ -497,9 +477,9 @@
                         class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
                       >
                         <p class="font-text">
-                          Когда впервые задумываешься о том, какой карьерный путь
-                          выбрать после окончания учебы, сталкиваешься с огромным
-                          количеством вариантов для самообразования и
+                          Когда впервые задумываешься о том, какой карьерный
+                          путь выбрать после окончания учебы, сталкиваешься с
+                          огромным количеством вариантов для самообразования и
                           трудоустройства, и в этом море информации бывает легко
                           пропустить что-то стоящее и подходящее именно тебе. На
                           мой взгляд, это здорово, что у сегодняшних выпускников
@@ -522,7 +502,7 @@
                         <img
                           height="200px"
                           width="200px"
-                          src="../../src/static/images/mainpage/mentor3.jpeg"
+                          src="../../src/static/images/mentee2.jpg"
                           alt=""
                         />
                       </div>
@@ -530,50 +510,18 @@
                         class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
                       >
                         <p class="font-text">
-                          Когда впервые задумываешься о том, какой карьерный путь
-                          выбрать после окончания учебы, сталкиваешься с огромным
-                          количеством вариантов для самообразования и
-                          трудоустройства, и в этом море информации бывает легко
-                          пропустить что-то стоящее и подходящее именно тебе. На
-                          мой взгляд, это здорово, что у сегодняшних выпускников
-                          есть такая открытая площадка, чтобы получить совет от
-                          опытных менторов и выбрать направление для развития
+                          Разнообразный и богатый опыт постоянный количественный
+                          рост и сфера нашей активности представляет собой
+                          интересный эксперимент проверки существенных
+                          финансовых и административных условий. Таким образом
+                          сложившаяся структура организации требуют определения
+                          и уточнения системы обучения кадров, соответствует
+                          насущным потребностям. Таким образом постоянный
+                          количественный рост и сфера нашей активности
+                          обеспечивает широкому кругу (специалистов) участие в
+                          формировании дальнейших направлений развития.
                         </p>
-                        <h4 class="font-text-md">Наталья Бессонова,</h4>
-                        <p class="font-text">
-                          Индивидуальный предприниматель, МИРЭА РТУ -
-                          преподаватель
-                        </p>
-                      </div>
-                    </div>
-
-                    <div
-                      class="mainpage__reviews-block__review-div__carousel-item"
-                    >
-                      <div
-                        class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
-                      >
-                        <img
-                          height="200px"
-                          width="200px"
-                          src="../../src/static/images/mainpage/mentor3.jpeg"
-                          alt=""
-                        />
-                      </div>
-                      <div
-                        class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
-                      >
-                        <p class="font-text">
-                          Когда впервые задумываешься о том, какой карьерный путь
-                          выбрать после окончания учебы, сталкиваешься с огромным
-                          количеством вариантов для самообразования и
-                          трудоустройства, и в этом море информации бывает легко
-                          пропустить что-то стоящее и подходящее именно тебе. На
-                          мой взгляд, это здорово, что у сегодняшних выпускников
-                          есть такая открытая площадка, чтобы получить совет от
-                          опытных менторов и выбрать направление для развития
-                        </p>
-                        <h4 class="font-text-md">Наталья Бессонова,</h4>
+                        <h4 class="font-text-md">Мария Васильева,</h4>
                         <p class="font-text">
                           Индивидуальный предприниматель, МИРЭА РТУ -
                           преподаватель
@@ -590,7 +538,7 @@
                         <img
                           height="200px"
                           width="200px"
-                          src="../../src/static/images/mainpage/mentor1.jpg"
+                          src="../../src/static/images/mentee3.jpeg"
                           alt=""
                         />
                       </div>
@@ -598,16 +546,48 @@
                         class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
                       >
                         <p class="font-text">
-                          Когда впервые задумываешься о том, какой карьерный путь
-                          выбрать после окончания учебы, сталкиваешься с огромным
-                          количеством вариантов для самообразования и
+                          Когда впервые задумываешься о том, какой карьерный
+                          путь выбрать после окончания учебы, сталкиваешься с
+                          огромным количеством вариантов для самообразования и
                           трудоустройства, и в этом море информации бывает легко
                           пропустить что-то стоящее и подходящее именно тебе. На
                           мой взгляд, это здорово, что у сегодняшних выпускников
                           есть такая открытая площадка, чтобы получить совет от
                           опытных менторов и выбрать направление для развития
                         </p>
-                        <h4 class="font-text-md">Наталья Бессонова,</h4>
+                        <h4 class="font-text-md">Мадина Аешева,</h4>
+                        <p class="font-text">
+                          Индивидуальный предприниматель, МИРЭА РТУ -
+                          преподаватель
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="mainpage__reviews-block__review-div__carousel-item"
+                    >
+                      <div
+                        class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
+                      >
+                        <img
+                          height="200px"
+                          width="200px"
+                          src="../../src/static/images/mentee4.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
+                      >
+                        <p class="font-text">
+                          Товарищи! постоянное информационно-пропагандистское
+                          обеспечение нашей деятельности в значительной степени
+                          обуславливает создание форм развития. Повседневная
+                          практика показывает, что дальнейшее развитие различных
+                          форм деятельности играет важную роль в формировании
+                          направлений прогрессивного развития.
+                        </p>
+                        <h4 class="font-text-md">Дмитрий Ким,</h4>
                         <p class="font-text">
                           Индивидуальный предприниматель, МИРЭА РТУ -
                           преподаватель
@@ -616,7 +596,6 @@
                     </div>
                     <div
                       class="mainpage__reviews-block__review-div__carousel-item"
-                      id="firstClone"
                     >
                       <div
                         class="mainpage__reviews-block__review-div__carousel-item__avatar col-sm-4 col-md-4"
@@ -624,7 +603,7 @@
                         <img
                           height="200px"
                           width="200px"
-                          src="../../src/static/images/mainpage/mentor3.jpg"
+                          src="../../src/static/images/mentee3.jpeg"
                           alt=""
                         />
                       </div>
@@ -632,14 +611,12 @@
                         class="mainpage__reviews-block__review-div__carousel-item__text col-sm-8 col-md-8"
                       >
                         <p class="font-text">
-                          Когда впервые задумываешься о том, какой карьерный путь
-                          выбрать после окончания учебы, сталкиваешься с огромным
-                          количеством вариантов для самообразования и
-                          трудоустройства, и в этом море информации бывает легко
-                          пропустить что-то стоящее и подходящее именно тебе. На
-                          мой взгляд, это здорово, что у сегодняшних выпускников
-                          есть такая открытая площадка, чтобы получить совет от
-                          опытных менторов и выбрать направление для развития
+                          По своей сути рыбатекст является альтернативой
+                          традиционному lorem ipsum, который вызывает у некторых
+                          людей недоумение при попытках прочитать рыбу текст. В
+                          отличии от lorem ipsum, текст рыба на русском языке
+                          наполнит любой макет непонятным смыслом и придаст
+                          неповторимый колорит советских времен.
                         </p>
                         <h4 class="font-text-md">Наталья Бессонова,</h4>
                         <p class="font-text">
@@ -651,7 +628,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="mainpage__reviews-block__quote-wrapper col-lg-4 col-md-4">
                 <div class="mainpage__reviews-block__quote-div">
                   <div class="mainpage__reviews-block__quote-block1">
                     <p class="font-text">
@@ -721,20 +698,17 @@
       </section>
     </footer>
     <script src="../scripts/header.js"></script>
-    <script src="../scripts/mainpage.js"></script>
+
     <script src="../scripts/modal.js"></script>
     <script
       type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
+      src="http://code.jquery.com/jquery-1.7.js"
     ></script>
     <script
       type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+      src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
-
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
+    <script type="text/javascript" src="../scripts/slick/slick.min.js"></script>
+    <script src="../scripts/mainpage.js"></script>
   </body>
 </html>

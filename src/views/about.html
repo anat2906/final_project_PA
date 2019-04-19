@@ -37,10 +37,10 @@
                 RU
               </li>
             </ul>
-            <div class="header__header-upper__navbar__btn btn btn-white">
+            <div id="btn-login" class="header__header-upper__navbar__btn btn btn-white">
               <a href="#">Войти</a>
             </div>
-            <div class="header__header-upper__navbar__btn btn btn-primary">
+            <div id="btn-join" class="header__header-upper__navbar__btn btn btn-primary">
               <a href="#">Регистрация</a>
             </div>
             <a href="#" class="header__header-upper__nav-burger">
@@ -55,15 +55,20 @@
         <div class="modal-login__content container">
           <div class="modal-login__content__first-block">
             <h4 class="modal-login__content__title font-title-sm">
-                Вход
+              Вход
             </h4>
             <span class="modal-login__close">&times;</span>
           </div>
           <div class="modal-login__content__second-block">
             <form action="">
-              <input id="emailReg" placeholder="Почта" type="email" required>
-              <input id="firstNameReg" placeholder="Пароль" type="password" required>
-              <br>
+              <input id="emailReg" placeholder="Почта" type="email" required />
+              <input
+                id="firstNameReg"
+                placeholder="Пароль"
+                type="password"
+                required
+              />
+              <br />
               <button class="btn btn-primary" type="submit">Войти</button>
             </form>
             <a href="#" class="font-text">Забыли пароль?</a>
@@ -74,17 +79,27 @@
         <div class="modal-join__content container">
           <div class="modal-join__content__first-block">
             <h4 class="modal-join__content__title font-title-sm">
-                Регистрация
+              Регистрация
             </h4>
             <span class="modal-join__close">&times;</span>
           </div>
           <div class="modal-join__content__second-block">
             <form action="">
-              <input type="text" name="" id="" placeholder="Имя" required>
-              <input id="emailReg" placeholder="Почта" type="email" required>
-              <input id="firstNameReg" placeholder="Пароль" type="password" required>
-              <input id="firstNameReg" placeholder="Подтвердите пароль" type="password" required>
-              <br>
+              <input type="text" name="" id="" placeholder="Имя" required />
+              <input id="emailReg" placeholder="Почта" type="email" required />
+              <input
+                id="firstNameReg"
+                placeholder="Пароль"
+                type="password"
+                required
+              />
+              <input
+                id="firstNameReg"
+                placeholder="Подтвердите пароль"
+                type="password"
+                required
+              />
+              <br />
               <button class="btn btn-primary" type="submit">Войти</button>
             </form>
             <a href="#" class="font-text">Уже есть аккаунт?</a>
@@ -92,19 +107,23 @@
         </div>
       </div>
     </header>
-    <main class="aboutpage">
+    <main class="aboutpage ">
       <section class="container">
         <div class="aboutpage__first-block">
-          <h4 class="font-title-md">
-            О
-            <span>проекте</span>
+          <h4 class="font-title">
+            О проекте
           </h4>
+          <p class="font-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis commodi alias nisi, velit repudiandae perferendis
+            delectus exercitationem numquam ducimus cumque.
+          </p>
           <div class="aboutpage__first-block__content">
             <div class="aboutpage__first-block__left-div col-md-4">
               <div class="aboutpage__first-block__img"></div>
             </div>
 
-            <div class="aboutpage__first-block__right-div col-md-8">
+            <div class="aboutpage__first-block__right-div col-lg-8 col-md-12 col-sm-12">
               <div class="aboutpage__first-block__title"></div>
               <div class="aboutpage__first-block__text">
                 <h4 class="font-text-md ">
@@ -167,7 +186,6 @@
                 </div>
               </div>
             </div>
-
             <div class="col-lg-4 col-md-6 col-sm-12">
               <div class="aboutpage__mission-block__card card">
                 <div class="aboutpage__mission-block__card__img-bg">
@@ -193,7 +211,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="aboutpage__mission-block__card card ">
+              <div class="aboutpage__mission-block__card card">
                 <div class="aboutpage__mission-block__card__img-bg">
                   <div class="aboutpage__mission-block__card__img-bg-text">
                     <img
@@ -217,6 +235,9 @@
             </div>
           </div>
         </div>
+      </section>
+      <section class="container">
+
       </section>
     </main>
     <footer>
