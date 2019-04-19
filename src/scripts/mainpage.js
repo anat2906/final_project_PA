@@ -1,37 +1,45 @@
 (function() {
-  var doc = document;
-  var slides = doc.querySelectorAll(
-    ".mainpage__reviews-block__review-div__carousel-item"
-  );
-  var btnPrev = doc.querySelector("#prevbtn");
-  var btnNext = doc.querySelector("#nextbtn");
-  var current = 0;
+  (function() {
+    var doc = document;
+    var slides = doc.querySelectorAll(
+      ".mainpage__reviews-block__review-div__carousel-item"
+    );
+    var btnPrev = doc.querySelector("#prevbtn");
+    var btnNext = doc.querySelector("#nextbtn");
+    var current = 0;
+    //
+    function nextSlide() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.add("opacity0");
+      }
+      slides[current].classList.remove("opacity0");
+    }
+    function slider() {
+      if (current + 1 == slides.length) {
+        current = 0;
+      } else {
+        current++;
+      }
+      nextSlide();
+    }
+    //
+    btnNext.addEventListener("click", function() {
+      slider();
+    });
+    //
+    btnPrev.addEventListener("click", function() {
+      if (current - 1 == -1) {
+        current = slides.length - 1;
+      } else {
+        current--;
+      }
+      nextSlide();
+    });
+    //
 
-  function slider() {
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].classList.add("opacity0");
-    }
-    slides[current].classList.remove("opacity0");
-  }
-  slider();
-  //
-  btnPrev.addEventListener("click", function() {
-    if (current - 1 == -1) {
-      current = slides.length - 1;
-    } else {
-      current--;
-    }
-    slider();
-  });
-  //
-  btnNext.addEventListener("click", function() {
-    if (current + 1 == slides.length) {
-      current = 0;
-    } else {
-      current++;
-    }
-    slider();
-  });
+    setInterval(slider, 3500);
+  })();
+
   //
   (function toTopBtn() {
     var button = document.createElement("button");

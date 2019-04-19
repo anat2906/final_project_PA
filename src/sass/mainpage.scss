@@ -49,15 +49,15 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-
+    position: relative;
     .mainpage__second-block__title {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       flex-direction: row;
       position: absolute;
-      left: 20%;
-      top: -20%;
+      left: 17%;
+      top: -10%;
       margin-top: -20px;
       padding-top: 1.5em;
       p {
@@ -123,7 +123,7 @@
       }
     }
     .mainpage__second-block__subtitle {
-      padding-top: 2em;
+      padding-top: 4em;
     }
     .mainpage__second-block__text {
       padding-top: 1.2em;
@@ -508,7 +508,7 @@
 }
 @media (max-width: 985.98px) {
   .mainpage .mainpage__second-block .mainpage__second-block__subtitle {
-    padding-top: 2.5em;
+    padding-top: 5em;
   }
 }
 
@@ -535,5 +535,11 @@
     .mainpage__reviews-block__carousel
     .mainpage__reviews-block__review-div__carousel-slides {
     height: 550px;
+  }
+}
+@media (max-width: 767px) {
+  .btn.btn-primary.toTop {
+  bottom: 50px;
+  right: 50px;
   }
 }
