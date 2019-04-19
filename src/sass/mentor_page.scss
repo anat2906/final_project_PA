@@ -4,18 +4,19 @@
   height: 220px;
   background-color: $text-grey;
   position: relative;
-  .profile-avatar {
-    background-image: url("/home/mira/Documents/PA_projects/final_project_PA/src/static/images/profile.png");
-    background-size: 130%;
-    background-repeat:no-repeat;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) translateY(90%);
-  }
+  background-image: url("../../src/static/images/aboutpage/topography.png");
+}
+.profile-avatar {
+  background-image: url("../../src/static/images/profile.png");
+  background-size: 130%;
+  background-repeat:no-repeat;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(55%);
 }
 
 .profile-right {
@@ -58,8 +59,9 @@
     padding-left: 3em;
     .profile-ad {
       margin: 10px 5px 10px;
-      padding: 2em;
-      border: 1px solid black;
+      padding: 1.5em;
+      background: whitesmoke;
+      border-radius: 5px;
       .profile-ad-text {
         margin-bottom: 1.5em;
       }

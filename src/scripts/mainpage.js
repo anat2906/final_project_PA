@@ -12,7 +12,7 @@
 
     this.btns = doc.querySelectorAll(".mainpage__reviews-block__btn");
     this.size = this.box.clientWidth;
-
+    console.log(this.size)
     this.position();
     this.carousel();
   };
@@ -34,20 +34,20 @@
     }
   };
 
-  Slider.prevbtn = function(box) {
+  Slider.prevbtn = function Pre(box) {
     box.slidesBox.style.transition = "transform .3s ease-in-out";
     var size = box.size;
     index <= 0 ? false : index--;
-    box.slidesBox.style.transform = "translateX(" + -index * size + "px)";
+    box.slidesBox.style.transform = "translateX(" + -index * size +20 + "px)";
     box.jump();
   };
 
-  Slider.nextbtn = function(box) {
+  Slider.nextbtn = function Next(box) {
     box.slidesBox.style.transition = "transform .3s ease-in-out";
     var max = box.slides.length;
     var size = box.size;
     index >= max - 1 ? false : index++;
-    box.slidesBox.style.transform = "translateX(" + -index * size + "px)";
+    box.slidesBox.style.transform = "translateX(" + -index * size + 20 + "px)";
     box.jump();
   };
 
@@ -67,10 +67,67 @@
   new Slider();
 })();
 
-(function() {
-  document.querySelector(".mainpage__third-block__cards-carousel").slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  });
-})();
+(function(){
+  var words = document.getElementsByClassName('word');
+  var wordArray = [];
+  var currentWord = 0;
+
+  words[currentWord].style.opacity = 1;
+  for (var i = 0; i < words.length; i++) {
+    splitLetters(words[i]);
+  }
+
+  function changeWord() {
+    var cw = wordArray[currentWord];
+    var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+    for (var i = 0; i < cw.length; i++) {
+      animateLetterOut(cw, i);
+    }
+    
+    for (var i = 0; i < nw.length; i++) {
+      nw[i].className = 'letter behind';
+      nw[0].parentElement.style.opacity = 1;
+      animateLetterIn(nw, i);
+    }
+    
+    currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+  }
+
+  function animateLetterOut(cw, i) {
+    setTimeout(function() {
+      cw[i].className = 'letter out';
+    }, i*80);
+  }
+
+  function animateLetterIn(nw, i) {
+    setTimeout(function() {
+      nw[i].className = 'letter in';
+    }, 340+(i*80));
+  }
+
+  function splitLetters(word) {
+    var content = word.innerHTML;
+    word.innerHTML = '';
+    var letters = [];
+    for (var i = 0; i < content.length; i++) {
+      var letter = document.createElement('span');
+      letter.className = 'letter';
+      letter.innerHTML = content.charAt(i);
+      word.appendChild(letter);
+      letters.push(letter);
+    }
+    
+    wordArray.push(letters);
+  }
+
+  changeWord();
+  setInterval(changeWord, 4000);
+})()
+
+// (function() {
+//   document.querySelector(".mainpage__third-block__cards-carousel").slick({
+//     infinite: true,
+//     slidesToShow: 3,
+//     slidesToScroll: 3
+//   });
+// })();
