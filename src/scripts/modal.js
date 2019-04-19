@@ -1,9 +1,9 @@
 var modalLogin = document.getElementById("modal-login");
 var loginBtn = document.getElementById("btn-login");
 var modalLoginClose = document.getElementsByClassName("modal-login__close")[0];
-var modalJoin = document.getElementById("modal-join");
+var modalJoin = document.getElementById("modal-join-mentee");
 var joinBtn = document.getElementById("btn-join");
-var modalJoinClose = document.getElementsByClassName("modal-join__close")[0];
+var modalJoinClose = document.getElementsByClassName("modal-join__close")[1];
 
 loginBtn.addEventListener("click", () => {
     modalLogin.style.display = "block"

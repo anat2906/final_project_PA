@@ -5,7 +5,11 @@ a {
     &:hover {
         color: $primary;
     }
+    &.active{
+        color: $primary;
+    }
 }
+
 .font-text-md{
     font-family: "Gilroy-Regular";
     font-size: 18px;
@@ -77,4 +81,5 @@ a {
     text-transform: uppercase;
     color: $text;
 }
+
 

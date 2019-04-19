@@ -3,7 +3,7 @@
   box-sizing: border-box;
   border: none;
   margin: 0;
-  outline: none;
+  outline: none!important;
   font-family: "Gilroy-Bold";
   font-style: normal;
   font-stretch: normal;
@@ -17,16 +17,44 @@
   transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   z-index: 0;
   padding: 0.3em 1em;
+  cursor: pointer;
   &.btn-primary {
     background-color: $primary;
     border: 2px solid $primary;
-    color: white;
+    color: $light;
+    &.toTop {
+      display: none;
+      background-color: lighten($primary, 10%);
+      position: fixed;
+      bottom: 100px;
+      right: 100px;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: 2px solid lighten($primary, 10%);
+      z-index: 100;
+      &::after {
+        content: "";
+        color: $light;
+        height: 15px;
+        width: 15px;
+        border-top: 2px solid $light;
+        border-left: 2px solid $light;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 13px;
+        bottom: 2px;
+        left: 0px;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
     &:hover {
       filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.18));
       text-decoration: none;
       transform: translateY(-0.2rem);
       a {
-        color: white;
+        color: $light;
       }
     }
   }
@@ -36,12 +64,11 @@
     &:hover {
       background-color: $primary;
       a {
-        color: white;
+        color: $light;
       }
     }
   }
 }
-
 
 .btn-lg {
   background: none;
@@ -54,7 +81,7 @@
   font-stretch: normal;
   font-weight: 400;
   border-radius: 2.8rem;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 0.05rem;
   text-align: center;
   text-transform: uppercase;

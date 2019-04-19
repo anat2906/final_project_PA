@@ -3,12 +3,11 @@
   .aboutpage__first-block {
     display: flex;
     flex-direction: column;
-    h4{
-        span{
-            
-            color: $primary;
-            font-weight: bold;
-        }
+    h4 {
+      span {
+        color: $primary;
+        font-weight: bold;
+      }
     }
     .aboutpage__first-block__content {
       padding: 1.5em 0;
@@ -21,8 +20,8 @@
         }
         .aboutpage__first-block__img {
           border-radius: 2px;
-          height: 220px;
-          background-image: url("../../src/static/images/aboutpage/about1.jpg");
+          height: 200px;
+          background-image: url("../../src/static/images/about1.jpg");
           background-size: 100%;
         }
       }
@@ -40,7 +39,7 @@
     text-align: center;
     clip-path: polygon(-1px 100%, 100% 80%, 100% 5%, 0px 0px);
     height: auto;
-    background-image: url("../../src/static/images/aboutpage/topography.png");
+    background-image: url("../../src/static/images/topography.png");
     h4 {
       font-size: 22px;
     }
@@ -55,25 +54,27 @@
     flex-direction: column;
     text-align: start;
     h4 {
-        padding-left: 0.5em;
+      padding-left: 0.5em;
 
       font-weight: normal;
-      span{
-          color: $primary;
-          display: block;
-          font-weight: bold;
+      span {
+        color: $primary;
+        display: block;
+        font-weight: bold;
       }
     }
     .aboutpage__mission-block__cards-div {
-        padding-top: 4em;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+      padding-top: 2em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
       .aboutpage__mission-block__card {
+        margin-top: 1.5em;
         box-shadow: 0 0 15px -8px $text-grey;
         height: auto;
         .aboutpage__mission-block__card__img-bg {
-            text-align: center;
+          text-align: center;
           border-radius: 2px;
           height: auto;
           background-color: $primary;
@@ -92,5 +93,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 985.98px) {
+  .aboutpage__first-block__left-div{
+    display: none;
   }
 }

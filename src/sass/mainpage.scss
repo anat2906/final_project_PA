@@ -2,13 +2,14 @@
   height: auto;
   .mainpage__first-block__background {
     height: auto;
-    background-image: url("../../src/static/images/aboutpage/bg-img1.jpg");
+    background-image: url("../../src/static/images/about1.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;
     background-attachment: fixed;
   }
   .mainpage__first-block {
+    height: auto;
     padding-top: 1em;
     display: flex;
     justify-content: flex-start;
@@ -65,14 +66,14 @@
         margin: 0;
         padding-right: 0.7em;
       }
-      
+
       .word {
         position: absolute;
         width: 350px;
         opacity: 0;
         top: 45px;
       }
-      
+
       .letter {
         display: inline-block;
         position: relative;
@@ -80,41 +81,41 @@
         transform: translateZ(10px);
         transform-origin: 50% 50% 10px;
       }
-      
+
       .letter.out {
         transform: rotateX(90deg);
         transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
       }
-      
+
       .letter.behind {
         transform: rotateX(-90deg);
       }
-      
+
       .letter.in {
         transform: rotateX(0deg);
         transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
-      
+
       .wisteria {
         color: $primary;
       }
-      
+
       .belize {
-        color: #2980b9;
+        color: $primary;
       }
-      
+
       .pomegranate {
-        color: #a53656;
+        color: $primary;
       }
-      
+
       .green {
-        color: $accent;
+        color: $primary;
       }
-      
+
       .midnight {
-        color: #2c3e50;
+        color: $primary;
       }
-      
+
       .mainpage__second-block__icon {
         height: 50px;
         width: 50px;
@@ -133,36 +134,35 @@
   }
   .mainpage__third-block__background {
     height: auto;
-    background: linear-gradient(145deg, lighten($primary, 70%) -130%, $primary);
+    background-color: lighten($primary, 35%);
     .mainpage__third-block {
       display: flex;
       flex-direction: column;
-      color: $light;
+      color: $text;
       width: 100%;
       .mainpage__third-block__title {
         text-align: center;
         h2 {
-          color: $light;
+          color: $text;
           span {
             text-transform: uppercase;
             font-family: "Gilroy-Bold";
             font-size: 30px;
             font-style: normal;
             font-weight: 400;
-            color: $light;
+            color: $primary;
           }
         }
       }
       .mainpage__third-block__cards-div {
         padding-top: 4em;
         .mainpage__third-block__cards-carousel {
-          display: flex;
-          justify-content: flex-start;
-          flex-direction: row;
-          flex-wrap: nowrap;
+          // display: flex;
+          // justify-content: flex-start;
+          // flex-direction: row;
+          // flex-wrap: nowrap;
           width: 100%;
           .mainpage__third-block__card {
-            width: 80%;
             height: 350px;
             border: 2px solid $light;
             margin-right: 2em;
@@ -170,7 +170,7 @@
             box-sizing: border-box;
             .mainpage__third-block__card-img {
               height: 300px;
-              background-image: url("../../src/static/images/mainpage/signin.jpg");
+              background-image: url("../../src/static/images/signin.jpg");
               background-repeat: no-repeat;
               background-position: top;
               background-size: 110%;
@@ -188,7 +188,7 @@
     .mainpage__mentors-block__mentor-cards {
       margin-top: 4em;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       flex-wrap: wrap;
       .mainpage__mentor-cards__mentor-card {
         display: flex;
@@ -226,11 +226,11 @@
           margin-top: 0.5em;
         }
         .mainpage__mentor-cards__mentor-card__position {
-          padding: 1em 1em;
+          padding: 1em 1.5em;
         }
         .mainpage__mentor-cards__mentor-card__bio {
           margin-bottom: 1.5em;
-          padding: 0 1em;
+          padding: 0 1.5em;
           text-align: left;
         }
       }
@@ -241,7 +241,7 @@
   }
   .mainpage__steps-block__background {
     height: auto;
-    background-image: url("../../src/static/images/aboutpage/topography.png");
+    background-image: url("../../src/static/images/topography.png");
     background-position-x: center;
     background-position-y: top;
     .container {
@@ -297,9 +297,11 @@
     }
   }
   .mainpage__reviews-block {
+    padding-bottom: 2em;
     height: auto;
     .mainpage__reviews__title {
       display: block;
+      
       span {
         color: $primary;
         display: block;
@@ -312,37 +314,49 @@
       flex-direction: row;
       width: 100%;
       padding-top: 4em;
+      height: auto;
       .mainpage__reviews-block__review-div {
+        padding-left: 0;
         display: flex;
         justify-content: space-between;
+        height: auto;
         .mainpage__reviews-block__carousel {
-          overflow: hidden;
-          height: auto;
-          display: block;
+          width: 100%;
+          height: 130%;
           display: flex;
-          flex-direction: column;
-          .mainpage__reviews-block__btns-div {
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
-            height: auto;
+          flex-direction: row; 
+          position: relative;
+          .mainpage__reviews-block__btn{
+            cursor: pointer;
           }
           .mainpage__reviews-block__review-div__carousel-slides {
-            width: 10000px;
-            display: flex;
-            flex-direction: row;
+            box-sizing: border-box;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            position: relative;
             .mainpage__reviews-block__review-div__carousel-item {
-              width: 730px;
-              display: flex;
-              justify-content: flex-start;
-              flex-direction: row;
+              outline: none!important;
+              height: 100%;
+              width: 100%;
+              clear: both;
+              position: absolute;
+              opacity: 1;
+              transition: all ease 1s;
+              &.opacity0 {
+                opacity: 0;
+              }
               .mainpage__reviews-block__review-div__carousel-item__avatar {
                 border-radius: 3px;
                 height: 200px;
+                float: left;
               }
               .mainpage__reviews-block__review-div__carousel-item__text {
+                background-color: #fff;
+                height: 100%;
                 padding-left: 20px;
                 padding-right: 20px;
+                float: right;
                 p {
                   margin-bottom: 10px;
                 }
@@ -356,7 +370,6 @@
         }
       }
       .mainpage__reviews-block__quote-div {
-        margin-top: 5px;
         background-color: lighten($primary, 35%);
         padding: 20px 10px;
         .mainpage__reviews-block__quote-block1 {
@@ -391,7 +404,6 @@
   }
 }
 
-
 @media (max-width: 767px) {
   .mainpage__first-block__title-div {
     height: 700px;
@@ -400,12 +412,13 @@
 
 @media (max-width: 985.98px) {
   .mainpage__first-block__background {
-    height: 500px;
+    height: 600px;
   }
 }
 @media (max-width: 767px) {
   .mainpage__first-block__background {
-    height: 500px;
+    background-position: center;
+    height: 400px;
   }
 }
 
@@ -418,28 +431,28 @@
     display: block;
   }
 }
-@media (max-width: 985.98px){
+@media (max-width: 985.98px) {
   .mainpage
-  .mainpage__steps-block__background
-  .container
-  .mainpage__steps-block__steps-wrapper
-  .mainpage__steps-block__next-arrow.arrow__tablet{
+    .mainpage__steps-block__background
+    .container
+    .mainpage__steps-block__steps-wrapper
+    .mainpage__steps-block__next-arrow.arrow__tablet {
     display: none;
   }
 }
 
-@media(max-width: 767px){
+@media (max-width: 767px) {
   .mainpage
-  .mainpage__steps-block__background
-  .container
-  .mainpage__steps-block__steps-wrapper
-  .mainpage__steps-block__next-arrow{
+    .mainpage__steps-block__background
+    .container
+    .mainpage__steps-block__steps-wrapper
+    .mainpage__steps-block__next-arrow {
     display: none;
   }
 }
 
-@media (max-width: 985.98px){
-  .mainpage__first-block__title-div{
+@media (max-width: 985.98px) {
+  .mainpage__first-block__title-div {
     border-radius: 1px;
     height: auto;
     padding: 1em 2em;
@@ -447,17 +460,80 @@
     opacity: 0.5;
     box-sizing: border-box;
   }
-  .mainpage.mainpage__first-block.mainpage__first-block__buttons-div.btn-lg.btn-white{
+
+}
+@media (max-width: 985.98px) {
+  .btn-lg.btn-white{
+    padding: 0.5em 1em 0.2em 1em;
+    font-size: 13px;
     background-color: $primary;
     border: 2px solid $primary;
-    color: white;
   }
+  .btn-lg.btn-white:hover{
+    transition: all ease-in .5s;
+    border: 2px solid $light;
+    background-color: $light;
+    a {
+      color: $primary;
+    }
+  }
+  .btn-lg{
+    padding: 0.5em 1em 0.2em 1em;
+    font-size: 13px;
+  }
+  
 }
-@media(max-width: 767px){
-  .mainpage__first-block__title-div{
+
+@media (max-width: 767px) {
+  .mainpage__first-block__title-div {
     display: none;
   }
 }
 
+@media (max-width: 985.98px) {
+  .mainpage .mainpage__second-block .mainpage__second-block__title {
+    display: block;
+  }
+}
+@media (max-width: 985.98px) {
+  .mainpage .mainpage__second-block .mainpage__second-block__title p {
+    display: block;
+  }
+}
+@media (max-width: 985.98px) {
+  .mainpage .mainpage__second-block .mainpage__second-block__title .word {
+    top: 80px;
+    left: 95px;
+  }
+}
+@media (max-width: 985.98px) {
+  .mainpage .mainpage__second-block .mainpage__second-block__subtitle {
+    padding-top: 2.5em;
+  }
+}
 
-
+@media (max-width: 985.98px) {
+  .mainpage__reviews-block__quote-wrapper {
+    display: none;
+  }
+}
+@media (max-width: 985.98px) {
+  .mainpage
+    .mainpage__reviews-block
+    .mainpage__reviews-block__wrapper
+    .mainpage__reviews-block__review-div
+    .mainpage__reviews-block__carousel
+    .mainpage__reviews-block__review-div__carousel-slides {
+    height: 400px;
+  }
+}
+@media (max-width: 767px) {
+  .mainpage
+    .mainpage__reviews-block
+    .mainpage__reviews-block__wrapper
+    .mainpage__reviews-block__review-div
+    .mainpage__reviews-block__carousel
+    .mainpage__reviews-block__review-div__carousel-slides {
+    height: 550px;
+  }
+}
