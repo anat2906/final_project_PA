@@ -5,6 +5,9 @@ a {
     &:hover {
         color: $primary;
     }
+    &.active{
+        color: $primary;
+    }
 }
 
 .font-text-md{
@@ -78,7 +81,5 @@ a {
     text-transform: uppercase;
     color: $text;
 }
-.active{
-    color: $primary;
-}
+
 
