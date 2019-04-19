@@ -1,62 +1,36 @@
 .mentors-wrapper {
   z-index: 20;
   padding-top: 1.5em;
-  .mentors-search {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 0.3em 0.5em;
-    border: 1px solid $text-grey;
-    border-radius: 5px;
-    justify-content: space-between;
-    .mentors__mentors-search__input {
-      color: $text-grey;
-      border: none;
-      width: calc(100% - 2em);
-      background: none;
-      &:focus {
-        outline: none;
-      }
-    }
-    .mentors__mentors-search__icon {
-      width: 1.8em;
-      height: 1.8em;
-      background-image: url("../../src/static/icons/search.svg");
+}
+.mentors__mentor-cards {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  .mentors__mentor-cards__mentor-card {
+    padding: 1em;
+    margin-top: 1.5em;
+    text-align: center;
+    .mentors__mentor-cards__mentor-card__img {
+      width: 80%;
+      height: 300px;
+      margin: 0 auto;
+      background-image: url("../../src/static/images/mentor.jpg");
+      background-size: 100%;
       background-position: center;
-      background-size: contain;
+      background-position-y: 15%;
       background-repeat: no-repeat;
     }
-  }
-  .mentors__mentor-cards {
-    margin-top: 2em;
-    display: flex;
-    flex-wrap: wrap;
-    .mentors__mentor-cards__mentor-card {
-      padding: 1em;
-      margin-top: 1.5em;
-      text-align: center;
-      .mentors__mentor-cards__mentor-card__img {
-        width: 80%;
-        height: 300px;
-        margin: 0 auto;
-        background-image: url("../../src/static/images/mentor.jpg");
-        background-size: 100%;
-        background-position: center;
-        background-position-y: 15%;
-        background-repeat: no-repeat;
-      }
-      .mentors__mentor-cards__mentor-card__name {
-        margin-top: 0.5em;
-      }
-      .mentors__mentor-cards__mentor-card__position {
-        padding: 0 1em;
-      }
-      .mentors__mentor-cards__mentor-card__bio {
-        margin-top: 0.5em;
-        margin-bottom: 1.5em;
-        padding: 0 1em;
-        text-align: left;
-      }
+    .mentors__mentor-cards__mentor-card__name {
+      margin-top: 0.5em;
+    }
+    .mentors__mentor-cards__mentor-card__position {
+      padding: 0 1em;
+    }
+    .mentors__mentor-cards__mentor-card__bio {
+      margin-top: 0.5em;
+      margin-bottom: 1.5em;
+      padding: 0 1em;
+      text-align: left;
     }
   }
 }
