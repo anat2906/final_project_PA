@@ -1,7 +1,119 @@
-{% extends "base.html" %}
-{% load crispy_forms_tags %}
-{% block content %}
-    <div class="content-section">
+{% extends "base.html" %} {% load crispy_forms_tags %} {% block content %}
+<main>
+  <div class="background-blobs">
+    <svg class="bg-svg" id="blobShape6" viewBox="0 0 500 500">
+      <clipPath></clipPath>
+      <path
+        fill="url(#g6)"
+        d="M 47.99,295.7 C 44.25,252.9 72.33,195.7 110.4,167 169.6,122.4 259,106.1 329.6,128.8 381.3,145.4 428,193 443.7,245 453.3,277 464.9,322.4 424.6,343.5 369,372.7 304.2,310.1 239.1,319 190.9,325.5 153,380 107.6,373.4 64.97,367.3 50.68,326.4 47.99,295.7 Z"
+      />
+      <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0" stop-color="#eeaeca" />
+        <stop offset="1" stop-color="#94bbe9" />
+      </linearGradient>
+    </svg>
+    <section>
+      <div class="container mentor-account">
+        <div class="col-lg-9 col-md-12 col-sm-12 mentor-account__form">
+          <h2 class="font-title">
+            Настройки Профиля
+          </h2>
+          <form action="">
+            <div>
+              <label for="mentor-account__form__avatar" class="font-subtitle"
+                >Загрузить фото профиля</label
+              >
+              <input
+                class="font-text"
+                type="file"
+                id="mentor-account__form__avatar"
+              />
+              <label for="mentor-account__form__name" class="font-subtitle"
+                >Имя</label
+              >
+              <input
+                class="font-text"
+                type="text"
+                id="mentor-account__form__name"
+                placeholder="Имя"
+              />
+              <label for="mentor-account__form__lastname" class="font-subtitle"
+                >Фамилия</label
+              >
+              <input
+                class="font-text"
+                type="text"
+                id="mentor-account__form__lastname"
+                placeholder="Фамилия"
+              />
+              <label for="mentor-account__form__email" class="font-subtitle"
+                >Электронная почта</label
+              >
+              <input
+                class="font-text"
+                type="email"
+                id="mentor-account__form__email"
+                placeholder="Email"
+              />
+              <label for="mentor-account__form__bio" class="font-subtitle"
+                >Обо мне</label
+              >
+              <textarea
+                class="font-text"
+                name="bio"
+                id="mentor-account__form__bio"
+              ></textarea>
+              <label
+                for="mentor-account__form__expectations"
+                class="font-subtitle"
+                >Мои ожидания</label
+              >
+              <textarea
+                class="font-text"
+                name="bio"
+                id="mentor-account__form__expectations"
+              ></textarea>
+            </div>
+            <button
+              id="mentor-account__form__btn"
+              type="submit"
+              value="Сохранить"
+              class="btn btn-primary"
+            >
+              Сохранить
+            </button>
+          </form>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 account-sidebar">
+          <ul class="account-sidebar__nav">
+            <li
+              class="font-link account-sidebar__nav__nav-item active"
+              id="sidebar-feed"
+            >
+              <div id="sidebar-icon-feed"></div>
+              <a href="#">Мои публикации</a>
+            </li>
+            <li
+              class="font-link account-sidebar__nav__nav-item active"
+              id="sidebar-settings"
+            >
+              <div id="sidebar-icon-settings"></div>
+              <a href="#">Настройки аккаунта</a>
+            </li>
+            <li
+              class="font-link account-sidebar__nav__nav-item"
+              id="sidebar-follows"
+            >
+              <div id="sidebar-icon-follows"></div>
+              <a href="#">Мои подписки</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+<!-- <div class="content-section">
       <div class="media">
         <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
         <div class="media-body">
@@ -20,5 +132,5 @@
               <button class="btn btn-outline-info" type="submit">Update</button>
           </div>
       </form>
-    </div>
+    </div> -->
 {% endblock content %}

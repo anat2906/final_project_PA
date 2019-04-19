@@ -2479,31 +2479,31 @@ body {
   font-family: "Gilroy-Bold";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Gilroy-Bold.woff") format("woff"); }
+  src: url("/static/fonts/Gilroy-Bold.woff") format("woff"); }
 
 @font-face {
   font-family: "Gilroy-Heavy";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Gilroy-Heavy.woff") format("woff"); }
+  src: url("/static/fonts/Gilroy-Heavy.woff") format("woff"); }
 
 @font-face {
   font-family: "Gilroy-Light";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Gilroy-Light.woff") format("woff"); }
+  src: url("/static/fonts/Gilroy-Light.woff") format("woff"); }
 
 @font-face {
   font-family: "Gilroy-Medium";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Gilroy-Medium.woff") format("woff"); }
+  src: url("/static/fonts/Gilroy-Medium.woff") format("woff"); }
 
 @font-face {
   font-family: "Gilroy-Regular";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Gilroy-Regular.woff") format("woff"); }
+  src: url("/static/fonts/Gilroy-Regular.woff") format("woff"); }
 
 a {
   text-decoration: none;

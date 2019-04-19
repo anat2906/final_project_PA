@@ -19,10 +19,13 @@
             <h4 class="font-title">
               {{ object.title }}
             </h4>
-            <p class="font-text-sm">{{ object.timestamp|timesince }}</p>
-            <img src="{{ object.blogimage_set.first.image.url }}" class="publication-card__img">
+            <p class="font-text-sm">{{ object.timestamp | timesince }}</p>
+            <img
+              src="{{ object.blogimage_set.first.image.url }}"
+              class="publication-card__img"
+            />
             <p class="font-text">
-                {{ object.content }}
+              {{ object.content }}
             </p>
             {% if object.user == request.user %}
             <div class="publication-card__footer">
@@ -54,8 +57,17 @@
                 class="publication-author-card__card-body__author__avatar"
               ></div>
               <div class="publication-author-card__card-body__author__name">
-                <h5 class="font-text"><a href="#">Ирина Кибина</a></h5>
+                <h5 class="font-text"><a href="#">Имя Фамилия</a></h5>
+                <p class="font-text-sm">Коуч, ментор, спикер</p>
               </div>
+              <p
+                class="publication-author-card__card-body__card-body__content font-text"
+              >
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                odio praesentium harum ducimus quis porro. Soluta quia odio
+                tempore nisi reiciendis facilis expedita, consectetur nam
+                voluptas ab reprehenderit ad recusandae!
+              </p>
             </div>
           </div>
         </div>

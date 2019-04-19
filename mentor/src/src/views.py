@@ -20,4 +20,12 @@ class SearchView(View):
 
 def home(request):
     return render(request, 'home.html')
-    
+
+def about_page(request):
+    return render(request, 'about.html')
+
+def faq(request):
+    return render(request, 'faq.html')
+
+def agreement(request):
+    return render(request, 'agreement.html')
