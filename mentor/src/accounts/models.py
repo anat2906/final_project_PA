@@ -47,7 +47,7 @@ class UserProfileManager(models.Manager):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='profile', on_delete=models.CASCADE)
-    image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    image = models.ImageField(default='default.svg', upload_to='profile_pics')
     # user.profile
     following = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True, related_name='followed_by')
     # user.profile.following - i follow

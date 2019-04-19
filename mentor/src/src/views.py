@@ -17,3 +17,7 @@ class SearchView(View):
                 )
         context = {"users": qs}
         return render(request, "search.html", context)
+
+def home(request):
+    return render(request, 'home.html')
+    

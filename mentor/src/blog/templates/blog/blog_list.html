@@ -6,7 +6,7 @@
     <input type="submit" value="Search">
   </form>
   {% for object in object_list %}
-  <article class="media content-section">
+  <!-- <article class="media content-section">
     <div class="media-body mt-3">
       <div class="article-metadata">
         <small class="text-muted">{{ object.timestamp|timesince }}</small>
@@ -22,7 +22,25 @@
 {#      <img class="img-thumbnail" src="{{ object.blogimage_set.first.image.url }}"/>#}
 
     </div>
-  </article>
+  </article> -->
+  <div class="blog-card">
+    <div class="blog-card__blog-card-header">
+      <img class="blog-card__blog-card-header__avatar" src="{{ object.user.profile.image.url }}">
+      <div class="blog_card__blog-card-header__username">
+        <h4 class="font-subtitle"><a href="#">{{ object.user.username }}</a></h4>
+        <p class="font-text-sm">{{ object.timestamp|timesince }}</p>
+      </div>
+    </div>
+    <div class="blog-card__blog-card-body">
+      <h4 class="font-title-sm">
+        <a href="{% url 'blog:detail' object.id %}"
+          >{{ object.title }}</a
+        >
+      </h4>
+      <p class="font-text">{{ object.content }}</p>
+      <img class="blog-card__blog-card-body__img" src="{{ object.blogimage_set.first.image.url }}">
+    </div>
+  </div>
   {% empty %}
   {% if request.GET.q %}
   <p>No posts found</p>

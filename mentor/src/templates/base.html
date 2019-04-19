@@ -1,61 +1,236 @@
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-
-    <title>
-        {% block title %}Mentor{% endblock title %}
-    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/bootstrap-grid.css' %}"
+    />
+    <title>Mentor.kg</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+    />
   </head>
-  {% include "navbar.html" %}
-  <div class="container">
-
-      {% block content %}
-
-      {% endblock content %}
-  </div>
-
-{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>#}
-{#    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>#}
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-   {% block script %}{% endblock script %}
-    <script>
-        $(document).ready(function () {
-            var typingTimer;
-            var doneInterval = 500;
-            var searchInput = $("#navbar-search-form input[type=text]");
-            var searchQuery;
-            searchInput.keyup(function (event) {
-                searchQuery = $(this).val();
-                clearTimeout(typingTimer);
-                typingTimer = setTimeout(doneSearchTyping, doneInterval)
-            });
-            searchInput.keydown(function (event) {
-                clearTimeout(typingTimer)
-
-            });
-
-        function doneSearchTyping(){
-          if (searchQuery){
-            // do search
-            var url = 'search/?q=' + searchQuery
-            document.location.href = url;
-                }
-
-            }
-
-        })
-    </script>
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-upper">
+          <div class="header-upper-wrapper">
+            <div class="header__header-upper__logo">
+              <h2 class="font-subtitle">
+                <a href="./index.html">Mentor.kg</a>
+              </h2>
+            </div>
+            <ul class="header__header-upper__nav">
+              {% if user.is_authenticated %}
+              <li class="header__header-upper__nav__nav-item font-link">
+                <a href="./about.html">О проекте</a>
+              </li>
+              <li class="header__header-upper__nav__nav-item font-link">
+                <a href="./blog.html">Блог</a>
+              </li>
+              <li class="header__header-upper__nav__nav-item font-link">
+                <a href="./mentors.html">Наши менторы</a>
+              </li>
+              <li id="btn-join" class="font-link">
+                <a href="{% url 'profiles:profile' %}">Личный кабинет</a>
+              </li>
+              {% else %}
+              <li class="header__header-upper__nav__nav-item font-link">
+                <a href="./about.html">О проекте</a>
+              </li>
+              <li class="header__header-upper__nav__nav-item font-link">
+                <a href="{% url 'blog:list' %}">Блог</a>
+              </li>
+              <li class="header__header-upper__nav__nav-item font-link">
+                <a href="./mentors.html">Наши менторы</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+          <div class="header-upper-wrapper">
+            <ul class="header__header-upper__navbar__lang">
+              <li
+                class="header__header-upper__navbar__lang__lang-option font-subtitle"
+              >
+                RU
+              </li>
+            </ul>
+            {% if user.is_authenticated %}
+            <div
+              id="btn-login"
+              class="header__header-upper__navbar__btn btn btn-white"
+            >
+              <a href="{% url 'profiles:logout' %}">Выйти</a>
+            </div>
+            {% else %}
+            <div
+              id="btn-login"
+              class="header__header-upper__navbar__btn btn btn-white"
+            >
+              <a href="{% url 'profiles:login' %}">Войти</a>
+            </div>
+            <div
+              id="btn-join"
+              class="header__header-upper__navbar__btn btn btn-primary"
+            >
+              <a href="{% url 'profiles:register' %}">Регистрация</a>
+            </div>
+            {% endif %}
+            <a
+              href="#"
+              class="header__header-upper__nav-burger"
+              id="header-menu-btn"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header-upper__alt-nav" id="header-alt-nav">
+        <ul class="container header__header-upper__nav">
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="#">О проекте</a>
+          </li>
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="{% url 'blog:list' %}">Блог</a>
+          </li>
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="./mentors.html">Наши менторы</a>
+          </li>
+          {% if user.is_authenticated %}
+          <li class="header__header-upper__nav__nav-item font-link">
+              <a href="{% url 'profiles:logout' %}">Выйти</a>
+            </li>
+            <li class="header__header-upper__nav__nav-item font-link">
+              <a href="{% url 'profiles:profile' %}">Личный кабинет</a>
+            </li>
+          {% else %}
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="{% url 'profiles:login' %}">Войти</a>
+          </li>
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="{% url 'profiles:register' %}">Регистрация</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      <div id="modal-login" class="modal-login">
+        <div class="modal-login__content container">
+          <div class="modal-login__content__first-block">
+            <h4 class="modal-login__content__title font-title-sm">
+              Вход
+            </h4>
+            <span class="modal-login__close">&times;</span>
+          </div>
+          <div class="modal-login__content__second-block">
+            <form action="">
+              <input id="emailReg" placeholder="Почта" type="email" required />
+              <input
+                id="firstNameReg"
+                placeholder="Пароль"
+                type="password"
+                required
+              />
+              <br />
+              <button class="btn btn-primary" type="submit">Войти</button>
+            </form>
+            <a href="#" class="font-text">Забыли пароль?</a>
+          </div>
+        </div>
+      </div>
+      <div id="modal-join" class="modal-join">
+        <div class="modal-join__content container">
+          <div class="modal-join__content__first-block">
+            <h4 class="modal-join__content__title font-title-sm">
+              Регистрация
+            </h4>
+            <span class="modal-join__close">&times;</span>
+          </div>
+          <div class="modal-join__content__second-block">
+            <form action="">
+              <input type="text" name="" id="" placeholder="Имя" required />
+              <input id="emailReg" placeholder="Почта" type="email" required />
+              <input
+                id="firstNameReg"
+                placeholder="Пароль"
+                type="password"
+                required
+              />
+              <input
+                id="firstNameReg"
+                placeholder="Подтвердите пароль"
+                type="password"
+                required
+              />
+              <br />
+              <button class="btn btn-primary" type="submit">
+                Зарегистрироваться
+              </button>
+            </form>
+            <a href="#" class="font-text">Уже есть аккаунт?</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    {% block content %}{% endblock content %}
+    <footer>
+      <section class="footer">
+        <div class="container">
+          <ul class="footer-nav">
+            <li class="footer-nav-item col-lg-3 col-md-6 col-sm-12">
+              <a href="#" class="font-link">Часто задаваемые вопросы</a>
+            </li>
+            <li class="footer-nav-item col-lg-3 col-md-6 col-sm-12">
+              <a href="./agreement.html" class="font-link"
+                >Пользовательское соглашение</a
+              >
+            </li>
+            <li
+              class="footer-nav-item col-lg-3 col-md-6 col-sm-12 footer-nav__contacts"
+            >
+              <p class="font-link">Связаться с нами</p>
+              <p class="font-text-sm">+996 555 678747</p>
+              <p class="font-text-sm">mentor.kg@gmail.com</p>
+              <div class="footer-nav__contacts__icons">
+                <a
+                  class="footer-nav__contacts__icons__icon"
+                  id="icon-whatsapp"
+                ></a>
+                <a class="footer-nav__contacts__icons__icon" id="icon-fb"></a>
+                <a
+                  class="footer-nav__contacts__icons__icon"
+                  id="icon-instagram"
+                ></a>
+                <a
+                  class="footer-nav__contacts__icons__icon"
+                  id="icon-telegram"
+                ></a>
+              </div>
+            </li>
+            <li class="footer-nav-item col-lg-3 col-md-6 col-sm-12">
+              <h2 class="font-subtitle"><a href="#">Mentor.kg</a></h2>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>

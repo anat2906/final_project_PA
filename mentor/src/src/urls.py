@@ -22,11 +22,13 @@ from django.conf.urls.static import static
 
 
 from blog.views import BlogListView
-from .views import SearchView
+from .views import SearchView, home
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', BlogListView.as_view(), name='home'),
+    path('total/', BlogListView.as_view(), name='tttt'),
+    path('', views.home, name='home'),
     path('search/', SearchView.as_view(), name='search'),
     path('', include(('accounts.urls', 'profiles'), namespace='profiles')),
     path('api/blog/', include(('blog.api.urls', 'blog-api'), namespace='blog-api')),
