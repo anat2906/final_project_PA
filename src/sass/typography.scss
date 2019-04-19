@@ -6,6 +6,7 @@ a {
         color: $primary;
     }
 }
+
 .font-text-md{
     font-family: "Gilroy-Regular";
     font-size: 18px;
@@ -76,5 +77,8 @@ a {
     font-weight: 400;
     text-transform: uppercase;
     color: $text;
+}
+.active{
+    color: $primary;
 }
 
