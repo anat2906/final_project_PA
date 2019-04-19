@@ -101,19 +101,19 @@
       }
 
       .belize {
-        color: #2980b9;
+        color: $primary;
       }
 
       .pomegranate {
-        color: #a53656;
+        color: $primary;
       }
 
       .green {
-        color: $accent;
+        color: $primary;
       }
 
       .midnight {
-        color: #2c3e50;
+        color: $primary;
       }
 
       .mainpage__second-block__icon {
@@ -134,23 +134,23 @@
   }
   .mainpage__third-block__background {
     height: auto;
-    background: linear-gradient(145deg, lighten($primary, 70%) -130%, $primary);
+    background-color: lighten($primary, 35%);
     .mainpage__third-block {
       display: flex;
       flex-direction: column;
-      color: $light;
+      color: $text;
       width: 100%;
       .mainpage__third-block__title {
         text-align: center;
         h2 {
-          color: $light;
+          color: $text;
           span {
             text-transform: uppercase;
             font-family: "Gilroy-Bold";
             font-size: 30px;
             font-style: normal;
             font-weight: 400;
-            color: $light;
+            color: $primary;
           }
         }
       }
@@ -297,11 +297,11 @@
     }
   }
   .mainpage__reviews-block {
-    padding-bottom: 4em;
-
+    padding-bottom: 2em;
     height: auto;
     .mainpage__reviews__title {
       display: block;
+      
       span {
         color: $primary;
         display: block;
@@ -324,20 +324,19 @@
           width: 100%;
           height: 130%;
           display: flex;
-          flex-direction: column;
+          flex-direction: row; 
           position: relative;
-          .mainpage__reviews-block__btns-div {
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
-            height: auto;
+          .mainpage__reviews-block__btn{
+            cursor: pointer;
           }
           .mainpage__reviews-block__review-div__carousel-slides {
+            box-sizing: border-box;
             width: 100%;
-            height: 300px;
+            height: 350px;
             overflow: hidden;
             position: relative;
             .mainpage__reviews-block__review-div__carousel-item {
+              outline: none!important;
               height: 100%;
               width: 100%;
               clear: both;
@@ -371,7 +370,6 @@
         }
       }
       .mainpage__reviews-block__quote-div {
-        margin-top: 5px;
         background-color: lighten($primary, 35%);
         padding: 20px 10px;
         .mainpage__reviews-block__quote-block1 {
@@ -527,5 +525,15 @@
     .mainpage__reviews-block__carousel
     .mainpage__reviews-block__review-div__carousel-slides {
     height: 400px;
+  }
+}
+@media (max-width: 767px) {
+  .mainpage
+    .mainpage__reviews-block
+    .mainpage__reviews-block__wrapper
+    .mainpage__reviews-block__review-div
+    .mainpage__reviews-block__carousel
+    .mainpage__reviews-block__review-div__carousel-slides {
+    height: 550px;
   }
 }
