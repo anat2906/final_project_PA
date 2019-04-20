@@ -15,6 +15,30 @@
       background-position: center;
       background-size: 110%;
     }
+    .publication-card__footer {
+      text-align: right;
+      .publication-card__footer__icon {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-top: 1.5em;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &#icon-edit {
+          background-image: url("../../src/static/icons/edit.svg");
+          margin-right: 1em;
+          &:hover {
+            background-image: url("../../src/static/icons/edit-primary.svg");
+          }
+        }
+        &#icon-delete {
+          background-image: url("../../src/static/icons/delete.svg");
+          &:hover {
+            background-image: url("../../src/static/icons/delete-primary.svg");
+          }
+        }
+      }
+    }
   }
   .publication-author-card {
     padding-top: 2em;
@@ -33,7 +57,6 @@
         align-items: center;
         .publication-author-card__card-body__author__avatar {
           border-radius: 50%;
-          border: 1px solid black;
           height: 3em;
           width: 3em;
           background-image: url("../../src/static/icons/icons8-user-male.svg");

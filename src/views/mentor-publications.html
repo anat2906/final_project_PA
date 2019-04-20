@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../../dist/css/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
-    <script src="../scripts/blogpage.js"></script>
-    <title>Блог</title>
+    <title>Mentor's publications</title>
   </head>
   <body>
     <header class="header">
@@ -40,19 +37,48 @@
                 RU
               </li>
             </ul>
-            <div class="header__header-upper__navbar__btn btn btn-white">
+            <div
+              id="btn-login"
+              class="header__header-upper__navbar__btn btn btn-white"
+            >
               <a href="#">Войти</a>
             </div>
-            <div class="header__header-upper__navbar__btn btn btn-primary">
+            <div
+              id="btn-join"
+              class="header__header-upper__navbar__btn btn btn-primary"
+            >
               <a href="#">Регистрация</a>
             </div>
-            <a href="#" class="header__header-upper__nav-burger">
+            <a
+              href="#"
+              class="header__header-upper__nav-burger"
+              id="header-menu-btn"
+            >
               <span></span>
               <span></span>
               <span></span>
             </a>
           </div>
         </div>
+      </div>
+      <div class="header-upper__alt-nav" id="header-alt-nav">
+        <ul class="container header__header-upper__nav">
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="#">О проекте</a>
+          </li>
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="./blog.html">Блог</a>
+          </li>
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="./mentors.html">Наши менторы</a>
+          </li>
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="./mentors.html">Войти</a>
+          </li>
+          <li class="header__header-upper__nav__nav-item font-link">
+            <a href="./mentors.html">Регистрация</a>
+          </li>
+        </ul>
       </div>
       <div id="modal-login" class="modal-login">
         <div class="modal-login__content container">
@@ -78,7 +104,7 @@
           </div>
         </div>
       </div>
-      <div id="modal-join" class="modal-join">
+      <div id="modal-join-common" class="modal-join">
         <div class="modal-join__content container">
           <div class="modal-join__content__first-block">
             <h4 class="modal-join__content__title font-title-sm">
@@ -103,14 +129,49 @@
                 required
               />
               <br />
-              <button class="btn btn-primary" type="submit">Войти</button>
+              <button class="btn btn-primary" type="submit">
+                Зарегистрироваться
+              </button>
+            </form>
+            <a href="#" class="font-text">Уже есть аккаунт?</a>
+          </div>
+        </div>
+      </div>
+      <div id="modal-join-mentee" class="modal-join">
+        <div class="modal-join__content container">
+          <div class="modal-join__content__first-block">
+            <h4 class="modal-join__content__title font-title-sm">
+              Регистрация
+            </h4>
+            <span class="modal-join__close">&times;</span>
+          </div>
+          <div class="modal-join__content__second-block">
+            <form action="">
+              <input type="text" name="" id="" placeholder="Имя" required />
+              <input id="emailReg" placeholder="Почта" type="email" required />
+              <input
+                id="firstNameReg"
+                placeholder="Пароль"
+                type="password"
+                required
+              />
+              <input
+                id="firstNameReg"
+                placeholder="Подтвердите пароль"
+                type="password"
+                required
+              />
+              <br />
+              <button class="btn btn-primary" type="submit">
+                Зарегистрироваться
+              </button>
             </form>
             <a href="#" class="font-text">Уже есть аккаунт?</a>
           </div>
         </div>
       </div>
     </header>
-    <main class="main">
+    <main>
       <div class="background-blobs">
         <svg class="bg-svg" id="blobShape2" viewBox="0 0 500 500">
           <clipPath></clipPath>
@@ -139,23 +200,7 @@
             class="container col-lg-8 col-md-10 col-sm-12"
             id="blog__blog-cards"
           >
-            <h2 class="font-title">Блог сообщества</h2>
-            <p class="font-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis commodi alias nisi, velit repudiandae perferendis
-              delectus exercitationem numquam ducimus cumque.
-            </p>
-            <form method="GET" id="blog__search-form" action="">
-              <div class="searchbox col-lg-8 col-md-8 col-sm-12">
-                <input
-                  type="text"
-                  class="searchbox__input font-text"
-                  placeholder="Поиск"
-                  name="q"
-                />
-                <input type="submit" class="searchbox__icon" value="" />
-              </div>
-            </form>
+            <h2 class="font-title">Публикации ментора</h2>
             <div class="blog-card">
               <div class="blog-card__blog-card-header">
                 <div class="blog-card__blog-card-header__avatar"></div>
@@ -268,7 +313,9 @@
               <a href="#" class="font-link">Часто задаваемые вопросы</a>
             </li>
             <li class="footer-nav-item col-lg-3 col-md-6 col-sm-12">
-              <a href="#" class="font-link">Пользовательское соглашение</a>
+              <a href="./agreement.html" class="font-link"
+                >Пользовательское соглашение</a
+              >
             </li>
             <li
               class="footer-nav-item col-lg-3 col-md-6 col-sm-12 footer-nav__contacts"
@@ -299,6 +346,8 @@
         </div>
       </section>
     </footer>
+    <script src="../scripts/header.js"></script>
+
     <script src="../scripts/modal.js"></script>
   </body>
 </html>

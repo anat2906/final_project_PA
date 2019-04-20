@@ -37,10 +37,16 @@
                 RU
               </li>
             </ul>
-            <div id="btn-login" class="header__header-upper__navbar__btn btn btn-white">
+            <div
+              id="btn-login"
+              class="header__header-upper__navbar__btn btn btn-white"
+            >
               <a href="#">Войти</a>
             </div>
-            <div id="btn-join" class="header__header-upper__navbar__btn btn btn-primary">
+            <div
+              id="btn-join"
+              class="header__header-upper__navbar__btn btn btn-primary"
+            >
               <a href="#">Регистрация</a>
             </div>
             <a href="#" class="header__header-upper__nav-burger">
@@ -55,15 +61,20 @@
         <div class="modal-login__content container">
           <div class="modal-login__content__first-block">
             <h4 class="modal-login__content__title font-title-sm">
-                Вход
+              Вход
             </h4>
             <span class="modal-login__close">&times;</span>
           </div>
           <div class="modal-login__content__second-block">
             <form action="">
-              <input id="emailReg" placeholder="Почта" type="email" required>
-              <input id="firstNameReg" placeholder="Пароль" type="password" required>
-              <br>
+              <input id="emailReg" placeholder="Почта" type="email" required />
+              <input
+                id="firstNameReg"
+                placeholder="Пароль"
+                type="password"
+                required
+              />
+              <br />
               <button class="btn btn-primary" type="submit">Войти</button>
             </form>
             <a href="#" class="font-text">Забыли пароль?</a>
@@ -74,17 +85,27 @@
         <div class="modal-join__content container">
           <div class="modal-join__content__first-block">
             <h4 class="modal-join__content__title font-title-sm">
-                Регистрация
+              Регистрация
             </h4>
             <span class="modal-join__close">&times;</span>
           </div>
           <div class="modal-join__content__second-block">
             <form action="">
-              <input type="text" name="" id="" placeholder="Имя" required>
-              <input id="emailReg" placeholder="Почта" type="email" required>
-              <input id="firstNameReg" placeholder="Пароль" type="password" required>
-              <input id="firstNameReg" placeholder="Подтвердите пароль" type="password" required>
-              <br>
+              <input type="text" name="" id="" placeholder="Имя" required />
+              <input id="emailReg" placeholder="Почта" type="email" required />
+              <input
+                id="firstNameReg"
+                placeholder="Пароль"
+                type="password"
+                required
+              />
+              <input
+                id="firstNameReg"
+                placeholder="Подтвердите пароль"
+                type="password"
+                required
+              />
+              <br />
               <button class="btn btn-primary" type="submit">Войти</button>
             </form>
             <a href="#" class="font-text">Уже есть аккаунт?</a>
@@ -113,16 +134,17 @@
               vel, mollitia dolores illo.
             </p>
             <div class="mentors-wrapper">
-              <div class="mentors-search col-lg-8 col-md-8 col-sm-12">
-                <input
-                  type="text"
-                  class="mentors__mentors-search__input font-text"
-                  placeholder="Поиск"
-                />
-                <a href="#">
-                  <div class="mentors__mentors-search__icon"></div>
-                </a>
-              </div>
+              <form method="GET" id="blog__search-form" action="">
+                <div class="searchbox col-lg-8 col-md-8 col-sm-12">
+                  <input
+                    type="text"
+                    class="searchbox__input font-text"
+                    placeholder="Поиск"
+                    name="q"
+                  />
+                  <input type="submit" class="searchbox__icon" value="" />
+                </div>
+              </form>
               <div class="mentors__mentor-cards col-12">
                 <div
                   class="mentors__mentor-cards__mentor-card col-lg-4 col-md-6 col-sm-12"

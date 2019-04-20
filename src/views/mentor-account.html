@@ -69,6 +69,14 @@
                 Настройки Профиля
               </h2>
               <form action="">
+                <label for="mentor-account__form__avatar" class="font-subtitle"
+                  >Загрузить фото профиля</label
+                >
+                <input
+                  class="font-text"
+                  type="file"
+                  id="mentor-account__form__avatar"
+                />
                 <div>
                   <label for="mentor-account__form__name" class="font-subtitle"
                     >Имя</label
@@ -138,11 +146,18 @@
                   <a href="#">Мои публикации</a>
                 </li>
                 <li
-                  class="font-link account-sidebar__nav__nav-item"
+                  class="font-link account-sidebar__nav__nav-item active"
                   id="sidebar-settings"
                 >
                   <div id="sidebar-icon-settings"></div>
                   <a href="#">Настройки профиля</a>
+                </li>
+                <li
+                  class="font-link account-sidebar__nav__nav-item"
+                  id="sidebar-follows"
+                >
+                  <div id="sidebar-icon-follows"></div>
+                  <a href="#">Мои подписки</a>
                 </li>
               </ul>
             </div>
