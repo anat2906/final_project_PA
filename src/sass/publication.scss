@@ -10,10 +10,14 @@
       height: 350px;
       margin-top: 1.5em;
       margin-bottom: 1.5em;
-      background-image: url("../../src/static/images/blog-img.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 110%;
+      overflow: hidden;
+      // background-image: url("../../src/static/images/blog-img.jpg");
+      // background-repeat: no-repeat;
+      // background-position: center;
+      // background-size: 110%;
+      img{
+        width: 100%;
+      }
     }
     .publication-card__footer {
       text-align: right;

@@ -50,165 +50,76 @@
       </div>
     </header>
     <main>
-      <section>
-        <div class="edit-post__block container mt-5">
-          <div class="col-sm-10 col-md-8 col-lg-8 d-block mx-auto">
-            <h1 class="font-title">Редактировать пост</h1>
-            <form method="post" enctype="multipart/form-data">
-              <input
-                type="hidden"
-                name="csrfmiddlewaretoken"
-                value="MAeFT7C2E4XGGdDlA8tbhTvymyxMSEbMM5qKC75SHHlh01mnroIQCHLU93qBInGU"
-              />
-              <p>
-                <label for="id_title">Title:</label>
-                <input
-                  type="text"
-                  name="title"
-                  value="The most votted answer (Mike Lyons&#39;s one) does not even answer the question."
-                  placeholder="Your title"
-                  class="form-control"
-                  maxlength="100"
-                  required
-                  id="id_title"
-                />
-              </p>
-              <p>
-                <label for="id_content">Content:</label>
-                <textarea
-                  name="content"
-                  cols="40"
-                  rows="10"
-                  placeholder="Your post"
-                  class="form-control"
-                  required
-                  id="id_content"
-                >
-                This could be a very elegant solution, especially given the eternal struggle with vendorizing: bitprophet.org/blog/2012/06/07/on-vendorizing – Nathan Basanese Apr 4 &#39;16 at 6:40
-                One caution with this is you may pip install &lt;some_module&gt; without using requirements.txt but that will not update requirements.txt. An alternative might be updating a docker such that it lists all the pip install commands that are run to install dependencies. – ampersands Feb 22 &#39;18 at 23:05
-                i tried this python -m pip install -r requirements.txt when inside the activated venv enviroment. things installed smoothly but when i do pip list it does not show that packages, when I am in the active venv or even after deactivate venv. also not able to use that packages. dont know what&#39;s wrong here – Shreyan Mehta Feb 12 at 9:53</textarea
-                >
-              </p>
-              <table class="table">
+      <div class="background-blobs">
+        <svg class="bg-svg" id="blobShape6" viewBox="0 0 500 500">
+          <clipPath></clipPath>
+          <path
+            fill="url(#g6)"
+            d="M 47.99,295.7 C 44.25,252.9 72.33,195.7 110.4,167 169.6,122.4 259,106.1 329.6,128.8 381.3,145.4 428,193 443.7,245 453.3,277 464.9,322.4 424.6,343.5 369,372.7 304.2,310.1 239.1,319 190.9,325.5 153,380 107.6,373.4 64.97,367.3 50.68,326.4 47.99,295.7 Z"
+          />
+          <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0" stop-color="#eeaeca" />
+            <stop offset="1" stop-color="#94bbe9" />
+          </linearGradient>
+        </svg>
+        <section>
+          <div class="container mentor-account">
+            <div class="col-lg-9 col-md-12 col-sm-12 mentor-account__form">
+              <h2 class="font-title">
+                Редактировать публикацию
+              </h2>
+              <form method="post" enctype="multipart/form-data">
                 <input
                   type="hidden"
-                  name="blogimage_set-TOTAL_FORMS"
-                  value="2"
-                  id="id_blogimage_set-TOTAL_FORMS"
-                /><input
-                  type="hidden"
-                  name="blogimage_set-INITIAL_FORMS"
-                  value="1"
-                  id="id_blogimage_set-INITIAL_FORMS"
-                /><input
-                  type="hidden"
-                  name="blogimage_set-MIN_NUM_FORMS"
-                  value="0"
-                  id="id_blogimage_set-MIN_NUM_FORMS"
-                /><input
-                  type="hidden"
-                  name="blogimage_set-MAX_NUM_FORMS"
-                  value="1000"
-                  id="id_blogimage_set-MAX_NUM_FORMS"
+                  name="csrfmiddlewaretoken"
+                  value="MAeFT7C2E4XGGdDlA8tbhTvymyxMSEbMM5qKC75SHHlh01mnroIQCHLU93qBInGU"
                 />
 
-                <thead>
-                  <tr>
-                    <th>Image</th>
+                  <label for="id_title">Заголовок</label>
+                  <input
+                    type="text"
+                    name="title"
+                    value="The most votted answer (Mike Lyons&#39;s one) does not even answer the question."
+                    placeholder="Your title"
+                    class="form-control"
+                    maxlength="100"
+                    required
+                    id="id_title"
+                  />
 
-                    <th>Delete</th>
-                  </tr>
-                </thead>
+                  <label for="id_content">Текст</label>
+                  <textarea
+                    name="content"
+                    cols="40"
+                    rows="10"
+                    placeholder="Your post"
+                    class="form-control"
+                    required
+                    id="id_content"
+                  >
+                  This could be a very elegant solution, especially given the eternal struggle with vendorizing: bitprophet.org/blog/2012/06/07/on-vendorizing – Nathan Basanese Apr 4 &#39;16 at 6:40
+                  One caution with this is you may pip install &lt;some_module&gt; without using requirements.txt but that will not update requirements.txt. An alternative might be updating a docker such that it lists all the pip install commands that are run to install dependencies. – ampersands Feb 22 &#39;18 at 23:05
+                  i tried this python -m pip install -r requirements.txt when inside the activated venv enviroment. things installed smoothly but when i do pip list it does not show that packages, when I am in the active venv or even after deactivate venv. also not able to use that packages. dont know what&#39;s wrong here – Shreyan Mehta Feb 12 at 9:53</textarea
+                  >
 
-                <tr class="formset_row">
-                  <td>
-                    <input
-                      type="hidden"
-                      name="blogimage_set-0-blog"
-                      value="1"
-                      id="id_blogimage_set-0-blog"
-                    />
-
-                    <input
-                      type="hidden"
-                      name="blogimage_set-0-id"
-                      value="4"
-                      id="id_blogimage_set-0-id"
-                    />
-
-                    Currently:
-                    <a
-                      href="/media/blog_images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_%D0%BE%D1%82_2019-03-27_12-36-05_hurUGe9.png"
-                      >blog_images/Снимок_экрана_от_2019-03-27_12-36-05_hurUGe9.png</a
-                    >
-                    <input
-                      type="checkbox"
-                      name="blogimage_set-0-image-clear"
-                      id="blogimage_set-0-image-clear_id"
-                    />
-                    <label for="blogimage_set-0-image-clear_id">Clear</label
-                    ><br />
-                    Change:
-                    <input
-                      type="file"
-                      name="blogimage_set-0-image"
-                      class="form-control-file"
-                      accept="image/*"
-                      id="id_blogimage_set-0-image"
-                    />
-                  </td>
-
-                  <td>
-                    <input
-                      type="checkbox"
-                      name="blogimage_set-0-DELETE"
-                      id="id_blogimage_set-0-DELETE"
-                    />
-                  </td>
-                </tr>
-
-                <tr class="formset_row">
-                  <td>
-                    <input
-                      type="hidden"
-                      name="blogimage_set-1-blog"
-                      value="1"
-                      id="id_blogimage_set-1-blog"
-                    />
-
-                    <input
-                      type="hidden"
-                      name="blogimage_set-1-id"
-                      id="id_blogimage_set-1-id"
-                    />
-
-                    <input
-                      type="file"
-                      name="blogimage_set-1-image"
-                      class="form-control-file"
-                      accept="image/*"
-                      id="id_blogimage_set-1-image"
-                    />
-                  </td>
-
-                  <td>
-                    <input
-                      type="checkbox"
-                      name="blogimage_set-1-DELETE"
-                      id="id_blogimage_set-1-DELETE"
-                    />
-                  </td>
-                </tr>
-              </table>
-
-              <button type="submit" class="mt-4 btn btn-white">
-                Сохранить изменения
-              </button>
-            </form>
+                <label for="edit-blog__img"
+                  >Выбрать изобрежение публикации</label
+                >
+                <input
+                  class="edit-blog-img"
+                  type="file"
+                  id="edit-blog__img"
+                />
+                <button type="submit" class="btn btn-primary mt-4 ">
+                  Сохранить изменения
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
+
     <footer>
       <section class="footer">
         <div class="container">
