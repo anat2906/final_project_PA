@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="../../dist/css/style.css" />
   <title>Главная</title>
 </head>
-
 <body>
   <header class="header">
     <div class="container">
@@ -18,25 +17,6 @@
             <h2 class="font-subtitle">
               <a href="./index.html">Mentor.kg</a>
             </h2>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header-upper">
-          <div class="header-upper-wrapper">
-            <div class="header__header-upper__logo">
-              <h2 class="font-subtitle">
-                <a href="./index.html">Mentor.kg</a>
-              </h2>
-            </div>
-            <ul class="header__header-upper__nav">
-              <li class="header__header-upper__nav__nav-item font-link">
-                <a href="#">О проекте</a>
-              </li>
-              <li class="header__header-upper__nav__nav-item font-link">
-                <a href="./blog.html">Блог</a>
-              </li>
-
-            </ul>
           </div>
           <ul class="header__header-upper__nav">
             <li class="header__header-upper__nav__nav-item font-link">
@@ -45,18 +25,23 @@
             <li class="header__header-upper__nav__nav-item font-link">
               <a href="./blog.html">Блог</a>
             </li>
+            <li class="header__header-upper__nav__nav-item font-link">
+              <a href="./mentors.html">Наши менторы</a>
+            </li>
           </ul>
         </div>
         <div class="header-upper-wrapper">
           <ul class="header__header-upper__navbar__lang">
-            <li class="header__header-upper__navbar__lang__lang-option font-subtitle">
+            <li
+              class="header__header-upper__navbar__lang__lang-option font-subtitle"
+            >
               RU
             </li>
           </ul>
-          <div class="header__header-upper__navbar__btn btn btn-white">
+          <div id="btn-login" class="header__header-upper__navbar__btn btn btn-white">
             <a href="#">Войти</a>
           </div>
-          <div class="header__header-upper__navbar__btn btn btn-primary">
+          <div id="btn-join" class="header__header-upper__navbar__btn btn btn-primary">
             <a href="#">Регистрация</a>
           </div>
           <a href="#" class="header__header-upper__nav-burger">
@@ -64,6 +49,61 @@
             <span></span>
             <span></span>
           </a>
+        </div>
+      </div>
+    </div>
+    <div id="modal-login" class="modal-login">
+      <div class="modal-login__content container">
+        <div class="modal-login__content__first-block">
+          <h4 class="modal-login__content__title font-title-sm">
+            Вход
+          </h4>
+          <span class="modal-login__close">&times;</span>
+        </div>
+        <div class="modal-login__content__second-block">
+          <form action="">
+            <input id="emailReg" placeholder="Почта" type="email" required />
+            <input
+              id="firstNameReg"
+              placeholder="Пароль"
+              type="password"
+              required
+            />
+            <br />
+            <button class="btn btn-primary" type="submit">Войти</button>
+          </form>
+          <a href="#" class="font-text">Забыли пароль?</a>
+        </div>
+      </div>
+    </div>
+    <div id="modal-join" class="modal-join">
+      <div class="modal-join__content container">
+        <div class="modal-join__content__first-block">
+          <h4 class="modal-join__content__title font-title-sm">
+            Регистрация
+          </h4>
+          <span class="modal-join__close">&times;</span>
+        </div>
+        <div class="modal-join__content__second-block">
+          <form action="">
+            <input type="text" name="" id="" placeholder="Имя" required />
+            <input id="emailReg" placeholder="Почта" type="email" required />
+            <input
+              id="firstNameReg"
+              placeholder="Пароль"
+              type="password"
+              required
+            />
+            <input
+              id="firstNameReg"
+              placeholder="Подтвердите пароль"
+              type="password"
+              required
+            />
+            <br />
+            <button class="btn btn-primary" type="submit">Войти</button>
+          </form>
+          <a href="#" class="font-text">Уже есть аккаунт?</a>
         </div>
       </div>
     </div>
