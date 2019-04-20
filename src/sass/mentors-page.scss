@@ -14,11 +14,15 @@
       width: 80%;
       height: 300px;
       margin: 0 auto;
-      background-image: url("../../src/static/images/mentor.jpg");
-      background-size: 100%;
-      background-position: center;
-      background-position-y: 15%;
-      background-repeat: no-repeat;
+      overflow: hidden;
+      // background-image: url("../../src/static/images/mentor.jpg");
+      // background-size: 100%;
+      // background-position: center;
+      // background-position-y: 15%;
+      // background-repeat: no-repeat;
+      img{
+        width: 100%
+      }
     }
     .mentors__mentor-cards__mentor-card__name {
       margin-top: 0.5em;

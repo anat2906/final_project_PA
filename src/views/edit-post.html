@@ -66,94 +66,60 @@
           <div class="container mentor-account">
             <div class="col-lg-9 col-md-12 col-sm-12 mentor-account__form">
               <h2 class="font-title">
-                Настройки Профиля
+                Редактировать публикацию
               </h2>
-              <form action="">
-                <div>
-                  <label for="mentor-account__form__name">Имя</label>
+              <form method="post" enctype="multipart/form-data">
+                <input
+                  type="hidden"
+                  name="csrfmiddlewaretoken"
+                  value="MAeFT7C2E4XGGdDlA8tbhTvymyxMSEbMM5qKC75SHHlh01mnroIQCHLU93qBInGU"
+                />
+
+                  <label for="id_title">Заголовок</label>
                   <input
                     type="text"
-                    id="mentor-account__form__name"
-                    placeholder="Имя"
+                    name="title"
+                    value="The most votted answer (Mike Lyons&#39;s one) does not even answer the question."
+                    placeholder="Your title"
+                    class="form-control"
+                    maxlength="100"
+                    required
+                    id="id_title"
                   />
-                  <label
-                    for="mentor-account__form__lastname"
-                    class="font-subtitle"
-                    >Фамилия</label
-                  >
-                  <input
-                    type="text"
-                    id="mentor-account__form__lastname"
-                    placeholder="Фамилия"
-                  />
-                  <label for="mentor-account__form__email"
-                    >Электронная почта</label
-                  >
-                  <input
-                    type="email"
-                    id="mentor-account__form__email"
-                    placeholder="Email"
-                  />
-                  <label for="mentor-account__form__avatar"
-                    >Загрузить фото профиля</label
-                  >
-                  <input
-                    class="form_avatar"
-                    type="file"
-                    id="mentor-account__form__avatar"
-                  />
-                  <label for="mentor-account__form__bio">Обо мне</label>
+
+                  <label for="id_content">Текст</label>
                   <textarea
-                    name="bio"
-                    id="mentor-account__form__bio"
-                  ></textarea>
-                  <label for="mentor-account__form__expectations"
-                    >Мои ожидания</label
+                    name="content"
+                    cols="40"
+                    rows="10"
+                    placeholder="Your post"
+                    class="form-control"
+                    required
+                    id="id_content"
                   >
-                  <textarea
-                    name="bio"
-                    id="mentor-account__form__expectations"
-                  ></textarea>
-                </div>
-                <button
-                  id="mentor-account__form__btn"
-                  type="submit"
-                  value="Сохранить"
-                  class="btn btn-primary form_btn"
+                  This could be a very elegant solution, especially given the eternal struggle with vendorizing: bitprophet.org/blog/2012/06/07/on-vendorizing – Nathan Basanese Apr 4 &#39;16 at 6:40
+                  One caution with this is you may pip install &lt;some_module&gt; without using requirements.txt but that will not update requirements.txt. An alternative might be updating a docker such that it lists all the pip install commands that are run to install dependencies. – ampersands Feb 22 &#39;18 at 23:05
+                  i tried this python -m pip install -r requirements.txt when inside the activated venv enviroment. things installed smoothly but when i do pip list it does not show that packages, when I am in the active venv or even after deactivate venv. also not able to use that packages. dont know what&#39;s wrong here – Shreyan Mehta Feb 12 at 9:53</textarea
+                  >
+
+                <label for="edit-blog__img"
+                  >Выбрать изобрежение публикации</label
                 >
-                  Сохранить
+                <input
+                  class="edit-blog-img"
+                  type="file"
+                  id="edit-blog__img"
+                />
+                <button type="submit" class="btn btn-primary mt-4 ">
+                  Сохранить изменения
                 </button>
               </form>
-            </div>
-            <div class="col-lg-3 col-md-12 col-sm-12 account-sidebar">
-              <ul class="account-sidebar__nav">
-                <li
-                  class="font-link account-sidebar__nav__nav-item "
-                  id="sidebar-feed"
-                >
-                  <div id="sidebar-icon-feed"></div>
-                  <a href="#">Мои публикации</a>
-                </li>
-                <li
-                  class="font-link account-sidebar__nav__nav-item active"
-                  id="sidebar-settings"
-                >
-                  <div id="sidebar-icon-settings"></div>
-                  <a href="#">Настройки профиля</a>
-                </li>
-                <li
-                  class="font-link account-sidebar__nav__nav-item"
-                  id="sidebar-follows"
-                >
-                  <div id="sidebar-icon-follows"></div>
-                  <a href="#">Мои подписки</a>
-                </li>
-              </ul>
             </div>
           </div>
         </section>
       </div>
     </main>
+
     <footer>
       <section class="footer">
         <div class="container">

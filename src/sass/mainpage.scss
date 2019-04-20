@@ -49,15 +49,15 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-
+    position: relative;
     .mainpage__second-block__title {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       flex-direction: row;
       position: absolute;
-      left: 20%;
-      top: -20%;
+      left: 17%;
+      top: -10%;
       margin-top: -20px;
       padding-top: 1.5em;
       p {
@@ -101,19 +101,19 @@
       }
 
       .belize {
-        color: #2980b9;
+        color: $primary;
       }
 
       .pomegranate {
-        color: #a53656;
+        color: $primary;
       }
 
       .green {
-        color: $accent;
+        color: $primary;
       }
 
       .midnight {
-        color: #2c3e50;
+        color: $primary;
       }
 
       .mainpage__second-block__icon {
@@ -123,7 +123,7 @@
       }
     }
     .mainpage__second-block__subtitle {
-      padding-top: 2em;
+      padding-top: 4em;
     }
     .mainpage__second-block__text {
       padding-top: 1.2em;
@@ -132,48 +132,67 @@
       padding-top: 2em;
     }
   }
-  .mainpage__third-block__background {
+  .mainpage__mentors-steps__background {
     height: auto;
-    background: linear-gradient(145deg, lighten($primary, 70%) -130%, $primary);
-    .mainpage__third-block {
+    // background-image: url("../../src/static/images/topography.png");
+    background-color: lighten($primary, 35%);
+    .mainpage__mentors-steps {
       display: flex;
       flex-direction: column;
-      color: $light;
+      color: $text;
       width: 100%;
-      .mainpage__third-block__title {
+      .mainpage__mentors-steps__title {
         text-align: center;
         h2 {
-          color: $light;
+          color: $text;
           span {
             text-transform: uppercase;
             font-family: "Gilroy-Bold";
             font-size: 30px;
             font-style: normal;
             font-weight: 400;
-            color: $light;
+            color: $primary;
           }
         }
       }
-      .mainpage__third-block__cards-div {
+      .mainpage__mentors-steps__cards-div {
         padding-top: 4em;
-        .mainpage__third-block__cards-carousel {
+        .mainpage__mentors-steps__cards-carousel {
           // display: flex;
           // justify-content: flex-start;
           // flex-direction: row;
           // flex-wrap: nowrap;
           width: 100%;
-          .mainpage__third-block__card {
+          .mainpage__mentors-steps__card {
             height: 350px;
+            background: linear-gradient(45deg, #dbb2fe, #c5dde8);
             border: 2px solid $light;
             margin-right: 2em;
             padding: 0;
             box-sizing: border-box;
-            .mainpage__third-block__card-img {
-              height: 300px;
-              background-image: url("../../src/static/images/signin.jpg");
-              background-repeat: no-repeat;
-              background-position: top;
-              background-size: 110%;
+            cursor: pointer;
+            &.reverse-gradient {
+              background: linear-gradient(135deg, #dbb2fe, #c5dde8);
+            }
+            .mainpage__mentors-steps__card__num {
+              height: 50%;
+              text-align: center;
+              font-size: 180px;
+              color: lighten($light, 35%);
+              font-family: "Gilroy-Bold";
+              width: 100%;
+            }
+            .mainpage__mentors-steps__card__description {
+              padding: 1em 2em;
+              text-align: center;
+
+              h4 {
+                padding-bottom: 1em;
+              }
+              p {
+                font-size: 15px;
+                color: $text-grey;
+              }
             }
           }
         }
@@ -199,11 +218,16 @@
           width: 80%;
           height: 250px;
           margin: 0 auto;
-          background-image: url("../../src/static/images/mentor.jpg");
-          background-size: cover;
-          background-position: center;
-          background-position-y: 15%;
+          overflow: hidden;
+          // background-image: url("../../src/static/images/mentor.jpg");
+          // background-size: cover;
+          // background-position: center;
+          // background-position-y: 15%;
           filter: grayscale(100%);
+          img{
+            width: 100%;
+
+          }
         }
         &:hover {
           .mainpage__mentor-cards__mentor-card__img {
@@ -297,11 +321,11 @@
     }
   }
   .mainpage__reviews-block {
-    padding-bottom: 4em;
-
+    padding-bottom: 1em;
     height: auto;
     .mainpage__reviews__title {
       display: block;
+
       span {
         color: $primary;
         display: block;
@@ -324,20 +348,20 @@
           width: 100%;
           height: 130%;
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           position: relative;
-          .mainpage__reviews-block__btns-div {
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
-            height: auto;
+          .mainpage__reviews-block__btn {
+            cursor: pointer;
           }
           .mainpage__reviews-block__review-div__carousel-slides {
+            box-sizing: border-box;
             width: 100%;
-            height: 300px;
+            height: 350px;
             overflow: hidden;
             position: relative;
             .mainpage__reviews-block__review-div__carousel-item {
+              text-align: center;
+              outline: none !important;
               height: 100%;
               width: 100%;
               clear: both;
@@ -348,11 +372,15 @@
                 opacity: 0;
               }
               .mainpage__reviews-block__review-div__carousel-item__avatar {
-                border-radius: 3px;
                 height: 200px;
+                padding-left: 0;
                 float: left;
+                img {
+                  border-radius: 50%;
+                }
               }
               .mainpage__reviews-block__review-div__carousel-item__text {
+                text-align: left;
                 background-color: #fff;
                 height: 100%;
                 padding-left: 20px;
@@ -371,7 +399,6 @@
         }
       }
       .mainpage__reviews-block__quote-div {
-        margin-top: 5px;
         background-color: lighten($primary, 35%);
         padding: 20px 10px;
         .mainpage__reviews-block__quote-block1 {
@@ -462,28 +489,53 @@
     opacity: 0.5;
     box-sizing: border-box;
   }
-
 }
 @media (max-width: 985.98px) {
-  .btn-lg.btn-white{
+  .btn-lg.btn-white {
     padding: 0.5em 1em 0.2em 1em;
     font-size: 13px;
     background-color: $primary;
     border: 2px solid $primary;
   }
-  .btn-lg.btn-white:hover{
-    transition: all ease-in .5s;
+  .btn-lg.btn-white:hover {
+    transition: all ease-in 0.5s;
     border: 2px solid $light;
     background-color: $light;
     a {
       color: $primary;
     }
   }
-  .btn-lg{
+  .btn-lg {
     padding: 0.5em 1em 0.2em 1em;
     font-size: 13px;
   }
-  
+}
+
+@media (max-width: 767px) {
+  .mainpage .mainpage__first-block .mainpage__first-block__buttons-div{
+    padding-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .btn-lg.btn-white {
+    padding: 0.2em 1em 0.2em 1em;
+    font-size: 13px;
+    background-color: $primary;
+    border: 2px solid $primary;
+    margin-right: 10px;
+  }
+  .btn-lg.btn-white:hover {
+    transition: all ease-in 0.5s;
+    border: 2px solid $light;
+    background-color: $light;
+    a {
+      color: $primary;
+    }
+  }
+  .btn-lg {
+    padding: 0.5em 1em 0.2em 1em;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -508,9 +560,21 @@
     left: 95px;
   }
 }
+@media (max-width: 767px) {
+  .mainpage .mainpage__second-block .mainpage__second-block__title .word {
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 @media (max-width: 985.98px) {
   .mainpage .mainpage__second-block .mainpage__second-block__subtitle {
-    padding-top: 2.5em;
+    padding-top: 5em;
+  }
+}
+@media (max-width: 767px) {
+  .mainpage .mainpage__second-block .mainpage__second-block__subtitle {
+    padding-top: 6em;
   }
 }
 
@@ -526,6 +590,76 @@
     .mainpage__reviews-block__review-div
     .mainpage__reviews-block__carousel
     .mainpage__reviews-block__review-div__carousel-slides {
-    height: 400px;
+    height: 550px;
+  }
+}
+@media (max-width: 767px) {
+  .mainpage
+    .mainpage__reviews-block
+    .mainpage__reviews-block__wrapper
+    .mainpage__reviews-block__review-div
+    .mainpage__reviews-block__carousel
+    .mainpage__reviews-block__review-div__carousel-slides {
+      width: 100%;
+    height: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .btn.btn-primary.toTop {
+    bottom: 50px;
+    right: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .mainpage__reviews-block__review-div__carousel-item__text {
+    padding-top: 1em;
+  }
+}
+@media (max-width: 985.98px) {
+  .mainpage
+    .mainpage__mentors-steps__background
+    .mainpage__mentors-steps
+    .mainpage__mentors-steps__cards-div
+    .mainpage__mentors-steps__cards-carousel
+    .mainpage__mentors-steps__card {
+    height: 450px;
+  }
+}
+@media (max-width: 596px) {
+  .mainpage
+    .mainpage__mentors-steps__background
+    .mainpage__mentors-steps
+    .mainpage__mentors-steps__cards-div
+    .mainpage__mentors-steps__cards-carousel
+    .mainpage__mentors-steps__card {
+    height: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mainpage
+    .mainpage__reviews-block
+    .mainpage__reviews-block__wrapper
+    .mainpage__reviews-block__review-div
+    .mainpage__reviews-block__carousel
+    .mainpage__reviews-block__review-div__carousel-slides
+    .mainpage__reviews-block__review-div__carousel-item
+    .mainpage__reviews-block__review-div__carousel-item__avatar {
+    float: none;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .mainpage
+  .mainpage__reviews-block
+  .mainpage__reviews-block__wrapper
+  .mainpage__reviews-block__review-div
+  .mainpage__reviews-block__carousel
+  .mainpage__reviews-block__review-div__carousel-slides
+  .mainpage__reviews-block__review-div__carousel-item
+  .mainpage__reviews-block__review-div__carousel-item__text{
+    float: none;
+    width: 100%
   }
 }

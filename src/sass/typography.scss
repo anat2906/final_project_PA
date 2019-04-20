@@ -1,85 +1,88 @@
 a {
-    text-decoration: none;
-    cursor: pointer;
-    color: inherit;
-    &:hover {
-        color: $primary;
-    }
-    &.active{
-        color: $primary;
-    }
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  &:hover {
+    color: $primary;
+  }
+  &.active {
+    color: $primary;
+  }
 }
 
-.font-text-md{
-    font-family: "Gilroy-Regular";
-    font-size: 18px;
-    font-weight: normal;
-    color: $text;
-    z-index: 1;
+.font-text-md {
+  font-family: "Gilroy-Regular";
+  font-size: 18px;
+  font-weight: normal;
+  color: $text;
+  z-index: 1;
 }
 .font-text {
-    font-family: "Gilroy-Regular";
-    font-size: 16px;
-    font-weight: normal;
-    color: $text;
+  font-family: "Gilroy-Regular";
+  font-size: 16px;
+  font-weight: normal;
+  color: $text;
 }
 
-
 .font-text-sm {
-    font-family: "Gilroy-Regular";
-    font-size: 12px;
-    font-weight: normal;
-    color: $text-grey;
+  font-family: "Gilroy-Regular";
+  font-size: 12px;
+  font-weight: normal;
+  color: $text-grey;
 }
 
 .font-title {
-    font-family: "Gilroy-Bold";
-    font-size: 40px;
-    font-weight: normal;
-    color: $text;
+  font-family: "Gilroy-Bold";
+  font-size: 40px;
+  font-weight: normal;
+  color: $text;
 }
 
 .font-title-sm {
-    font-family: "Gilroy-Bold";
-    font-size: 30px;
-    font-weight: normal;
-    color: $text;
+  font-family: "Gilroy-Bold";
+  font-size: 30px;
+  font-weight: normal;
+  color: $text;
 }
-.font-title-sm-l{
-    font-family: "Gilroy-Bold";
-    font-size: 30px;
-    font-weight: normal;
-    color: $light;
+.font-title-sm-l {
+  font-family: "Gilroy-Bold";
+  font-size: 30px;
+  font-weight: normal;
+  color: $light;
 }
 
-.font-subtitle{
-    font-family: "Gilroy-Bold";
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: $text-grey;
+.font-subtitle {
+  font-family: "Gilroy-Bold";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $text-grey;
 }
 
 .font-link {
-    font-family: "Gilroy-Regular";
-    font-size: 16px;
-    font-weight: bold;
-    color: $text;
+  font-family: "Gilroy-Regular";
+  font-size: 16px;
+  font-weight: bold;
+  color: $text;
 }
-.font-title-md{
-    font-family: "Gilroy-Regular";
-    font-size: 35px;
-    font-weight: 100;
-    color: $text;
+.font-title-md {
+  font-family: "Gilroy-Regular";
+  font-size: 35px;
+  font-weight: 100;
+  color: $text;
 }
-.font-subtitle-lg{
-    font-family: "Gilroy-Bold";
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: $text;
+.font-subtitle-lg {
+  font-family: "Gilroy-Bold";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $text;
 }
 
-
+@media (max-width: 767px) {
+  .font-title {
+    font-size: 30px;
+  }
+}

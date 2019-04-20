@@ -1,31 +1,5 @@
 .mentor-account {
     display: flex;
-    .mentor-account__form{
-        form {
-            margin-top: 2em;
-            label{
-                margin-top: 2em;
-                display: block;
-            }
-            input, textarea {
-                color: $text;
-                border: 1px solid $text-grey;
-                padding: 0.5em;
-                border-radius: 3px
-            }
-            #mentor-account__form__avatar{
-                border:none;
-            }
-            textarea {
-                width: 40em;
-                height: 15em;
-            }
-
-            #mentor-account__form__btn {
-                margin-top: 1.5em;
-            }
-        }
-    }
 }
 @media (max-width: 991.98px) {
     .mentor-account {
