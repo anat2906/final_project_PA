@@ -37,40 +37,12 @@
     });
     //
 
-    setInterval(slider, 3500);
+    setInterval(slider, 4000);
   })();
 
-  //
-  (function toTopBtn() {
-    var button = document.createElement("button");
-    button.classList.add("btn", "btn-primary", "toTop");
-    document.body.appendChild(button);
-    document.body.setAttribute("style", "scroll-behavior: smooth");
-    document.documentElement.setAttribute("style", "scroll-behavior: smooth");
-
-    button.addEventListener("click", toTopFunc);
-
-    window.addEventListener("scroll", scrollFunc);
-
-    function toTopFunc() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-
-    function scrollFunc() {
-      if (
-        document.body.scrollTop > 500 ||
-        document.documentElement.scrollTop > 500
-      ) {
-        button.style.display = "block";
-      } else {
-        button.style.display = "none";
-      }
-    }
-  })();
   //
   (function slickCarousel() {
-    $(".mainpage__third-block__cards-carousel").slick({
+    $(".mainpage__mentors-steps__cards-carousel").slick({
       speed: 200,
       arrows: false,
       dots: true,
@@ -99,7 +71,6 @@
         {
           breakpoint: 480,
           settings: {
-            unslick: true,
             slidesToShow: 1,
             slidesToScroll: 1
           }

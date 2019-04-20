@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../../dist/css/style.css" />
+    <title>Мои Настройки</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-upper">
+          <div class="header-upper-wrapper">
+            <div class="header__header-upper__logo">
+              <h2 class="font-subtitle">
+                <a href="./index.html">Mentor.kg</a>
+              </h2>
+            </div>
+            <ul class="header__header-upper__nav">
+              <li class="header__header-upper__nav__nav-item font-link">
+                <a href="./about.html">О проекте</a>
+              </li>
+              <li class="header__header-upper__nav__nav-item font-link">
+                <a href="./blog.html">Блог</a>
+              </li>
+              <li class="header__header-upper__nav__nav-item font-link">
+                <a href="./mentors.html">Наши менторы</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-upper-wrapper">
+            <ul class="header__header-upper__navbar__lang">
+              <li
+                class="header__header-upper__navbar__lang__lang-option font-subtitle"
+              >
+                RU
+              </li>
+            </ul>
+            <div class="header__header-upper__navbar__btn btn btn-primary">
+              <a href="#">Выйти</a>
+            </div>
+            <a href="#" class="header__header-upper__nav-burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="edit-post__block container mt-5">
+          <div class="col-sm-10 col-md-8 col-lg-8 d-block mx-auto">
+            <h1 class="font-title">Редактировать пост</h1>
+            <form method="post" enctype="multipart/form-data">
+              <input
+                type="hidden"
+                name="csrfmiddlewaretoken"
+                value="MAeFT7C2E4XGGdDlA8tbhTvymyxMSEbMM5qKC75SHHlh01mnroIQCHLU93qBInGU"
+              />
+              <p>
+                <label for="id_title">Title:</label>
+                <input
+                  type="text"
+                  name="title"
+                  value="The most votted answer (Mike Lyons&#39;s one) does not even answer the question."
+                  placeholder="Your title"
+                  class="form-control"
+                  maxlength="100"
+                  required
+                  id="id_title"
+                />
+              </p>
+              <p>
+                <label for="id_content">Content:</label>
+                <textarea
+                  name="content"
+                  cols="40"
+                  rows="10"
+                  placeholder="Your post"
+                  class="form-control"
+                  required
+                  id="id_content"
+                >
+                This could be a very elegant solution, especially given the eternal struggle with vendorizing: bitprophet.org/blog/2012/06/07/on-vendorizing – Nathan Basanese Apr 4 &#39;16 at 6:40
+                One caution with this is you may pip install &lt;some_module&gt; without using requirements.txt but that will not update requirements.txt. An alternative might be updating a docker such that it lists all the pip install commands that are run to install dependencies. – ampersands Feb 22 &#39;18 at 23:05
+                i tried this python -m pip install -r requirements.txt when inside the activated venv enviroment. things installed smoothly but when i do pip list it does not show that packages, when I am in the active venv or even after deactivate venv. also not able to use that packages. dont know what&#39;s wrong here – Shreyan Mehta Feb 12 at 9:53</textarea
+                >
+              </p>
+              <table class="table">
+                <input
+                  type="hidden"
+                  name="blogimage_set-TOTAL_FORMS"
+                  value="2"
+                  id="id_blogimage_set-TOTAL_FORMS"
+                /><input
+                  type="hidden"
+                  name="blogimage_set-INITIAL_FORMS"
+                  value="1"
+                  id="id_blogimage_set-INITIAL_FORMS"
+                /><input
+                  type="hidden"
+                  name="blogimage_set-MIN_NUM_FORMS"
+                  value="0"
+                  id="id_blogimage_set-MIN_NUM_FORMS"
+                /><input
+                  type="hidden"
+                  name="blogimage_set-MAX_NUM_FORMS"
+                  value="1000"
+                  id="id_blogimage_set-MAX_NUM_FORMS"
+                />
+
+                <thead>
+                  <tr>
+                    <th>Image</th>
+
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+
+                <tr class="formset_row">
+                  <td>
+                    <input
+                      type="hidden"
+                      name="blogimage_set-0-blog"
+                      value="1"
+                      id="id_blogimage_set-0-blog"
+                    />
+
+                    <input
+                      type="hidden"
+                      name="blogimage_set-0-id"
+                      value="4"
+                      id="id_blogimage_set-0-id"
+                    />
+
+                    Currently:
+                    <a
+                      href="/media/blog_images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_%D0%BE%D1%82_2019-03-27_12-36-05_hurUGe9.png"
+                      >blog_images/Снимок_экрана_от_2019-03-27_12-36-05_hurUGe9.png</a
+                    >
+                    <input
+                      type="checkbox"
+                      name="blogimage_set-0-image-clear"
+                      id="blogimage_set-0-image-clear_id"
+                    />
+                    <label for="blogimage_set-0-image-clear_id">Clear</label
+                    ><br />
+                    Change:
+                    <input
+                      type="file"
+                      name="blogimage_set-0-image"
+                      class="form-control-file"
+                      accept="image/*"
+                      id="id_blogimage_set-0-image"
+                    />
+                  </td>
+
+                  <td>
+                    <input
+                      type="checkbox"
+                      name="blogimage_set-0-DELETE"
+                      id="id_blogimage_set-0-DELETE"
+                    />
+                  </td>
+                </tr>
+
+                <tr class="formset_row">
+                  <td>
+                    <input
+                      type="hidden"
+                      name="blogimage_set-1-blog"
+                      value="1"
+                      id="id_blogimage_set-1-blog"
+                    />
+
+                    <input
+                      type="hidden"
+                      name="blogimage_set-1-id"
+                      id="id_blogimage_set-1-id"
+                    />
+
+                    <input
+                      type="file"
+                      name="blogimage_set-1-image"
+                      class="form-control-file"
+                      accept="image/*"
+                      id="id_blogimage_set-1-image"
+                    />
+                  </td>
+
+                  <td>
+                    <input
+                      type="checkbox"
+                      name="blogimage_set-1-DELETE"
+                      id="id_blogimage_set-1-DELETE"
+                    />
+                  </td>
+                </tr>
+              </table>
+
+              <button type="submit" class="mt-4 btn btn-white">
+                Сохранить изменения
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="footer">
+        <div class="container">
+          <ul class="footer-nav">
+            <li class="footer-nav-item col-lg-3 col-md-6 col-sm-12">
+              <a href="#" class="font-link">Часто задаваемые вопросы</a>
+            </li>
+            <li class="footer-nav-item col-lg-3 col-md-6 col-sm-12">
+              <a href="#" class="font-link">Пользовательское соглашение</a>
+            </li>
+            <li
+              class="footer-nav-item col-lg-3 col-md-6 col-sm-12 footer-nav__contacts"
+            >
+              <p class="font-link">Связаться с нами</p>
+              <p class="font-text-sm">+996 555 678747</p>
+              <p class="font-text-sm">mentor.kg@gmail.com</p>
+              <div class="footer-nav__contacts__icons">
+                <a
+                  class="footer-nav__contacts__icons__icon"
+                  id="icon-whatsapp"
+                ></a>
+                <a class="footer-nav__contacts__icons__icon" id="icon-fb"></a>
+                <a
+                  class="footer-nav__contacts__icons__icon"
+                  id="icon-instagram"
+                ></a>
+                <a
+                  class="footer-nav__contacts__icons__icon"
+                  id="icon-telegram"
+                ></a>
+              </div>
+            </li>
+            <li class="footer-nav-item col-lg-3 col-md-6 col-sm-12">
+              <h2 class="font-subtitle"><a href="#">Mentor.kg</a></h2>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+    <script src="../scripts/edit-blog.js"></script>
+  </body>
+</html>

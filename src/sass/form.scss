@@ -1,0 +1,42 @@
+form {
+    display: block;
+    margin-top: 2em;
+    label{
+        margin-top: 2em;
+        margin-bottom: 0.5em;
+        display: block;
+        font-family: "Gilroy-Bold";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $text-grey;
+        text-align: left;
+    }
+    input, textarea {
+        width: 20em;
+        font-family: "Gilroy-Regular";
+        font-size: 16px;
+        font-weight: normal;
+        color: $text;
+        border: 1px solid $text-grey;
+        padding: 0.5em;
+        border-radius: 3px;
+        display: block;
+    }
+    .form_avatar{
+        border:none;
+    }
+    textarea {
+        width: 40em;
+        height: 20em;
+    }
+
+    .form_btn {
+
+        margin-top: 1.5em;
+    }
+    small{
+        display: none;
+    }
+}

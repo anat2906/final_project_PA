@@ -69,20 +69,9 @@
                 Настройки Профиля
               </h2>
               <form action="">
-                <label for="mentor-account__form__avatar" class="font-subtitle"
-                  >Загрузить фото профиля</label
-                >
-                <input
-                  class="font-text"
-                  type="file"
-                  id="mentor-account__form__avatar"
-                />
                 <div>
-                  <label for="mentor-account__form__name" class="font-subtitle"
-                    >Имя</label
-                  >
+                  <label for="mentor-account__form__name">Имя</label>
                   <input
-                    class="font-text"
                     type="text"
                     id="mentor-account__form__name"
                     placeholder="Имя"
@@ -93,35 +82,35 @@
                     >Фамилия</label
                   >
                   <input
-                    class="font-text"
                     type="text"
                     id="mentor-account__form__lastname"
                     placeholder="Фамилия"
                   />
-                  <label for="mentor-account__form__email" class="font-subtitle"
+                  <label for="mentor-account__form__email"
                     >Электронная почта</label
                   >
                   <input
-                    class="font-text"
                     type="email"
                     id="mentor-account__form__email"
                     placeholder="Email"
                   />
-                  <label for="mentor-account__form__bio" class="font-subtitle"
-                    >Обо мне</label
+                  <label for="mentor-account__form__avatar"
+                    >Загрузить фото профиля</label
                   >
+                  <input
+                    class="form_avatar"
+                    type="file"
+                    id="mentor-account__form__avatar"
+                  />
+                  <label for="mentor-account__form__bio">Обо мне</label>
                   <textarea
-                    class="font-text"
                     name="bio"
                     id="mentor-account__form__bio"
                   ></textarea>
-                  <label
-                    for="mentor-account__form__expectations"
-                    class="font-subtitle"
+                  <label for="mentor-account__form__expectations"
                     >Мои ожидания</label
                   >
                   <textarea
-                    class="font-text"
                     name="bio"
                     id="mentor-account__form__expectations"
                   ></textarea>
@@ -130,7 +119,7 @@
                   id="mentor-account__form__btn"
                   type="submit"
                   value="Сохранить"
-                  class="btn btn-primary"
+                  class="btn btn-primary form_btn"
                 >
                   Сохранить
                 </button>
@@ -139,7 +128,7 @@
             <div class="col-lg-3 col-md-12 col-sm-12 account-sidebar">
               <ul class="account-sidebar__nav">
                 <li
-                  class="font-link account-sidebar__nav__nav-item active"
+                  class="font-link account-sidebar__nav__nav-item "
                   id="sidebar-feed"
                 >
                   <div id="sidebar-icon-feed"></div>

@@ -1,0 +1,42 @@
+tbody {
+  #id_blogimage_set-0-image,
+  #id_blogimage_set-1-DELETE,
+  #blogimage_set-0-image-clear_id,
+  label {
+    display: none;
+  }
+  .formset-row {
+    td {
+      a, input {
+        padding: 10px 0;
+      }
+    }
+  }
+}
+.form-control-file {
+  border: none;
+}
+table {
+  margin-top: 2em;
+  width: 70%;
+}
+thead {
+  background-color: lighten($primary, 35%);
+  tr {
+    font-family: "Gilroy-Bold";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $text-grey;
+    margin-bottom: 1em;
+    padding: 10px 0;
+    th {
+      padding: 5px;
+    }
+  }
+}
+.edit-post__block{
+    text-align: center;
+}
+
