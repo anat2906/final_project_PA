@@ -40,7 +40,6 @@ class UserDetailView(DetailView):
         context['recommended'] = UserProfile.objects.recommended(self.request.user)
         return context
 
-
 class UserFollowView(View):
     def get(self, request, username, *args, **kwargs):
         toggle_user = get_object_or_404(User, username__iexact=username)

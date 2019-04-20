@@ -47,7 +47,11 @@ class UserProfileManager(models.Manager):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='profile', on_delete=models.CASCADE)
-    image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    image = models.ImageField(default='default.png', upload_to='profile_pics')
+    position = models.CharField(max_length=120)
+    company = models.CharField(max_length=120)
+    biography = models.TextField()
+    expectations = models.TextField()
     # user.profile
     following = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True, related_name='followed_by')
     # user.profile.following - i follow
@@ -62,8 +66,8 @@ class UserProfile(models.Model):
 
         img = Image.open(self.image.path)
 
-        if img.height > 100 or img.width > 100:
-            output_size = (100, 100)
+        if img.height > 300 or img.width > 300:
+            output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.image.path)
 

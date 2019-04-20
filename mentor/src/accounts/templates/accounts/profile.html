@@ -1,7 +1,8 @@
-{% extends "base.html" %}
-{% load crispy_forms_tags %}
+{% extends "base.html" %} {% load crispy_forms_tags %}
+{% block title %}Личный кабинет{% endblock title %}
 {% block content %}
-    <div class="content-section">
+<main>
+<div class="content-section">
       <div class="media">
         <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
         <div class="media-body">
@@ -11,14 +12,12 @@
       </div>
       <form method="POST" enctype="multipart/form-data">
           {% csrf_token %}
-          <fieldset class="form-group">
-              <legend class="border-bottom mb-4">Profile Info</legend>
-              {{ u_form|crispy }}
-              {{ p_form|crispy }}
-          </fieldset>
+              {{ u_form.as_p }}
+              {{ p_form.as_p }}
           <div class="form-group">
-              <button class="btn btn-outline-info" type="submit">Update</button>
+              <button class="btn btn-primary" type="submit">Update</button>
           </div>
       </form>
     </div>
+</main>
 {% endblock content %}

@@ -4,15 +4,16 @@
 <script>
 $(document).ready(function(){
   $("form input").addClass('form-control')
+
 });
 </script>
-
-
 {% endblock %}
 
 
+
 {% block content %}
-<div class='col-sm-6 col-sm-offset-3 text-center'>
+{#<div class='col-sm-6 col-sm-offset-3 text-center' id="dialog_confirm" style="display: none">#}
+<div class=''>
     <h1>Login</h1>
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
@@ -43,13 +44,14 @@ $(document).ready(function(){
 
 
 
-<button type="submit" class='btn btn-primary'>Login</button>
+<button id="login_btn" type="submit" class='btn btn-primary'>Login</button>
 <input type="hidden" name="next" value="{{ next }}" />
-{#</form>#}
-{##}
-{##}
-{##}
-{# Assumes you setup the password_reset view in your URLconf #}
-{#<!-- <p><a href="{% url 'password_reset' %}">Lost password?</a></p> -->#}
-{#</div>#}
+</form>
+
+
+
+ Assumes you setup the password_reset view in your URLconf
+<!-- <p><a href="{% url 'password_reset' %}">Lost password?</a></p> -->
+</div>
+
 {% endblock %}
