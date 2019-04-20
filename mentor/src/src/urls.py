@@ -27,12 +27,12 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('total/', BlogListView.as_view(), name='total'),
+    path('total/', BlogListView.as_view(), name='total'),#общий блог
     path('about/', about_page, name="about"),
     path('faq/', faq, name="faq"),
     path('agreement/', agreement, name="agreement"),
     path('', views.home, name='home'),
-    path('search/', SearchView.as_view(), name='search'),
+    path('search/', SearchView.as_view(), name='search'),#all mentor list
     path('', include(('accounts.urls', 'profiles'), namespace='profiles')),
     path('api/blog/', include(('blog.api.urls', 'blog-api'), namespace='blog-api')),
     path('blog/', include(('blog.urls', 'blog'), namespace='blog')),

@@ -95,7 +95,7 @@ class UserBlogListView(LoginRequiredMixin, ListView):
     template_name = "blog/user_blog_list.html"
 
     def get_queryset(self, *args, **kwargs):
-        # qs = Blog.objects.all()
+        qs = Blog.objects.all()
         me_following = self.request.user.profile.get_following()
         qs1 = Blog.objects.filter(user__in=me_following)
         qs2 = Blog.objects.filter(user=self.request.user)
@@ -107,5 +107,21 @@ class UserBlogListView(LoginRequiredMixin, ListView):
                 Q(content__icontains=query) |
                 Q(user__username__icontains=query)
                            )
+        return qs
+
+
+class UserListView(LoginRequiredMixin, ListView):
+    model = Blog
+    template_name = "accounts/user_list_view.html"
+
+    def get_queryset(self, *args, **kwargs):
+        qs = super(UserListView, self).get_queryset(**kwargs)
+        qs = qs.filter(user=self.request.user).order_by("-timestamp")
+        query = self.request.GET.get("q")
+        if query:
+            qs = qs.filter(
+                Q(title__icontains=query) |
+                Q(content__icontains=query)
+            ).order_by("-timestamp")
         return qs
 

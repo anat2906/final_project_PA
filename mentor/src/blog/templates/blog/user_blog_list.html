@@ -1,7 +1,7 @@
 {% extends "base.html" %} 
 
 {% block title %}
-    Blog
+    Моя лента
 {% endblock title %}
 
 {% block content %}
@@ -20,28 +20,12 @@
     </svg>
     <section>
       <div class="container col-lg-8 col-md-10 col-sm-12" id="blog__blog-cards">
-        <h2 class="font-title">Блог сообщества</h2>
+        <h2 class="font-title">Моя Лента</h2>
         <p class="font-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
           commodi alias nisi, velit repudiandae perferendis delectus
           exercitationem numquam ducimus cumque.
         </p>
-        <form
-          method="GET"
-          id="blog__search-form"
-          action="{% url 'blog:list' %}"
-        >
-          <div class="searchbox col-lg-8 col-md-8 col-sm-12">
-            <input
-              type="text"
-              class="searchbox__input font-text"
-              placeholder="Поиск"
-              name="q"
-              value="{{ request.GET.q }}"
-            />
-            <input type="submit" class="searchbox__icon" value="" />
-          </div>
-        </form>
         {% for object in object_list %}
         <div class="blog-card">
           <div class="blog-card__blog-card-header">
@@ -51,7 +35,7 @@
             />
             <div class="blog_card__blog-card-header__username">
               <h4 class="font-subtitle">
-                <a href="#">{{ object.user.username }}</a>
+                <a href="#">{{ object.user.first_name }} {{ object.user.last_name }}</a>
               </h4>
               <p class="font-text-sm"> {{ object.timestamp | timesince }}</p>
             </div>
@@ -67,11 +51,7 @@
             />
           </div>
         </div>
-        {% empty %} {% if request.GET.q %}
-        <p>No posts found</p>
-        {% else %}
-        <p>No posts.</p>
-        {% endif %} {% endfor %}
+        {% endfor %}
       </div>
     </section>
   </div>
