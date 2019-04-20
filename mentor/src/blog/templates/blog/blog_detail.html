@@ -20,27 +20,24 @@
               {{ object.title }}
             </h4>
             <p class="font-text-sm">{{ object.timestamp | timesince }}</p>
-            <img
-              src="{{ object.blogimage_set.first.image.url }}"
-              class="publication-card__img"
-            />
+            <div class="publication-card__img">
+              <img src="{{ object.blogimage_set.first.image.url }}" alt="" />
+            </div>
             <p class="font-text">
               {{ object.content }}
             </p>
             {% if object.user == request.user %}
             <div class="publication-card__footer">
-              <a href="#">
+              <a href="{% url 'blog:edit' object.id %}">
                 <div
                   class="publication-card__footer__icon"
                   id="icon-edit"
-                  href="{% url 'blog:edit' object.id %}"
                 ></div>
               </a>
-              <a href="#">
+              <a href="{% url 'blog:delete' object.id %}">
                 <div
                   class="publication-card__footer__icon"
                   id="icon-delete"
-                  href="{% url 'blog:delete' object.id %}"
                 ></div>
               </a>
             </div>
@@ -53,22 +50,24 @@
           </div>
           <div class="publication-author-card__card-body">
             <div class="publication-author-card__card-body__author">
-              <div
-                class="publication-author-card__card-body__author__avatar"
-              ></div>
+              <img class="publication-author-card__card-body__author__avatar" src="{{ object.user.image.url }}>" alt=""/>
               <div class="publication-author-card__card-body__author__name">
-                <h5 class="font-text"><a href="#">Имя Фамилия</a></h5>
-                <p class="font-text-sm">Коуч, ментор, спикер</p>
+                <h5 class="font-text">
+                  <a href="{% url 'profiles:account_detail' user.username %}"
+                    >{{ object.user.first_name }} {{ object.user.last_name }}</a
+                  >
+                </h5>
+                <p class="font-text-sm">{{ object.user.position }}</p>
               </div>
-              <p
-                class="publication-author-card__card-body__card-body__content font-text"
-              >
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
-                odio praesentium harum ducimus quis porro. Soluta quia odio
-                tempore nisi reiciendis facilis expedita, consectetur nam
-                voluptas ab reprehenderit ad recusandae!
-              </p>
             </div>
+            <p
+              class="publication-author-card__card-body__card-body__content font-text"
+            >
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. At odio
+              praesentium harum ducimus quis porro. Soluta quia odio tempore
+              nisi reiciendis facilis expedita, consectetur nam voluptas ab
+              reprehenderit ad recusandae!
+            </p>
           </div>
         </div>
       </div>
