@@ -42,9 +42,7 @@
                 <p class="font-text">
                   {{ blog.content }}
                 </p>
-                <div class="blog-card__blog-card-body__img">
-                    <img src="{{ blog.blogimage_set.first.image.url }}" />
-                </div>
+                    <img class="blog-card__blog-card-body__img" src="{{ blog.blogimage_set.first.image.url }}" />
               </div>
             </div>
         {% empty %}

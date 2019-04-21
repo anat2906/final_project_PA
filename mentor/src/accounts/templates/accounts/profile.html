@@ -1,23 +1,66 @@
-{% extends "base.html" %} {% load crispy_forms_tags %}
-{% block title %}Личный кабинет{% endblock title %}
-{% block content %}
+{% extends "base.html" %} {% load crispy_forms_tags %} {% block title %}Личный
+кабинет{% endblock title %} {% block content %}
 <main>
-<div class="content-section">
-      <div class="media">
-        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
-        <div class="media-body">
-          <h2 class="account-heading">{{ user.username }}</h2>
-          <p class="text-secondary">{{ user.email }}</p>
+  <div class="background-blobs">
+    <svg class="bg-svg" id="blobShape6" viewBox="0 0 500 500">
+      <clipPath></clipPath>
+      <path
+        fill="url(#g6)"
+        d="M 47.99,295.7 C 44.25,252.9 72.33,195.7 110.4,167 169.6,122.4 259,106.1 329.6,128.8 381.3,145.4 428,193 443.7,245 453.3,277 464.9,322.4 424.6,343.5 369,372.7 304.2,310.1 239.1,319 190.9,325.5 153,380 107.6,373.4 64.97,367.3 50.68,326.4 47.99,295.7 Z"
+      />
+      <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0" stop-color="#eeaeca" />
+        <stop offset="1" stop-color="#94bbe9" />
+      </linearGradient>
+    </svg>
+    <section>
+      <div class="container mentor-account">
+        <div class="col-lg-9 col-md-12 col-sm-12 mentor-account__form">
+          <h2 class="font-title">
+            Настройки Профиля
+          </h2>
+          <div class="mt-5">
+            <h2 class="font-title-sm ">{{ user.first_name }} {{ user.last_name }}</h2>
+            <p class="font-text">{{ user.email }}</p>
+          </div>
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ u_form.as_p }}
+            {{ p_form.as_p }}
+
+            <button class="btn btn-primary form-btn mt-5" type="submit">
+              Сохранить
+            </button>
+          </form>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 account-sidebar">
+          <ul class="account-sidebar__nav">
+            <li
+              class="font-link account-sidebar__nav__nav-item "
+              id="sidebar-feed"
+            >
+              <div id="sidebar-icon-feed"></div>
+              <a href="{% url 'profiles:user_blog_list' user.username %}">Мои публикации</a>
+            </li>
+            <li
+              class="font-link account-sidebar__nav__nav-item active"
+              id="sidebar-settings"
+            >
+              <div id="sidebar-icon-settings"></div>
+              <a href="#">Настройки профиля</a>
+            </li>
+            <li
+              class="font-link account-sidebar__nav__nav-item"
+              id="sidebar-follows"
+            >
+              <div id="sidebar-icon-follows"></div>
+              <a href="#">Мои подписки</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <form method="POST" enctype="multipart/form-data">
-          {% csrf_token %}
-              {{ u_form.as_p }}
-              {{ p_form.as_p }}
-          <div class="form-group">
-              <button class="btn btn-primary" type="submit">Update</button>
-          </div>
-      </form>
-    </div>
+    </section>
+  </div>
 </main>
+
 {% endblock content %}
