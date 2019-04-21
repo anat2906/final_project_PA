@@ -2479,31 +2479,31 @@ body {
   font-family: "Gilroy-Bold";
   font-style: normal;
   font-weight: normal;
-  src: url("../../src/static/fonts/Gilroy-Bold.woff") format("woff"); }
+  src: url("/static/fonts/Gilroy-Bold.woff") format("woff"); }
 
 @font-face {
   font-family: "Gilroy-Heavy";
   font-style: normal;
   font-weight: normal;
-  src: url("../../src/static/fonts/Gilroy-Heavy.woff") format("woff"); }
+  src: url("/static/fonts/Gilroy-Heavy.woff") format("woff"); }
 
 @font-face {
   font-family: "Gilroy-Light";
   font-style: normal;
   font-weight: normal;
-  src: url("../../src/static/fonts/Gilroy-Light.woff") format("woff"); }
+  src: url("/static/fonts/Gilroy-Light.woff") format("woff"); }
 
 @font-face {
   font-family: "Gilroy-Medium";
   font-style: normal;
   font-weight: normal;
-  src: url("../../src/static/fonts/Gilroy-Medium.woff") format("woff"); }
+  src: url("/static/fonts/Gilroy-Medium.woff") format("woff"); }
 
 @font-face {
   font-family: "Gilroy-Regular";
   font-style: normal;
   font-weight: normal;
-  src: url("../../src/static/fonts/Gilroy-Regular.woff") format("woff"); }
+  src: url("/static/fonts/Gilroy-Regular.woff") format("woff"); }
 
 a {
   text-decoration: none;
@@ -2597,29 +2597,29 @@ section {
       .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item#sidebar-feed:hover {
         color: #8459b5; }
         .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item#sidebar-feed:hover #sidebar-icon-feed {
-          background-image: url("../../src/static/icons/icons8-scroll -primary.svg"); }
+          background-image: url("/static/icons/icons8-scroll -primary.svg"); }
         .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item#sidebar-feed:hover.active {
           color: #8459b5; }
           .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item#sidebar-feed:hover.active #sidebar-icon-feed {
-            background-image: url("../../src/static/icons/icons8-scroll -primary.svg"); }
+            background-image: url("/static/icons/icons8-scroll -primary.svg"); }
       .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item#sidebar-settings:hover {
         color: #8459b5; }
         .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item#sidebar-settings:hover #sidebar-icon-settings {
-          background-image: url("../../src/static/icons/icons8-settings-primary.svg"); }
+          background-image: url("/static/icons/icons8-settings-primary.svg"); }
       .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item#sidebar-settings.active {
         color: #8459b5; }
         .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item#sidebar-settings.active #sidebar-icon-settings {
-          background-image: url("../../src/static/icons/icons8-settings-primary.svg"); }
+          background-image: url("/static/icons/icons8-settings-primary.svg"); }
       .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item#sidebar-follows:hover {
         color: #8459b5; }
         .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item#sidebar-follows:hover #sidebar-icon-follows {
-          background-image: url("../../src/static/icons/icons8-check-all-primary.svg"); }
+          background-image: url("/static/icons/icons8-check-all-primary.svg"); }
       .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item#sidebar-follows.active {
         color: #8459b5; }
         .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item#sidebar-follows.active #sidebar-icon-follows {
-          background-image: url("../../src/static/icons/icons8-check-all-primary.svg"); }
+          background-image: url("/static/icons/icons8-check-all-primary.svg"); }
       .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item #sidebar-icon-feed {
-        background-image: url("../../src/static/icons/icons8-scroll.svg");
+        background-image: url("/static/icons/icons8-scroll.svg");
         width: 1.5em;
         height: 1.5em;
         margin-right: 0.5em;
@@ -2627,7 +2627,7 @@ section {
         background-repeat: no-repeat;
         background-size: contain; }
       .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item #sidebar-icon-settings {
-        background-image: url("../../src/static/icons/icons8-settings.svg");
+        background-image: url("/static/icons/icons8-settings.svg");
         width: 1.5em;
         height: 1.5em;
         margin-right: 0.5em;
@@ -2635,7 +2635,7 @@ section {
         background-repeat: no-repeat;
         background-size: contain; }
       .account-sidebar .account-sidebar__nav .account-sidebar__nav__nav-item #sidebar-icon-follows {
-        background-image: url("../../src/static/icons/icons8-check-all.svg");
+        background-image: url("/static/icons/icons8-check-all.svg");
         width: 1.5em;
         height: 1.5em;
         margin-right: 0.5em;
@@ -2998,21 +2998,21 @@ section {
             background-repeat: no-repeat;
             background-size: contain; }
             .footer .footer-nav .footer-nav-item.footer-nav__contacts .footer-nav__contacts__icons .footer-nav__contacts__icons__icon#icon-whatsapp {
-              background-image: url("../../src/static/icons/whatsapp.svg"); }
+              background-image: url("/static/icons/whatsapp.svg"); }
               .footer .footer-nav .footer-nav-item.footer-nav__contacts .footer-nav__contacts__icons .footer-nav__contacts__icons__icon#icon-whatsapp:hover {
-                background-image: url("../../src/static/icons/icons8-whatsapp-primary.svg"); }
+                background-image: url("/static/icons/icons8-whatsapp-primary.svg"); }
             .footer .footer-nav .footer-nav-item.footer-nav__contacts .footer-nav__contacts__icons .footer-nav__contacts__icons__icon#icon-fb {
-              background-image: url("../../src/static/icons/facebook.svg"); }
+              background-image: url("/static/icons/facebook.svg"); }
               .footer .footer-nav .footer-nav-item.footer-nav__contacts .footer-nav__contacts__icons .footer-nav__contacts__icons__icon#icon-fb:hover {
-                background-image: url("../../src/static/icons/icons8-facebook-primary.svg"); }
+                background-image: url("/static/icons/icons8-facebook-primary.svg"); }
             .footer .footer-nav .footer-nav-item.footer-nav__contacts .footer-nav__contacts__icons .footer-nav__contacts__icons__icon#icon-instagram {
-              background-image: url("../../src/static/icons/instagram.svg"); }
+              background-image: url("/static/icons/instagram.svg"); }
               .footer .footer-nav .footer-nav-item.footer-nav__contacts .footer-nav__contacts__icons .footer-nav__contacts__icons__icon#icon-instagram:hover {
-                background-image: url("../../src/static/icons/icons8-instagram-primary.svg"); }
+                background-image: url("/static/icons/icons8-instagram-primary.svg"); }
             .footer .footer-nav .footer-nav-item.footer-nav__contacts .footer-nav__contacts__icons .footer-nav__contacts__icons__icon#icon-telegram {
-              background-image: url("../../src/static/icons/telegram-app.svg"); }
+              background-image: url("/static/icons/telegram-app.svg"); }
               .footer .footer-nav .footer-nav-item.footer-nav__contacts .footer-nav__contacts__icons .footer-nav__contacts__icons__icon#icon-telegram:hover {
-                background-image: url("../../src/static/icons/icons8-telegram-primary.svg"); }
+                background-image: url("/static/icons/icons8-telegram-primary.svg"); }
 
 .searchbox {
   margin: 0 auto;
@@ -3035,7 +3035,7 @@ section {
     height: 1.8em;
     border: none;
     background: none;
-    background-image: url("../../src/static/icons/search.svg");
+    background-image: url("/static/icons/search.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -3056,11 +3056,12 @@ section {
       border-radius: 50%;
       height: 3em;
       width: 3em;
-      background-image: url("../../src/static/icons/icons8-user-male.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 70%;
-      margin-right: 1em; }
+      margin-right: 1em;
+      overflow: hidden;
+    }
+    .blog-card .blog-card__blog-card-header .blog-card__blog-card-header__avatar img{
+       width: 100%;
+      }
   .blog-card .blog-card__blog-card-body h4 {
     margin-bottom: 0.5em; }
   .blog-card .blog-card__blog-card-body .blog-card__blog-card-body__img {
@@ -3133,14 +3134,14 @@ form {
       background-repeat: no-repeat;
       background-size: contain; }
       .publication .publication-card .publication-card__footer .publication-card__footer__icon#icon-edit {
-        background-image: url("../../src/static/icons/edit.svg");
+        background-image: url("/static/icons/edit.svg");
         margin-right: 1em; }
         .publication .publication-card .publication-card__footer .publication-card__footer__icon#icon-edit:hover {
-          background-image: url("../../src/static/icons/edit-primary.svg"); }
+          background-image: url("/static/icons/edit-primary.svg"); }
       .publication .publication-card .publication-card__footer .publication-card__footer__icon#icon-delete {
-        background-image: url("../../src/static/icons/delete.svg"); }
+        background-image: url("/static/icons/delete.svg"); }
         .publication .publication-card .publication-card__footer .publication-card__footer__icon#icon-delete:hover {
-          background-image: url("../../src/static/icons/delete-primary.svg"); }
+          background-image: url("/static/icons/delete-primary.svg"); }
   .publication .publication-author-card {
     padding-top: 2em;
     padding-left: 2em; }
@@ -3156,7 +3157,7 @@ form {
         border-radius: 50%;
         height: 3em;
         width: 3em;
-        background-image: url("../../src/static/icons/icons8-user-male.svg");
+        background-image: url("/static/icons/icons8-user-male.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 70%;
@@ -3171,10 +3172,10 @@ form {
   width: 100%;
   height: 220px;
   position: relative;
-  background-image: url("../../src/static/images/topography.png"); }
+  background-image: url("/static/images/topography.png"); }
 
 .profile-avatar {
-  background-image: url("../../src/static/images/profile.png");
+  background-image: url("/static/images/profile.png");
   background-size: 130%;
   background-repeat: no-repeat;
   width: 200px;
@@ -3203,21 +3204,21 @@ form {
     background-repeat: no-repeat;
     background-size: contain; }
     .profile-right .profile-icons#profile-icon-whatsapp {
-      background-image: url("../../src/static/icons/icons8-whatsapp-96.png"); }
+      background-image: url("/static/icons/icons8-whatsapp-96.png"); }
       .profile-right .profile-icons#profile-icon-whatsapp:hover {
-        background-image: url("../../src/static/icons/icons8-whatsapp-96-primary.png"); }
+        background-image: url("/static/icons/icons8-whatsapp-96-primary.png"); }
     .profile-right .profile-icons#profile-icon-fb {
-      background-image: url("../../src/static/icons/icons8-facebook-96.png"); }
+      background-image: url("/static/icons/icons8-facebook-96.png"); }
       .profile-right .profile-icons#profile-icon-fb:hover {
-        background-image: url("../../src/static/icons/icons8-facebook-96-primary.png"); }
+        background-image: url("/static/icons/icons8-facebook-96-primary.png"); }
     .profile-right .profile-icons#profile-icon-instagram {
-      background-image: url("../../src/static/icons/icons8-instagram-96.png"); }
+      background-image: url("/static/icons/icons8-instagram-96.png"); }
       .profile-right .profile-icons#profile-icon-instagram:hover {
-        background-image: url("../../src/static/icons/icons8-instagram-96-primary.png"); }
+        background-image: url("/static/icons/icons8-instagram-96-primary.png"); }
     .profile-right .profile-icons#profile-icon-telegram {
-      background-image: url("../../src/static/icons/icons8-telegram-logo-96.png"); }
+      background-image: url("/static/icons/icons8-telegram-logo-96.png"); }
       .profile-right .profile-icons#profile-icon-telegram:hover {
-        background-image: url("../../src/static/icons/icons8-telegram-96-primary.png"); }
+        background-image: url("/static/icons/icons8-telegram-96-primary.png"); }
   .profile-right .line-color {
     color: #8459b5;
     height: 2px; }
@@ -3256,7 +3257,7 @@ form {
   height: auto; }
   .mainpage .mainpage__first-block__background {
     height: auto;
-    background-image: url("../../src/static/images/about1.jpg");
+    background-image: url("/static/images/about1.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;
@@ -3345,7 +3346,7 @@ form {
       .mainpage .mainpage__second-block .mainpage__second-block__title .mainpage__second-block__icon {
         height: 50px;
         width: 50px;
-        background: url("../../static/icons/win.png"); }
+        background: url("/static/icons/win.png"); }
     .mainpage .mainpage__second-block .mainpage__second-block__subtitle {
       padding-top: 4em; }
     .mainpage .mainpage__second-block .mainpage__second-block__text {
@@ -3448,7 +3449,7 @@ form {
       margin-top: 3em; }
   .mainpage .mainpage__steps-block__background {
     height: auto;
-    background-image: url("../../src/static/images/topography.png");
+    background-image: url("/static/images/topography.png");
     background-position-x: center;
     background-position-y: top; }
     .mainpage .mainpage__steps-block__background .container .mainpage__steps-block__title span {
@@ -3763,7 +3764,7 @@ form {
     align-items: center;
     margin-top: 1em; }
     .mentee-account .mentee-account__content .mentee-account__content__feed .mentee-account__content__feed__publication .mentee-account__content__feed__publication__img {
-      background-image: url("../../src/static/images/blog-img.jpg");
+      background-image: url("/static/images/blog-img.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100%;
@@ -3806,7 +3807,7 @@ form {
       height: 150px;
       margin: 0 auto;
       border-radius: 50%;
-      background-image: url("../../src/static/images/mentor.jpg");
+      background-image: url("/static/images/mentor.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100%; }
@@ -3834,7 +3835,7 @@ form {
         .aboutpage .aboutpage__first-block .aboutpage__first-block__content .aboutpage__first-block__left-div .aboutpage__first-block__img {
           border-radius: 2px;
           height: 200px;
-          background-image: url("../../src/static/images/about1.jpg");
+          background-image: url("/static/images/about1.jpg");
           background-size: 100%; }
       .aboutpage .aboutpage__first-block .aboutpage__first-block__content .aboutpage__first-block__right-div {
         padding-left: 2em; }
@@ -3845,7 +3846,7 @@ form {
     text-align: center;
     clip-path: polygon(-1px 100%, 100% 80%, 100% 5%, 0px 0px);
     height: auto;
-    background-image: url("../../src/static/images/topography.png"); }
+    background-image: url("/static/images/topography.png"); }
     .aboutpage .aboutpage__quote-block h4 {
       font-size: 22px; }
     .aboutpage .aboutpage__quote-block p {
