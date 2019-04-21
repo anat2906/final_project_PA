@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} 
+{% block title %} Публикация {% endblock title %} 
+{% block content %}
 <main class="main">
   <div class="background-blobs">
     <svg class="bg-svg" id="blobShape4" viewBox="0 0 500 500">
@@ -50,7 +52,9 @@
           </div>
           <div class="publication-author-card__card-body">
             <div class="publication-author-card__card-body__author">
-              <img class="publication-author-card__card-body__author__avatar" src="{{ object.user.image.url }}>" alt=""/>
+              <div class="publication-author-card__card-body__author__avatar">
+                  <img src="{{ object.user.profile.image.url }}">
+              </div>
               <div class="publication-author-card__card-body__author__name">
                 <h5 class="font-text">
                   <a href="{% url 'profiles:account_detail' object.user.username %}"
