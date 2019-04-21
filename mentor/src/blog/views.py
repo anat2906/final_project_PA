@@ -42,7 +42,7 @@ def update_blog(request, id):
     blog = get_object_or_404(Blog, id=id)
     form = BlogForm(request.POST or None, instance=blog)
     title = 'Update a blog'
-    BlogImageFormSet = inlineformset_factory(Blog, BlogImage, form=BlogImageForm, extra=1, can_delete=True)
+    BlogImageFormSet = inlineformset_factory(Blog, BlogImage, form=BlogImageForm, extra=0, can_delete=True)
     if request.method == 'POST':
         if form.is_valid():
             product = form.save()
@@ -116,7 +116,7 @@ class UserListView(LoginRequiredMixin, ListView):
 
     def get_queryset(self, *args, **kwargs):
         qs = super(UserListView, self).get_queryset(**kwargs)
-        qs = qs.filter(user=self.request.user).order_by("-timestamp")
+        qs = qs.filter(user=self.user).order_by("-timestamp")
         query = self.request.GET.get("q")
         if query:
             qs = qs.filter(

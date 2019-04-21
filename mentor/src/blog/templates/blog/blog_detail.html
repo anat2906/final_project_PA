@@ -53,7 +53,7 @@
               <img class="publication-author-card__card-body__author__avatar" src="{{ object.user.image.url }}>" alt=""/>
               <div class="publication-author-card__card-body__author__name">
                 <h5 class="font-text">
-                  <a href="{% url 'profiles:account_detail' user.username %}"
+                  <a href="{% url 'profiles:account_detail' object.user.username %}"
                     >{{ object.user.first_name }} {{ object.user.last_name }}</a
                   >
                 </h5>

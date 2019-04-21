@@ -1,78 +1,79 @@
 {% extends "base.html" %}
 {% block content %}
 
-<main class="main">
-    <div class="background-blobs">
-      
-      <svg class="bg-svg" id="blobShape3" viewBox="0 0 500 500">
-        <clipPath></clipPath>
-        <path
-          fill="url(#g3)"
-          d="M 402.7,215.5 C 433.9,280.4 488.1,367.2 447.7,426.8 410.1,482.2 316.7,460.2 249.7,460.6 182.8,461.1 88.08,485.5 51.26,429.5 10.29,367.3 73.19,279.4 106.9,213 141.8,144 176.6,33.65 253.9,33.7 332.2,33.75 368.8,144.9 402.7,215.5 Z"
-        />
-        <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0" stop-color="#94d6ba" />
-          <stop offset="1" stop-color="#b5a9c4" />
-        </linearGradient>
-      </svg>
-      <section>
-        <div
-          class="container col-lg-8 col-md-10 col-sm-12"
-          id="blog__blog-cards"
-        >
-          <h2 class="font-title">Блог сообщества</h2>
-          <p class="font-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis commodi alias nisi, velit repudiandae perferendis
-            delectus exercitationem numquam ducimus cumque.
-          </p>
-          <form method="GET" id="blog__search-form" action="{% url 'blog:list' %}">
-            <div class="searchbox col-lg-8 col-md-8 col-sm-12">
-              <input
-                type="text"
-                class="searchbox__input font-text"
-                placeholder="Поиск"
-                name="q"
-                value="{{ request.GET.q }}"
-              />
-              <input type="submit" class="searchbox__icon" value="" />
-            </div>
-          </form>
-          {% for object in object_list %}
-          <div class="blog-card">
-            <div class="blog-card__blog-card-header">
-              <img class="blog-card__blog-card-header__avatar" src="{{ object.user.image.url }}>" alt=""/>
-              <div class="blog_card__blog-card-header__username">
-                <h4 class="font-subtitle"><a href="#">{{ object.user.first_name }} {{ object.user.last_name }}</a></h4>
-                <p class="font-text-sm">{{ object.timestamp|timesince }}</p>
-              </div>
-            </div>
-            <div class="blog-card__blog-card-body">
-              <h4 class="font-title-sm">
-                <a href="{% url 'blog:detail' object.id %}"
-                  >{{ object.title }}</a
+    <main class="main">
+        <div class="background-blobs">
+
+            <svg class="bg-svg" id="blobShape3" viewBox="0 0 500 500">
+                <clipPath></clipPath>
+                <path
+                        fill="url(#g3)"
+                        d="M 402.7,215.5 C 433.9,280.4 488.1,367.2 447.7,426.8 410.1,482.2 316.7,460.2 249.7,460.6 182.8,461.1 88.08,485.5 51.26,429.5 10.29,367.3 73.19,279.4 106.9,213 141.8,144 176.6,33.65 253.9,33.7 332.2,33.75 368.8,144.9 402.7,215.5 Z"
+                />
+                <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0" stop-color="#94d6ba" />
+                    <stop offset="1" stop-color="#b5a9c4" />
+                </linearGradient>
+            </svg>
+            <section>
+                <div
+                        class="container col-lg-8 col-md-10 col-sm-12"
+                        id="blog__blog-cards"
                 >
-              </h4>
-              <p class="font-text">
-                  {{ object.content }}
-              </p>
-              <div class="blog-card__blog-card-body__img">
-                <img src="{{ object.blogimage_set.first.image.url }}" alt="" />
-              </div>
-            </div>
-          </div>
+                    <h2 class="font-title">Блог сообщества</h2>
+                    <p class="font-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Perspiciatis commodi alias nisi, velit repudiandae perferendis
+                        delectus exercitationem numquam ducimus cumque.
+                    </p>
+                    <form method="GET" id="blog__search-form" action="{% url 'blog:list' %}">
+                        <div class="searchbox col-lg-8 col-md-8 col-sm-12">
+                            <input
+                                    type="text"
+                                    class="searchbox__input font-text"
+                                    placeholder="Поиск"
+                                    name="q"
+                                    value="{{ request.GET.q }}"
+                            />
+                            <input type="submit" class="searchbox__icon" value="" />
+                        </div>
+                    </form>
+                    {% for object in object_list %}
+                        <div class="blog-card">
+                            <div class="blog-card__blog-card-header">
+                                <div class="blog-card__blog-card-header__avatar" alt="">
+                                    <img src="{{ object.user.profile.image.url }}">
+                                </div>
+                                <div class="blog_card__blog-card-header__username">
+                                    <h4 class="font-subtitle"><a href="{% url 'profiles:account_detail' object.user.username %}">{{ object.user.first_name }} {{ object.user.last_name }}</a></h4>
+                                    <p class="font-text-sm">{{ object.timestamp|timesince }}</p>
+                                </div>
+                            </div>
+                            <div class="blog-card__blog-card-body">
+                                <h4 class="font-title-sm">
+                                    <a href="{% url 'blog:detail' object.id %}"
+                                    >{{ object.title }}</a
+                                    >
+                                </h4>
+                                <p class="font-text">
+                                    {{ object.content }}
+                                </p>
+                                <div class="blog-card__blog-card-body__img">
+                                    <img src="{{ object.blogimage_set.first.image.url }}" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    {% empty %}
+                        {% if request.GET.q %}
+                            <p class="mt-5 mb-5 font-text col-6 offset-3" style="text-align:center">Мы не нашли такой пост((</p>
+                        {% else %}
+                            <p class="mt-5 mb-5 font-text col-6 offset-3" style="text-align:center">Пока постов нет</p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-  </main>
-  {% empty %}
-  {% if request.GET.q %}
-  <p class="mt-5 mb-5 font-text col-6 offset-3" style="text-align:center">Мы не нашли такой пост((</p>
-  {% else %}
-  <p class="mt-5 mb-5 font-text col-6 offset-3" style="text-align:center">Пока постов нет</p>
-  {% endif %}
-  {% endfor %}
-</div>
+    </main>
 
 {% endblock content %}
 

@@ -3056,11 +3056,12 @@ section {
       border-radius: 50%;
       height: 3em;
       width: 3em;
-      background-image: url("/static/icons/icons8-user-male.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 70%;
-      margin-right: 1em; }
+      margin-right: 1em;
+      overflow: hidden;
+    }
+    .blog-card .blog-card__blog-card-header .blog-card__blog-card-header__avatar img{
+       width: 100%;
+      }
   .blog-card .blog-card__blog-card-body h4 {
     margin-bottom: 0.5em; }
   .blog-card .blog-card__blog-card-body .blog-card__blog-card-body__img {
