@@ -3,20 +3,33 @@
 {% load crispy_forms_tags %}
 
 
-{% block title %}Register | {{ block.super }}{% endblock title %}
+{% block title %}Регистрация | {{ block.super }}{% endblock title %}
 
 
 {% block content %}
-<div class='row'>
-    <div class='col-sm-6 col-sm-offset-3'>
-        <h1>Register</h1>
+
+    <main>
+        <div class="mentor-registration-block container">
+            <section>
+                <h4 class="font-title">
+                    Форма регистрации ментора
+                </h4>
+
                 <form class='form {% if form_class %}{{ form_class }}{% endif %}' method='POST' action="{% if action_url %}{{ action_url }}{% endif %}">
-           {% csrf_token %}
-            {{ form|crispy }}
-            <input class='btn btn-primary' type="submit" value="Register" />
-        </form>
-    </div>
-</div>
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button
+                            id="mentor-account__form__btn"
+                            type="submit"
+                            value="Создать аккаунт"
+                            class="btn btn-primary form_btn"
+                    >
+                        Создать аккаунт
+                    </button>
+                </form>
+            </section>
+        </div>
+    </main>
 {% endblock content %}
 
 
