@@ -35,7 +35,7 @@
             />
             <div class="blog_card__blog-card-header__username">
               <h4 class="font-subtitle">
-                <a href="{% url 'profiles:account' %}">{{ object.user.first_name }} {{ object.user.last_name }}</a>
+                <a href="/{{ object.user.username}}/">{{ object.user.first_name }} {{ object.user.last_name }}</a>
               </h4>
               <p class="font-text-sm"> {{ object.timestamp | timesince }}</p>
             </div>

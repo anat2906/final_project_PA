@@ -40,7 +40,7 @@
               id="sidebar-feed"
             >
               <div id="sidebar-icon-feed"></div>
-              <a href="{% url 'profiles:user_blog_list' user.username %}">Мои публикации</a>
+              <a href="/{{ user.username}}/blog">Мои публикации</a>
             </li>
             <li
               class="font-link account-sidebar__nav__nav-item active"
@@ -54,7 +54,7 @@
               id="sidebar-follows"
             >
               <div id="sidebar-icon-follows"></div>
-              <a href="#">Мои подписки</a>
+              <a href="/{{ user.username}}/following">Мои подписки</a>
             </li>
           </ul>
         </div>

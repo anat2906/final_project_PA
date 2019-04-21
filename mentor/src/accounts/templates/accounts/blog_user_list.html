@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <main>
+        <div class="background-blobs">
+            <svg class="bg-svg" id="blobShape2" viewBox="0 0 500 500">
+                <clipPath></clipPath>
+                <path
+                        fill="url(#g2)"
+                        d="M 184,127.4 C 235.4,92.39 319.7,79.27 359.9,132.2 383.2,163 357.1,216.6 355.8,258.8 354.8,291.2 371.3,332.9 352.9,356 306.1,414.4 205.1,419.3 153.7,367.2 123.8,336.8 128.6,272.1 136.1,225.2 142.1,187.8 157,145.7 184,127.4 Z"
+                />
+                <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0" stop-color="#fefefe" />
+                    <stop offset="1" stop-color="#452958" />
+                </linearGradient>
+            </svg>
+            <section>
+                <div
+                        class="container col-lg-8 col-md-10 col-sm-12"
+                        id="blog__blog-cards"
+                >
+                    <h2 class="font-title">Публикации ментора</h2>
+                    {% for blog in object.blog_set.all %}
+
+                        <div class="blog-card">
+                            <div class="blog-card__blog-card-header">
+                                <div class="blog-card__blog-card-header__avatar">
+                                    <img src="{{ blog.user.profile.image.url }}">
+                                </div>
+                                <div class="blog_card__blog-card-header__username">
+                                    <h4 class="font-subtitle"><a href="/{{ blog.user.username }}">{{ blog.user.first_name }} {{ blog.user.last_name }}</a></h4>
+                                    <p class="font-text-sm">{{ blog.timestamp|timesince }}</p>
+                                </div>
+                            </div>
+                            <div class="blog-card__blog-card-body">
+                                <h4 class="font-title-sm">
+                                    <a href="{% url 'blog:detail' blog.id %}"
+                                    >{{ blog.title }}</a
+                                    >
+                                </h4>
+                                <p class="font-text">
+                                    {{ blog.content }}
+                                </p>
+
+                                <div class="blog-card__blog-card-body__img">
+{#                                    <img src="{{ blog.blogimage_set.image.url }}" />#}
+{#                                    {% if object.blogimage_set.first %}#}
+                                        <img src="{{ blog.blogimage_set.first.image.url }}"/>
+{#                                    {% else %}#}
+{#                                      <p>No photo</p>#}
+{#                                    {% endif %}#}
+                                </div>
+                            </div>
+                        </div>
+                    {% empty %}
+                        <h5>Пока публикаций нет</h5>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+    </main>
+{% endblock content %}
+
+
+
+
+
+{#<div class="row mt-2">#}
+{#        <div class="col-sm-3 col-xs-12">#}
+{#            <h3>{{ object.username }}</h3>#}
+{#            <hr>#}
+{#            <div class="col-sm-9 col-xs-12">#}
+{#                <h3>Blog</h3>#}
+{#                {% for blog in object.blog_set.all %}#}
+{#                    <article class="media content-section">#}
+{#                        <div class="media-body">#}
+{#                            <div class="article-metadata">#}
+{#                                <small class="text-muted">{{ blog.timestamp|timesince }}</small>#}
+{#                            </div>#}
+{#                            <h2><a class="article-title" href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a>#}
+{#                            </h2>#}
+{#                            <p class="article-content">{{ blog.content }}</p>#}
+{#                        </div>#}
+{#                    </article>#}
+{#                    <hr>#}
+{#                {% empty %}#}
+{#                    <h5>No blog yet.</h5>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        </div>#}

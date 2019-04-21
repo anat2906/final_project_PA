@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>{{ object.username }}</h3>
+
+    {% for user in object.profile.get_following %}
+        <a href="/{{ user.username }}">{{ user.username }}</a><br>
+    {% empty %}
+        <h5>Not following any users</h5>
+    {% endfor %}
+
+{% endblock %}

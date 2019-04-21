@@ -45,7 +45,7 @@
                             <a href="{% url 'total' %}">Блог</a>
                         </li>
                         <li class="header__header-upper__nav__nav-item font-link">
-                            <a href="{%  url 'search' %}">Наши менторы</a>
+                            <a href="{%  url 'profiles:user_list' %}">Наши менторы</a>
                         </li>
                         <li class="header__header-upper__nav__nav-item font-link">
                             <a href="{% url 'blog:user_blog_list' %}">Моя лента</a>
@@ -116,7 +116,7 @@
                 <a href="{% url 'total' %}">Блог</a>
             </li>
             <li class="header__header-upper__nav__nav-item font-link">
-                <a href="{% url 'search' %}">Наши менторы</a>
+                <a href="{% url 'profiles:user_list' %}">Наши менторы</a>
             </li>
             {% if user.is_authenticated %}
                 <li class="header__header-upper__nav__nav-item font-link">
