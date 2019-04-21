@@ -35,7 +35,7 @@
           mollitia dolores illo.
         </p>
         <div class="mentors-wrapper">
-          <form method="GET" id="blog__search-form" action="{% url 'search' %}">
+          <form method="GET" id="blog__search-form" action="{% url 'profiles:user_list' %}">
             <div class="searchbox col-lg-8 col-md-8 col-sm-12">
               <input
                 type="text"
@@ -48,7 +48,7 @@
             </div>
           </form>
           <div class="mentors__mentor-cards col-12">
-            {% for user in users %}
+            {% for user in object_list %}
               <div
                 class="mentors__mentor-cards__mentor-card col-lg-4 col-md-6 col-sm-12"
               >

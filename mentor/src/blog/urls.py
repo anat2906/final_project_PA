@@ -10,7 +10,6 @@ from .views import (
     update_blog,
     UserBlogListView,
 )
-
 urlpatterns = [
     path('', RedirectView.as_view(url="/")),
     path('list/', UserBlogListView.as_view(), name='user_blog_list'), #те на кого подписан

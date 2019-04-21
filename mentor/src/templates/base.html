@@ -30,11 +30,41 @@
     <header class="header">
       <div class="container">
         <div class="header-upper">
-          <div class="header-upper-wrapper">
-            <div class="header__header-upper__logo">
-              <h2 class="font-subtitle">
-                <a href="{% url 'home' %}">Mentor.kg</a>
-              </h2>
+            <div class="header-upper-wrapper">
+                <div class="header__header-upper__logo">
+                    <h2 class="font-subtitle">
+                        <a href="{% url 'home' %}">Mentor.kg</a>
+                    </h2>
+                </div>
+                <ul class="header__header-upper__nav">
+                    {% if user.is_authenticated %}
+                        <li class="header__header-upper__nav__nav-item font-link">
+                            <a href="{% url 'about' %}">О проекте</a>
+                        </li>
+                        <li class="header__header-upper__nav__nav-item font-link">
+                            <a href="{% url 'total' %}">Блог</a>
+                        </li>
+                        <li class="header__header-upper__nav__nav-item font-link">
+                            <a href="{%  url 'profiles:user_list' %}">Наши менторы</a>
+                        </li>
+                        <li class="header__header-upper__nav__nav-item font-link">
+                            <a href="{% url 'blog:user_blog_list' %}">Моя лента</a>
+                        </li>
+                        <li class="header__header-upper__nav__nav-item font-link">
+                            <a href="{% url 'profiles:profile' %}">Личный кабинет</a>
+                        </li>
+                    {% else %}
+                        <li class="header__header-upper__nav__nav-item font-link">
+                            <a href="{% url 'about' %}">О проекте</a>
+                        </li>
+                        <li class="header__header-upper__nav__nav-item font-link">
+                            <a href="{% url 'total' %}">Блог</a>
+                        </li>
+                        <li class="header__header-upper__nav__nav-item font-link">
+                            <a href="{%  url 'search' %} ">Наши менторы</a>
+                        </li>
+                    {% endif %}
+                </ul>
             </div>
             <ul class="header__header-upper__nav">
               {% if user.is_authenticated %}
@@ -43,37 +73,10 @@
               </li>
               <li class="header__header-upper__nav__nav-item font-link">
                 <a href="{% url 'total' %}">Блог</a>
-              </li>
-              <li class="header__header-upper__nav__nav-item font-link">
-                <a href="{%  url 'search' %}">Наши менторы</a>
-              </li>
-              <li class="header__header-upper__nav__nav-item font-link">
-                <a href="{% url 'blog:user_blog_list' %}">Моя лента</a>
-              </li>
-              <li class="header__header-upper__nav__nav-item font-link">
-                <a href="{% url 'profiles:profile' %}">Личный кабинет</a>
-              </li>
-              {% else %}
-              <li class="header__header-upper__nav__nav-item font-link">
-                <a href="{% url 'about' %}">О проекте</a>
-              </li>
-              <li class="header__header-upper__nav__nav-item font-link">
-                <a href="{% url 'total' %}">Блог</a>
-              </li>
-              <li class="header__header-upper__nav__nav-item font-link">
-                <a href="{%  url 'search' %} ">Наши менторы</a>
-              </li>
-              {% endif %}
-            </ul>
-          </div>
-          <div class="header-upper-wrapper">
-            <ul class="header__header-upper__navbar__lang">
-              <li
-                class="header__header-upper__navbar__lang__lang-option font-subtitle"
-              >
-                RU
-              </li>
-            </ul>
+            </li>
+            <li class="header__header-upper__nav__nav-item font-link">
+                <a href="{% url 'profiles:user_list' %}">Наши менторы</a>
+            </li>
             {% if user.is_authenticated %}
             <div
               id="btn-login"

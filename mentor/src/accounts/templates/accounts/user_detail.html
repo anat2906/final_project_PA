@@ -64,7 +64,7 @@
                                         <a class="btn btn-primary publications-btn mt-3" href="{{ object.profile.get_follow_url }}">
                                             Отписаться
                                         </a>
-                                    {%  else%}
+                                    {% else %}
                                         <h6 class="profile-ad-text font-subtitle">
                                             Заинтересованы в этом менторе? Подпишитесь на нее/него.
                                         </h6>
@@ -76,7 +76,7 @@
                                         <h4 class="font-subtitle">
                                             Публикации данного пользователя
                                         </h4>
-                                        <a class="btn btn-primary publications-btn" href="{% url 'profiles:user_blog_list' object.username %}">Показать</a>
+                                        <a class="btn btn-primary publications-btn" href="/{{ user.username}}/blog">Показать</a>
                                     </div>
                                 </div>
                             </div>

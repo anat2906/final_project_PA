@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views import View
-from django.views.generic import DetailView, FormView
+from django.views.generic import DetailView, FormView, ListView
 
 from accounts.forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from .models import UserProfile
@@ -40,12 +40,61 @@ class UserDetailView(DetailView):
         context['recommended'] = UserProfile.objects.recommended(self.request.user)
         return context
 
+
+class UserFollower(DetailView):
+    template_name = "accounts/following.html"
+    queryset = User.objects.all()
+
+    def get_object(self):
+        return get_object_or_404(User, username__iexact=self.kwargs.get("username"))
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(UserFollower, self).get_context_data(*args, **kwargs)
+        context["following"] = UserProfile.objects.is_following(self.request.user, self.get_object())
+        context['recommended'] = UserProfile.objects.recommended(self.request.user)
+        return context
+
+
+class UserBlog(DetailView):
+    template_name = "accounts/blog_user_list.html"
+    queryset = User.objects.all()
+
+    def get_object(self):
+        return get_object_or_404(User, username__iexact=self.kwargs.get("username"))
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(UserBlog, self).get_context_data(*args, **kwargs)
+        context["following"] = UserProfile.objects.is_following(self.request.user, self.get_object())
+        context['recommended'] = UserProfile.objects.recommended(self.request.user)
+        return context
+
+
 class UserFollowView(View):
     def get(self, request, username, *args, **kwargs):
         toggle_user = get_object_or_404(User, username__iexact=username)
         if request.user.is_authenticated:
             is_following = UserProfile.objects.toogle_follow(request.user, toggle_user)
         return redirect("profiles:account_detail", username=username)
+
+
+class UserView(ListView):
+    model = User
+    template_name = "search.html"
+
+    def get_queryset(self):
+        return User.objects.all()
+
+    def get_queryset(self, *args, **kwargs):
+        qs = super(UserView, self).get_queryset(**kwargs)
+        # qs = User.objects.all()
+        query = self.request.GET.get("q", None)
+        if query is not None:
+            qs = qs.filter(
+                Q(first_name__icontains=query) |
+                Q(last_name__icontains=query) |
+                Q(username__icontains=query)
+            )
+        return qs
 
 
 @login_required

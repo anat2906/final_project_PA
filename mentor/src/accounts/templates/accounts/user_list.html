@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="GET" class="mt-5 mb-4" action="{% url 'profiles:user_list' %}">
+        <input type="text" name="q" placeholder="Search" value="{{ request.GET.q }}">
+        <input type="submit" value="Search">
+      </form>
+    <h1>Users</h1>
+
+    <ul>
+    {% for instance in object_list  %}
+        <li><a href="/{{ user.username}}/">{{ instance.username }}</a>
+    {% empty %}
+        <li>No Tags yet.</li>
+    {% endfor %}
+
+    </ul>
+
+{% endblock content %}
