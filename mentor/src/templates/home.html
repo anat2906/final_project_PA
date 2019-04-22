@@ -13,20 +13,13 @@
               <h3 class="mainpage__first-block__title">
                 Онлайн платформа для поиска ментора
               </h3>
-              <!-- <h5 class="mainpage__first-block__subtitle font-text-md">
-                  Задача организации, в особенности же дальнейшее развитие
-                  различных форм деятельности влечет за собой процесс внедрения. В
-                  отличии от lorem ipsum, текст рыба на русском языке наполнит
-                  любой макет непонятным смыслом и придаст неповторимый колорит
-                  советских времен.
-                </h5> -->
             </div>
             <div class="mainpage__first-block__buttons-div">
               <div class="btn-lg btn-white">
-                <a href="./mentor-registration.html">Стать ментором</a>
+                <a href="{% url 'profiles:register' %}">Стать ментором</a>
               </div>
               <div class="btn-lg btn-primary">
-                <a href="./mentors.html">Выбрать ментора</a>
+                <a href="{% url 'profiles:user_list' %}">Выбрать ментора</a>
               </div>
             </div>
           </div>
@@ -61,7 +54,7 @@
           </div>
           <div class="mainpage__second-block__btn">
             <div class="btn-lg btn-white-transparency">
-              <a href="./about.html">Подробнее</a>
+              <a href="{% url 'about' %}">Подробнее</a>
             </div>
           </div>
         </div>
@@ -254,7 +247,7 @@
             </div>
           </div>
           <div class="mainpage__mentors-block__button btn-lg btn-primary">
-            <a href="./mentors.html">Показать всех</a>
+            <a href="{% url 'profiles:user_list' %}">Показать всех</a>
           </div>
         </div>
       </section>
@@ -536,7 +529,7 @@
                     светильники. <span>-Томас Фуллер</span>
                   </p>
                   <div class="btn btn-primary">
-                    <a href="./mentor-registration.html">Стать ментором</a>
+                    <a href="{% url 'profiles:register' %}">Стать ментором</a>
                   </div>
                 </div>
                 <div class="mainpage__reviews-block__quote-block2">
@@ -546,7 +539,7 @@
                     <span>-Жан де Лафонтен</span>
                   </p>
                   <div class="btn btn-primary">
-                    <a href="./mentors.html">Найти ментора</a>
+                    <a href="{% url 'profiles:user_list' %}">Найти ментора</a>
                   </div>
                 </div>
               </div>
