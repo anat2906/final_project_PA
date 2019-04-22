@@ -3661,6 +3661,30 @@ section {
   #sidebar-icon-follows {
   background-image: url("/static/icons/icons8-check-all-primary.svg");
 }
+
+.account-sidebar
+  .account-sidebar__nav
+  .account-sidebar__nav__nav-item#sidebar-create:hover {
+  color: #8459b5;
+}
+.account-sidebar
+  .account-sidebar__nav
+  .account-sidebar__nav__nav-item#sidebar-create:hover
+  #sidebar-icon-create {
+  background-image: url("/static/icons/edit-primary.svg");
+}
+.account-sidebar
+  .account-sidebar__nav
+  .account-sidebar__nav__nav-item#sidebar-create.active {
+  color: #8459b5;
+}
+.account-sidebar
+  .account-sidebar__nav
+  .account-sidebar__nav__nav-item#sidebar-create
+  #sidebar-icon-create {
+  background-image: url("/static/icons/edit.svg");
+}
+
 .account-sidebar
   .account-sidebar__nav
   .account-sidebar__nav__nav-item
@@ -5090,7 +5114,7 @@ form small {
   .mainpage__reviews-block__review-div
   .mainpage__reviews-block__carousel {
   width: 100%;
-  height: 130%;
+  height: auto;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -5444,11 +5468,6 @@ form small {
   }
 }
 
-@media (max-width: 767px) {
-  .mainpage__reviews-block__review-div__carousel-item__text {
-    padding-top: 1em;
-  }
-}
 
 @media (max-width: 985.98px) {
   .mainpage
@@ -5496,6 +5515,20 @@ form small {
     .mainpage__reviews-block__review-div__carousel-item__text {
     float: none;
     width: 100%;
+    padding-top: 1em;
+    height: 300px;
+  }
+}
+@media (max-width: 985.98px) {
+  .mainpage
+    .mainpage__reviews-block
+    .mainpage__reviews-block__wrapper
+    .mainpage__reviews-block__review-div
+    .mainpage__reviews-block__carousel
+    .mainpage__reviews-block__review-div__carousel-slides
+    .mainpage__reviews-block__review-div__carousel-item
+    .mainpage__reviews-block__review-div__carousel-item__text {
+    height: 400px;
   }
 }
 
@@ -5646,11 +5679,16 @@ form small {
   height: 150px;
   margin: 0 auto;
   border-radius: 50%;
-  background-image: url("/static/images/mentor.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  overflow: hidden;
 }
+
+.mentee-account__content__subscriptions
+  .mentee-account__content__subscriptions__sub-card
+  .mentee-account__content__subscriptions__sub-card__img
+  img {
+  width: 100%;
+  }
+
 .mentee-account__content__subscriptions
   .mentee-account__content__subscriptions__sub-card
   .mentee-account__content__subscriptions__sub-card__name {
