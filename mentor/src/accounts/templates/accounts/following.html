@@ -1,13 +1,80 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <main>
+        <div class="background-blobs">
+            <svg class="bg-svg" id="blobShape7" viewBox="0 0 500 500">
+                <clipPath></clipPath>
+                <path
+                        fill="url(#g7)"
+                        d="M 42.83,227.7 C 58.04,162.6 148.6,142.8 209,113.1 257.1,89.44 320.1,30.73 362.2,63.69 401.6,94.57 329.8,166.3 349.1,212.1 367.3,255.2 453,255.4 457.9,301.8 464.4,362.5 405,452.6 343.6,445.7 281.1,438.6 319.7,305.1 263.6,276.7 210.8,250 142.4,334.1 88.72,309.2 60.22,296 35.75,258 42.83,227.7 Z"
+                />
+                <linearGradient id="g7" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0" stop-color="#097976" />
+                    <stop offset="1" stop-color="#a23d8a" />
+                </linearGradient>
+            </svg>
+            <section>
+                <div class="container mentee-account">
+                    <div class="col-lg-9 col-md-12 col-sm-12 mentee-account__content">
+                        <h2 class="font-title">
+                            Мои Подписки
+                        </h2>
+                        <div class="mentee-account__content__subscriptions">
 
-<h3>{{ object.username }}</h3>
+                            {% for user in object.profile.get_following %}
 
-    {% for user in object.profile.get_following %}
-        <a href="/{{ user.username }}">{{ user.username }}</a><br>
-    {% empty %}
-        <h5>Not following any users</h5>
-    {% endfor %}
-
+                                <div
+                                        class="mentee-account__content__subscriptions__sub-card col-lg-4 col-md-6 col-sm-12"
+                                >
+                                    <div
+                                            class="mentee-account__content__subscriptions__sub-card__img"
+                                    >
+                                        <img src="{{ user.profile.image.url }}">
+                                    </div>
+                                    <p
+                                            class="font-text mentee-account__content__subscriptions__sub-card__name"
+                                    >
+                                        <a href="/{{ user.username }}">{{ user.first_name }} {{ user.last_name }} </a><br>
+                                    </p>
+                                    <p
+                                            class="font-text-sm mentee-account__content__subscriptions__sub-card__position"
+                                    >
+                                        {{ user.profile.position }}
+                                    </p>
+                                </div>
+                                {% empty %}#}
+                                <h5 class="font-text">Вы пока ни на кого не подписаны</h5>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 account-sidebar">
+                        <ul class="account-sidebar__nav">
+                            <li
+                                    class="font-link account-sidebar__nav__nav-item "
+                                    id="sidebar-feed"
+                            >
+                                <div id="sidebar-icon-feed"></div>
+                                <a href="/{{ user.username}}/blog">Мои публикации</a>
+                            </li>
+                            <li
+                                    class="font-link account-sidebar__nav__nav-item active"
+                                    id="sidebar-settings"
+                            >
+                                <div id="sidebar-icon-settings"></div>
+                                <a href="#">Настройки профиля</a>
+                            </li>
+                            <li
+                                    class="font-link account-sidebar__nav__nav-item"
+                                    id="sidebar-follows"
+                            >
+                                <div id="sidebar-icon-follows"></div>
+                                <a href="/{{ user.username}}/following">Мои подписки</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
 {% endblock %}

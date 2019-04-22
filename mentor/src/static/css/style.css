@@ -5655,11 +5655,16 @@ form small {
   height: 150px;
   margin: 0 auto;
   border-radius: 50%;
-  background-image: url("/static/images/mentor.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  overflow: hidden;
 }
+
+.mentee-account__content__subscriptions
+  .mentee-account__content__subscriptions__sub-card
+  .mentee-account__content__subscriptions__sub-card__img
+  img {
+  width: 100%;
+  }
+
 .mentee-account__content__subscriptions
   .mentee-account__content__subscriptions__sub-card
   .mentee-account__content__subscriptions__sub-card__name {
