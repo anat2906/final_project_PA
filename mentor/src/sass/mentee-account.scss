@@ -1,0 +1,56 @@
+.mentee-account {
+  display: flex;
+  flex-wrap: wrap;
+  .mentee-account__content {
+    .mentee-account__content__feed {
+      .mentee-account__content__feed__publication {
+        width: 100%;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        margin-top: 1em;
+        .mentee-account__content__feed__publication__img {
+          background-image: url("../../src/static/images/blog-img.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 100%;
+          width: 250px;
+          height: 200px;
+          margin-right: 1em;
+        }
+        .mentee-account__content__feed__publication__content {
+          width: 60%;
+          .mentee-account__content__feed__publication__content__title {
+            margin-bottom: 0.5em;
+          }
+          .mentee-account__content__feed__publication__content__text {
+          }
+          .mentee-account__content__feed__publication__content__date {
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .mentee-account {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mentee-account {
+    .mentee-account__content {
+      .mentee-account__content__feed {
+        .mentee-account__content__feed__publication {
+          .mentee-account__content__feed__publication__img {
+            display: none;
+          }
+          .mentee-account__content__feed__publication__content {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

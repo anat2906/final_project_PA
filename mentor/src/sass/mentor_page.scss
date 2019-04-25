@@ -1,0 +1,115 @@
+.profile-background {
+  text-align: center;
+  width: 100%;
+  height: 220px;
+  position: relative;
+  background-image: url("../../src/static/images/topography.png");
+}
+.profile-avatar {
+  background-image: url("../../src/static/images/profile.png");
+  background-size: 130%;
+  background-repeat:no-repeat;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(55%);
+}
+
+.profile-right {
+    margin-top: 100px;
+    .profile-name, .profile-title, .profile-title{
+      padding-bottom: 0.6em;
+    }
+    .profile-bio-text {
+      margin-top: 20px;
+      text-align: justify;
+    }
+    .profile-expectation-text {
+      margin-top: 20px;
+      text-align: justify;
+    }
+    .profile-icons {
+      width: 20px;
+      height: 20px;
+      margin-right: 0.5em;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      &#profile-icon-whatsapp {
+        background-image: url("../../src/static/icons/icons8-whatsapp-96.png");
+        &:hover{
+          background-image: url("../../src/static/icons/icons8-whatsapp-96-primary.png")
+        }
+      }
+      &#profile-icon-fb {
+        background-image: url("../../src/static/icons/icons8-facebook-96.png");
+        &:hover{
+          background-image: url("../../src/static/icons/icons8-facebook-96-primary.png")
+        }
+      }
+      &#profile-icon-instagram {
+        background-image: url("../../src/static/icons/icons8-instagram-96.png");
+        &:hover{
+          background-image: url("../../src/static/icons/icons8-instagram-96-primary.png")
+        }
+      }
+      &#profile-icon-telegram {
+        background-image: url("../../src/static/icons/icons8-telegram-logo-96.png");
+        &:hover{
+          background-image: url("../../src/static/icons/icons8-telegram-96-primary.png")
+        }
+      }
+    }
+    .line-color {
+      color: $primary;
+      height: 2px;
+    }
+}
+.profile-left {
+    margin-top: 150px;
+    padding-left: 3em;
+    .profile-nav {
+      margin: 10px 5px 10px;
+      padding: 1.5em;
+      background: lighten($primary,35%);
+      border-radius: 5px;
+      .profile-nav__subscribe{
+        h4 {
+          margin-bottom: 1em;
+        }
+        .subscribe-btn {
+          margin: auto;
+          display: block;
+        }
+      }
+      .profile-nav__publications{
+        padding-top: 2em;
+        h4 {
+          margin-bottom: 1em;
+        }
+        .publications-btn {
+          margin: auto;
+          display: block;
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+      }
+
+    }
+}
+
+@media (max-width: 767px){
+  .profile-left{
+    margin: 20px auto;
+    width: 80%;
+    margin-bottom: 0 ;
+    padding: 0 30px;
+  }
+}
+
+
+
+

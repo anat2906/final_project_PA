@@ -1,0 +1,30 @@
+//infrastructure
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "./base.scss";
+@import "./var.scss";
+@import "./font.scss";
+@import "./typography.scss";
+@import "./layout.scss";
+
+//components
+@import "./account-sidebar.scss";
+@import "./background-blobs.scss";
+@import "./button.scss";
+@import "./header-upper.scss";
+@import "./footer.scss";
+@import "./searchbox.scss";
+@import "./blog-card.scss";
+@import "./form.scss";
+
+//pages
+@import "./publication.scss";
+@import "./mentor_page.scss";
+@import "./mainpage.scss";
+@import "./mentors-page.scss";
+@import "./agreement.scss";
+@import "./mentee-account.scss";
+@import "./faq.scss";
+@import "./mentee-account-subscriptions.scss";
+@import "./aboutpage.scss";
+@import "./mentor-account.scss";
+@import "./edit-post.scss";

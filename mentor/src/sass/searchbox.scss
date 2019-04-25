@@ -1,0 +1,33 @@
+.searchbox {
+  margin: 0 auto;
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  padding: 0.3em 0.5em;
+  border: 1px solid $text-grey;
+  border-radius: 5px;
+  justify-content: space-between;
+  .searchbox__input {
+    color: $text-grey;
+    border: none;
+    width: calc(100% - 2em);
+    background: none;
+    &:focus {
+      outline: none;
+    }
+  }
+  .searchbox__icon {
+    width: 1.8em;
+    height: 1.8em;
+    border: none;
+    background: none;
+    background-image: url("../../src/static/icons/search.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+}
