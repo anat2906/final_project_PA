@@ -13,13 +13,17 @@ from django.views.generic import (
                 DeleteView,
                 ListView,
                 UpdateView
-                )
+)
 
+from src.decorators import (
+    can_create_blog,
+    can_update_blog
+)
 from .mixins import FormUserNeededMixin, UserOwnerMixin
 from .models import Blog, BlogImage
 from .forms import *
 
-
+@can_create_blog
 def create_post(request):
     form = BlogForm(request.POST or None)
     BlogImageFormSet = inlineformset_factory(Blog, BlogImage, form=BlogImageForm, extra=1, can_delete=True)
@@ -38,6 +42,7 @@ def create_post(request):
 
 
 @login_required
+@can_update_blog
 def update_blog(request, id):
     blog = get_object_or_404(Blog, id=id)
     form = BlogForm(request.POST or None, instance=blog)
@@ -90,7 +95,7 @@ class BlogListView(ListView):
         return context
 
 
-class UserBlogListView(LoginRequiredMixin, ListView):
+class UserBlogListView(ListView):
     model = Blog
     template_name = "blog/user_blog_list.html"
 
@@ -110,7 +115,7 @@ class UserBlogListView(LoginRequiredMixin, ListView):
         return qs
 
 
-class UserListView(LoginRequiredMixin, ListView):
+class UserListView(ListView):
     model = Blog
     template_name = "accounts/user_list_view.html"
 

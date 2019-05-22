@@ -1,9 +1,17 @@
 from PIL import Image
-from django.contrib.auth.models import User
 from django.db import models
 from django.conf import settings
 from django.db.models.signals import post_save
 from django.urls import reverse_lazy
+from django.contrib.auth.models import AbstractUser
+
+
+class User(AbstractUser):
+    USER_TYPE_CHOICES = (
+        ('Mentor', 'Mentor'),
+        ('Student', 'Student'),
+    )
+    user_type = models.CharField(max_length=20, choices=USER_TYPE_CHOICES, default='mentor')
 
 
 class UserProfileManager(models.Manager):
@@ -46,7 +54,7 @@ class UserProfileManager(models.Manager):
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='profile', on_delete=models.CASCADE)
+    user = models.OneToOneField(User, related_name='profile', on_delete=models.CASCADE)
     image = models.ImageField(default='default.png', upload_to='profile_pics')
     position = models.CharField(max_length=120)
     company = models.CharField(max_length=120)

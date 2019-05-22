@@ -21,3 +21,15 @@ class BlogImageForm(forms.ModelForm):
         widgets = {
             'image': forms.ClearableFileInput(attrs={'class': 'form-control-file'}),
         }
+
+
+class DeleteProductForm(forms.Form):
+    post_id = forms.IntegerField(widget=forms.HiddenInput(attrs={'class': 'datas'}))
+
+    def clean(self):
+        prod_id = self.cleaned_data.get('prod_id')
+        if not prod_id:
+            raise forms.ValidationError("There is not product id data!")
+        if not Blog.objects.filter(id=prod_id).exists():
+            raise forms.ValidationError("Such product does not exist!")
+        return self.cleaned_data

@@ -7,9 +7,10 @@ from django.views import View
 from django.views.generic import DetailView, FormView, ListView
 
 from accounts.forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from .models import User
 from .models import UserProfile
 
-User = get_user_model()
+# User = get_user_model()
 
 
 class UserRegisterView(FormView):
@@ -85,7 +86,7 @@ class UserView(ListView):
         return User.objects.all()
 
     def get_queryset(self, *args, **kwargs):
-        qs = super(UserView, self).get_queryset(**kwargs)
+        qs = super(UserView, self).get_queryset(**kwargs).exclude(user_type="Student")
         # qs = User.objects.all()
         query = self.request.GET.get("q", None)
         if query is not None:
@@ -95,6 +96,11 @@ class UserView(ListView):
                 Q(username__icontains=query)
             )
         return qs
+
+
+def user_list(request):
+    users = User.objects.all().exclude(user_type="Student").order_by('-id')[:3]
+    return render(request, 'home.html', locals())
 
 
 @login_required

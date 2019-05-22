@@ -22,7 +22,8 @@ from django.conf.urls.static import static
 
 
 from blog.views import BlogListView
-from .views import SearchView, home, about_page, faq, agreement
+from accounts.views import user_list
+from .views import SearchView, about_page, faq, agreement
 from . import views
 
 urlpatterns = [
@@ -31,12 +32,13 @@ urlpatterns = [
     path('about/', about_page, name="about"),
     path('faq/', faq, name="faq"),
     path('agreement/', agreement, name="agreement"),
-    path('', views.home, name='home'),
+    path('', user_list, name='home'),
     # path('user/search/', SearchView.as_view(), name='search'),#all mentor list
     path('', include(('accounts.urls', 'profiles'), namespace='profiles')),
     path('api/blog/', include(('blog.api.urls', 'blog-api'), namespace='blog-api')),
     path('blog/', include(('blog.urls', 'blog'), namespace='blog')),
     path('', include('django.contrib.auth.urls')),
+    path('403', views.forbidden_view, name='403')
 ]
 
 if settings.DEBUG:

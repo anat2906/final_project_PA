@@ -179,73 +179,41 @@
             <h2 class="font-title-sm">Наши менторы</h2>
           </div>
           <div class="mainpage__mentors-block__mentor-cards">
-            <div
-              class="mainpage__mentor-cards__mentor-card col-lg-4 col-md-6 col-sm-12 col-12"
-            >
-              <div class="mainpage__mentor-cards__mentor-card__img">
-                <img src="/static/images/mentor.jpg" alt="" />
-              </div>
+            {% for user in users %}
               <div
-                class="font-title-sm mainpage__mentor-cards__mentor-card__name"
+                class="mentors__mentor-cards__mentor-card col-lg-4 col-md-6 col-sm-12"
               >
-                <a href="./publication.html">Ирина Кибина</a>
+                <a href="#">
+                  <div class="mentors__mentor-cards__mentor-card__img">
+                    <img src="{{ user.profile.image.url }}" alt="" />
+                  </div>
+                </a>
+                <h4
+                  class="font-title-sm mentors__mentor-cards__mentor-card__name"
+                >
+                  <a href="{% url 'profiles:account_detail' user.username %}">{{ user.first_name}} {{ user.last_name}}</a>
+                </h4>
+                <h4
+                  class="font-subtitle mentors__mentor-cards__mentor-card__position"
+                >
+                  {{ user.position }}
+                </h4>
+                <div class="font-text mentors__mentor-cards__mentor-card__bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur molestiae voluptates accusamus minus autem adipisci
+                  ducimus voluptate maiores ad recusandae.
+                </div>
+                <button class="btn btn-white">
+                  <a href="{% url 'profiles:account_detail' user.username %}">Подробнее</a>
+                </button>
               </div>
-              <h4
-                class="font-subtitle mainpage__mentor-cards__mentor-card__position"
-              >
-                Project Manager Zensoft, Tech Women 2018
-              </h4>
-              <div class="font-text mainpage__mentor-cards__mentor-card__bio">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur molestiae voluptates accusamus minus autem adipisci
-                ducimus voluptate maiores ad recusandae.
-              </div>
-            </div>
-            <div
-              class="mainpage__mentor-cards__mentor-card col-lg-4 col-md-6 col-sm-12"
-            >
-              <div class="mainpage__mentor-cards__mentor-card__img">
-                <img src="/static/images/mentor.jpg" alt="" />
-              </div>
-              <div
-                class="font-title-sm mainpage__mentor-cards__mentor-card__name"
-              >
-                <a href="./publication.html">Ирина Кибина</a>
-              </div>
-              <h4
-                class="font-subtitle mainpage__mentor-cards__mentor-card__position"
-              >
-                Project Manager Zensoft, Tech Women 2018
-              </h4>
-              <div class="font-text mainpage__mentor-cards__mentor-card__bio">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur molestiae voluptates accusamus minus autem adipisci
-                ducimus voluptate maiores ad recusandae.
-              </div>
-            </div>
-            <div
-              class="mainpage__mentor-cards__mentor-card col-lg-4 col-md-6 col-sm-12"
-            >
-              <div class="mainpage__mentor-cards__mentor-card__img">
-                <img src="/static/images/mentor.jpg" alt="" />
-              </div>
-              <div
-                class="font-title-sm mainpage__mentor-cards__mentor-card__name"
-              >
-                <a href="./publication.html">Ирина Кибина</a>
-              </div>
-              <h4
-                class="font-subtitle mainpage__mentor-cards__mentor-card__position"
-              >
-                Project Manager Zensoft, Tech Women 2018
-              </h4>
-              <div class="font-text mainpage__mentor-cards__mentor-card__bio">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur molestiae voluptates accusamus minus autem adipisci
-                ducimus voluptate maiores ad recusandae.
-              </div>
-            </div>
-          </div>
+              {% empty %}
+              {% if request.GET.q %}
+              <p class="mt-5 mb-5 font-text col-6 offset-3" style="text-align:center">Извините, но такого ментора мы не нашли:(</p>
+              {% else %}
+              <p class="mt-5 mb-5 font-text col-6 offset-3" style="text-align:center">Менторов пока нет</p>
+              {% endif %}
+            {% endfor %}
           <div class="mainpage__mentors-block__button btn-lg btn-primary">
             <a href="{% url 'profiles:user_list' %}">Показать всех</a>
           </div>
