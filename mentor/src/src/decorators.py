@@ -37,7 +37,7 @@ def can_update_blog(func):
         user = request.user
         if not user.is_authenticated:
             return redirect(settings.REDIRECT_URL)
-        product = get_object_or_404(Product, pk=pk)
+        product = get_object_or_404(Blog, pk=pk)
         if not user.user_type == 'Mentor':
             return redirect(settings.FORBIDDEN_REDIRECT_URL)
         return func(request, pk, *args, **kwargs)

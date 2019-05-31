@@ -57,20 +57,22 @@
                         {% if not object.username == request.user.username %}
                             <div class="profile-nav">
                                 <div class="profile-nav__publications">
-                                    {% if following %}
-                                        <h6 class="profile-ad-text font-subtitle">
-                                            Отписаться от публикаций ментора
-                                        </h6>
-                                        <a class="btn btn-primary publications-btn mt-3" href="{{ object.profile.get_follow_url }}">
-                                            Отписаться
-                                        </a>
-                                    {% else %}
-                                        <h6 class="profile-ad-text font-subtitle">
-                                            Заинтересованы в этом менторе? Подпишитесь на нее/него.
-                                        </h6>
-                                        <a class="btn btn-primary publications-btn mt-3" href="{{ object.profile.get_follow_url }}">
-                                            Подписаться
-                                        </a>
+                                    {% if request.user.is_authenticated %}
+                                        {% if following %}
+                                            <h6 class="profile-ad-text font-subtitle">
+                                                Отписаться от публикаций ментора
+                                            </h6>
+                                            <a class="btn btn-primary publications-btn mt-3" href="{{ object.profile.get_follow_url }}">
+                                                Отписаться
+                                            </a>
+                                        {% else %}
+                                            <h6 class="profile-ad-text font-subtitle">
+                                                Заинтересованы в этом менторе? Подпишитесь на нее/него.
+                                            </h6>
+                                            <a class="btn btn-primary publications-btn mt-3" href="{{ object.profile.get_follow_url }}">
+                                                Подписаться
+                                            </a>
+                                        {% endif %}
                                     {% endif %}
                                     <div class="profile-nav__publications">
                                         <h4 class="font-subtitle">

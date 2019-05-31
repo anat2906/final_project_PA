@@ -44,7 +44,7 @@
                                 <h4 class="font-title-sm">
                                     <a href="{% url 'blog:detail' object.id %}">{{ object.title }}</a>
                                 </h4>
-                                <p class="font-text blog-card__blog-card-body_text">{{ object.content }}</p>
+                                <p class="font-text blog-card__blog-card-body_text">{{ object.content|truncatechars:100 }}</p>
                                 <div class="blog-card__blog-card-body__img">
                                     <img src="{{ object.blogimage_set.first.image.url }}"/>
                                 </div>

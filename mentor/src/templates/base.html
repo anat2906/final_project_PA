@@ -37,7 +37,7 @@
                     </h2>
                 </div>
                 <ul class="header__header-upper__nav">
-                    {% if user.is_authenticated %}
+                    {% if request.user.is_authenticated %}
                         <li class="header__header-upper__nav__nav-item font-link">
                             <a href="{% url 'about' %}">О проекте</a>
                         </li>
@@ -74,7 +74,7 @@
                         RU
                     </li>
                 </ul>
-                {% if user.is_authenticated %}
+                {% if request.user.is_authenticated %}
                     <div
                             id="btn-login"
                             class="header__header-upper__navbar__btn btn btn-white"
@@ -118,7 +118,7 @@
             <li class="header__header-upper__nav__nav-item font-link">
                 <a href="{% url 'profiles:user_list' %}">Наши менторы</a>
             </li>
-            {% if user.is_authenticated %}
+            {% if request.user.is_authenticated %}
                 <li class="header__header-upper__nav__nav-item font-link">
                     <a href="{% url 'blog:user_blog_list' %}">Моя лента</a>
                 </li>

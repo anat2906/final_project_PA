@@ -37,8 +37,10 @@ class UserDetailView(DetailView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(UserDetailView, self).get_context_data(*args, **kwargs)
-        context["following"] = UserProfile.objects.is_following(self.request.user, self.get_object())
-        context['recommended'] = UserProfile.objects.recommended(self.request.user)
+        if self.request.user.is_authenticated:
+            context["following"] = UserProfile.objects.is_following(self.request.user, self.get_object())
+            context['recommended'] = UserProfile.objects.recommended(self.request.user)
+            return context
         return context
 
 
@@ -51,8 +53,10 @@ class UserFollower(DetailView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(UserFollower, self).get_context_data(*args, **kwargs)
-        context["following"] = UserProfile.objects.is_following(self.request.user, self.get_object())
-        context['recommended'] = UserProfile.objects.recommended(self.request.user)
+        if self.request.user.is_authenticated:
+            context["following"] = UserProfile.objects.is_following(self.request.user, self.get_object())
+            context['recommended'] = UserProfile.objects.recommended(self.request.user)
+            return context
         return context
 
 
@@ -62,12 +66,6 @@ class UserBlog(DetailView):
 
     def get_object(self):
         return get_object_or_404(User, username__iexact=self.kwargs.get("username"))
-
-    def get_context_data(self, *args, **kwargs):
-        context = super(UserBlog, self).get_context_data(*args, **kwargs)
-        context["following"] = UserProfile.objects.is_following(self.request.user, self.get_object())
-        context['recommended'] = UserProfile.objects.recommended(self.request.user)
-        return context
 
 
 class UserFollowView(View):
