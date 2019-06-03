@@ -97,7 +97,7 @@ class UserView(ListView):
 
 
 def user_list(request):
-    users = User.objects.all().exclude(user_type="Student").order_by('-id')[:3]
+    users = User.objects.all().exclude(user_type="Student").order_by('?')[:3]
     return render(request, 'home.html', locals())
 
 
@@ -124,4 +124,3 @@ def profile(request):
     }
 
     return render(request, 'accounts/profile.html', context)
-
