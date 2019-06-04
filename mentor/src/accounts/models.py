@@ -11,7 +11,7 @@ class User(AbstractUser):
         ('Mentor', 'Mentor'),
         ('Student', 'Student'),
     )
-    user_type = models.CharField(max_length=20, choices=USER_TYPE_CHOICES, default='Mentor')
+    user_type = models.CharField(max_length=20, choices=USER_TYPE_CHOICES)
 
 
 class UserProfileManager(models.Manager):
