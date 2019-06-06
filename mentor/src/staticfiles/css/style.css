@@ -5468,7 +5468,6 @@ form small {
   }
 }
 
-
 @media (max-width: 985.98px) {
   .mainpage
     .mainpage__mentors-steps__background
@@ -5687,7 +5686,7 @@ form small {
   .mentee-account__content__subscriptions__sub-card__img
   img {
   width: 100%;
-  }
+}
 
 .mentee-account__content__subscriptions
   .mentee-account__content__subscriptions__sub-card
@@ -5804,8 +5803,7 @@ form small {
   text-align: center;
   border-radius: 2px;
   height: auto;
-  background:  linear-gradient(45deg, #c2dfd7,#dbb2fe);
-  
+  background: linear-gradient(45deg, #c2dfd7, #dbb2fe);
 }
 .aboutpage
   .aboutpage__mission-block
@@ -5872,4 +5870,17 @@ form small {
 #edit-blog__img {
   border: none;
   outline: none;
+}
+
+#id_user_type {
+  background: transparent;
+  width: 17em;
+  font-family: "Gilroy-Regular";
+  font-size: 16px;
+  font-weight: normal;
+  color: #1e1e1e;
+  border: 1px solid #595959;
+  padding: 0.5em;
+  border-radius: 3px;
+  display: block;
 }
