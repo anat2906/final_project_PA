@@ -56,13 +56,15 @@
               <div id="sidebar-icon-follows"></div>
               <a href="/{{ user.username}}/following">Мои подписки</a>
             </li>
-            <li
-            class="font-link account-sidebar__nav__nav-item"
-            id="sidebar-create"
-          >
-            <div id="sidebar-icon-create"></div>
-            <a href="{% url 'blog:create' %}">Создать пост</a>
-          </li>
+            {% if request.user.user_type != 'Student' %}
+              <li
+              class="font-link account-sidebar__nav__nav-item"
+              id="sidebar-create"
+            >
+                  <div id="sidebar-icon-create"></div>
+                  <a href="{% url 'blog:create' %}">Создать пост</a>
+            </li>
+            {% endif %}
           </ul>
         </div>
       </div>

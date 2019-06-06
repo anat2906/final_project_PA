@@ -40,16 +40,11 @@
                                     >
                                 </h4>
                                 <p class="font-text">
-                                    {{ blog.content }}
+                                    {{ blog.content|truncatechars:100 }}
                                 </p>
 
                                 <div class="blog-card__blog-card-body__img">
-{#                                    <img src="{{ blog.blogimage_set.image.url }}" />#}
-{#                                    {% if object.blogimage_set.first %}#}
-                                        <img src="{{ blog.blogimage_set.first.image.url }}"/>
-{#                                    {% else %}#}
-{#                                      <p>No photo</p>#}
-{#                                    {% endif %}#}
+                                    <img src="{{ blog.blogimage_set.first.image.url }}"/>
                                 </div>
                             </div>
                         </div>
@@ -61,31 +56,3 @@
         </div>
     </main>
 {% endblock content %}
-
-
-
-
-
-{#<div class="row mt-2">#}
-{#        <div class="col-sm-3 col-xs-12">#}
-{#            <h3>{{ object.username }}</h3>#}
-{#            <hr>#}
-{#            <div class="col-sm-9 col-xs-12">#}
-{#                <h3>Blog</h3>#}
-{#                {% for blog in object.blog_set.all %}#}
-{#                    <article class="media content-section">#}
-{#                        <div class="media-body">#}
-{#                            <div class="article-metadata">#}
-{#                                <small class="text-muted">{{ blog.timestamp|timesince }}</small>#}
-{#                            </div>#}
-{#                            <h2><a class="article-title" href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a>#}
-{#                            </h2>#}
-{#                            <p class="article-content">{{ blog.content }}</p>#}
-{#                        </div>#}
-{#                    </article>#}
-{#                    <hr>#}
-{#                {% empty %}#}
-{#                    <h5>No blog yet.</h5>#}
-{#                {% endfor %}#}
-{#            </div>#}
-{#        </div>#}

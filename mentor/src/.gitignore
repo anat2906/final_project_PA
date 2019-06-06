@@ -7,7 +7,7 @@ pip-selfcheck.json
 *.DS_Store
 .idea/
 .migrations/
-
+db.sqlite3
 
 
 # Byte-compiled / optimized / DLL files
