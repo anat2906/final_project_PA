@@ -4936,13 +4936,11 @@ form small {
   .mainpage__mentors-block__mentor-cards
   .mainpage__mentor-cards__mentor-card
   .mainpage__mentor-cards__mentor-card__img {
-  border-radius: 1px;
-  width: 80%;
-  height: 250px;
-  margin: 0 auto;
-  overflow: hidden;
   filter: grayscale(100%);
+  display: flex;
+  justify-content: center;
 }
+
 .mainpage
   .mainpage__mentors-block
   .mainpage__mentors-block__mentor-cards
@@ -4950,7 +4948,19 @@ form small {
   .mainpage__mentor-cards__mentor-card__img
   img {
   width: 100%;
+  height: 100%;
 }
+
+.mainpage
+  .mainpage__mentors-block
+  .mainpage__mentors-block__mentor-cards
+  .mainpage__mentor-cards__mentor-card
+   a {
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+
 .mainpage
   .mainpage__mentors-block
   .mainpage__mentors-block__mentor-cards
@@ -5559,20 +5569,30 @@ form small {
   padding: 1em;
   margin-top: 1.5em;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.mentors__mentor-cards .mentors__mentor-cards__mentor-card button{
+  margin: 0 auto;
+  width: 70%;
+}
+
 .mentors__mentor-cards
   .mentors__mentor-cards__mentor-card
   .mentors__mentor-cards__mentor-card__img {
-  width: 80%;
-  height: 300px;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  height: 300px;
 }
 .mentors__mentor-cards
   .mentors__mentor-cards__mentor-card
   .mentors__mentor-cards__mentor-card__img
   img {
   width: 100%;
+  height: auto;
 }
 .mentors__mentor-cards
   .mentors__mentor-cards__mentor-card

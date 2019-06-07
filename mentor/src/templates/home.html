@@ -181,10 +181,10 @@
           <div class="mainpage__mentors-block__mentor-cards">
             {% for user in users %}
               <div
-                class="mentors__mentor-cards__mentor-card col-lg-4 col-md-6 col-sm-12"
+                class="mainpage__mentor-cards__mentor-card col-lg-4 col-md-6 col-sm-12 mb-4"
               >
                 <a href="#">
-                  <div class="mentors__mentor-cards__mentor-card__img">
+                  <div class="mainpage__mentor-cards__mentor-card__img">
                     <img src="{{ user.profile.image.url }}" alt="" />
                   </div>
                 </a>
@@ -203,7 +203,7 @@
                   Aspernatur molestiae voluptates accusamus minus autem adipisci
                   ducimus voluptate maiores ad recusandae.
                 </div>
-                <button class="btn btn-white">
+                <button class="btn btn-white mt-2">
                   <a href="{% url 'profiles:account_detail' user.username %}">Подробнее</a>
                 </button>
               </div>
