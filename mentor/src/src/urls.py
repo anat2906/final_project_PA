@@ -38,7 +38,8 @@ urlpatterns = [
     path('api/blog/', include(('blog.api.urls', 'blog-api'), namespace='blog-api')),
     path('blog/', include(('blog.urls', 'blog'), namespace='blog')),
     path('', include('django.contrib.auth.urls')),
-    path('403', views.forbidden_view, name='403')
+    path('403', views.forbidden_view, name='403'),
+    path('chat/', include('chat.urls')),
 ]
 
 if settings.DEBUG:
