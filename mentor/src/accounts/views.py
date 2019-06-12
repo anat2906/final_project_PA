@@ -10,7 +10,6 @@ from accounts.forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from .models import User
 from .models import UserProfile
 
-# User = get_user_model()
 
 
 class UserRegisterView(FormView):
@@ -100,7 +99,8 @@ class UserView(ListView):
             qs = qs.filter(
                 Q(first_name__icontains=query) |
                 Q(last_name__icontains=query) |
-                Q(username__icontains=query)
+                Q(username__icontains=query) |
+                Q(profile__position__icontains=query)
             )
         return qs
 
